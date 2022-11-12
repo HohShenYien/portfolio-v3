@@ -1,0 +1,54 @@
+$thickness: 4px;
+$width: 40px;
+$shorter: 10px;
+$gap: 10px;
+
+.nav-btn {
+  display: inline-block;
+  width: calc($width - $shorter);
+  height: $thickness;
+  border-radius: 4px;
+  position: relative;
+  background-color: white;
+  transition: background-color 80ms linear, transform 100ms linear;
+
+  &::after {
+    content: "";
+    width: $width;
+    border-radius: 4px;
+    height: $thickness;
+    background-color: white;
+    position: absolute;
+    top: -$gap;
+    left: 0;
+    transition: transform 80ms linear, top 40ms ease-in 160ms;
+  }
+
+  &::before {
+    content: "";
+    width: $width;
+    border-radius: 4px;
+    height: $thickness;
+    background-color: white;
+    position: absolute;
+    bottom: -$gap;
+    left: 0;
+    transition: transform 80ms linear, bottom 40ms ease-in 160ms;
+  }
+
+  &.open {
+    background-color: transparent;
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+      transition: top 40ms ease-in, transform 80ms linear 120ms;
+    }
+
+    &::before {
+      bottom: 0;
+      transform: rotate(45deg);
+      transition: bottom 40ms ease-in, transform 80ms linear 120ms;
+    }
+  }
+}
