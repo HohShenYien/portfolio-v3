@@ -8,23 +8,41 @@ const fadeInRight: IAnimation = {
     translateX: -30,
     opacity: 0,
   },
-  animate: {
+  // @ts-ignore
+  viewport: { once: true },
+  whileInView: {
     translateX: 0,
     opacity: 1,
   },
-  transition: "all ease-in 0.2s",
+  transition: "all ease-in 0.25s",
+};
+
+const fadeInLeft: IAnimation = {
+  initial: {
+    translateX: 30,
+    opacity: 0,
+  },
+  // @ts-ignore
+  viewport: { once: true },
+  whileInView: {
+    translateX: 0,
+    opacity: 1,
+  },
+  transition: "all ease-in 0.25s",
 };
 
 const fadeUp: IAnimation = {
   initial: {
-    translateY: 30,
+    translateY: 60,
     opacity: 0,
   },
-  animate: {
+  // @ts-ignore
+  viewport: { once: true },
+  whileInView: {
     translateY: 0,
     opacity: 1,
   },
-  transition: "all linear 0.1s",
+  transition: "all linear 0.3s",
 };
 
 const fadeDown: IAnimation = {
@@ -32,11 +50,25 @@ const fadeDown: IAnimation = {
     translateY: -30,
     opacity: 0,
   },
-  animate: {
+  // @ts-ignore
+  viewport: { once: true },
+  whileInView: {
     translateY: 0,
     opacity: 1,
   },
   transition: "all linear 0.1s",
 };
 
-export { fadeInRight, fadeUp, fadeDown };
+const fadeIn: IAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  // @ts-ignore
+  viewport: { once: true },
+  whileInView: {
+    opacity: 1,
+  },
+  transition: "all linear 300ms",
+};
+
+export { fadeInRight, fadeInLeft, fadeUp, fadeDown, fadeIn };

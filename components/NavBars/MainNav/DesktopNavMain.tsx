@@ -8,7 +8,7 @@ import { MainNavProps } from ".";
 
 export default function DesktopNavMain({ navStyles }: MainNavProps) {
   return (
-    <Box as="header" {...navStyles}>
+    <Box as="header" {...navStyles} display={{ base: "none", md: "block" }}>
       <Box
         maxW="7xl"
         mx="auto"
@@ -16,6 +16,7 @@ export default function DesktopNavMain({ navStyles }: MainNavProps) {
         py="2"
         alignItems="center"
         justifyContent="space-between"
+        px={{ base: 6, "2xl": 0 }}
       >
         <Link href="/">
           <HStack alignItems="flex-end" spacing={1}>
@@ -41,7 +42,9 @@ export default function DesktopNavMain({ navStyles }: MainNavProps) {
                 fontSize="sm"
                 fontWeight="light"
               >
-                <NiceLink href={`#${header.id}`}>{header.title}</NiceLink>
+                <NiceLink href={`#${header.id}`} color="white">
+                  {header.title}
+                </NiceLink>
               </Box>
             );
           })}

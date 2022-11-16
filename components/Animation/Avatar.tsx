@@ -91,7 +91,7 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
     >
       {rotated && (
         <m.div
-          initial={{ position: "absolute", right: "62vw", top: "2vw" }}
+          style={{ position: "absolute", right: "62vw", top: "2vw" }}
           animate={{ translateY: translationY }}
           transition={{
             type: "spring",
@@ -101,7 +101,8 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
           }}
         >
           <m.div
-            initial={{ rotate: -20, y: "10vw" }}
+            style={{ rotate: -20 }}
+            initial={{ y: "10vw" }}
             transition={{
               type: "spring",
               damping: 9,
@@ -159,18 +160,19 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
       )}
 
       <m.div
-        initial={{
-          rotate: 0,
+        style={{
           display: "inline-block",
           transformOrigin: "bottom left",
           overflow: "visible",
         }}
+        initial={{ rotate: 0 }}
         animate={imageLoaded ? { rotate: -65 } : {}}
         transition={{
           type: "spring",
           damping: 9,
           stiffness: 60,
           restDelta: 0.1,
+          delay: 0.5,
         }}
         onAnimationComplete={() => setRotated(true)}
       >

@@ -7,7 +7,6 @@
   cursor: pointer;
 
   .link-txt {
-    color: white;
     letter-spacing: 1px;
   }
 
@@ -15,7 +14,7 @@
   &.active {
     color: $brand-400;
     &::after {
-      transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+      transform: translate3d(0, 1px, 0) scale3d(1, 2, 1);
       clip-path: polygon(
         0% 0%,
         0% 100%,

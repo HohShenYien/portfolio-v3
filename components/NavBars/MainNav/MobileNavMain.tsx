@@ -22,13 +22,13 @@ export default function MobileNavMain({ navStyles }: MainNavProps) {
   }, [isOpen]);
 
   return (
-    <Box as="header" {...navStyles}>
+    <Box as="header" {...navStyles} display={{ base: "block", md: "none" }}>
       <Drawer
         placement={"top"}
         onClose={() => setIsOpen(false)}
         isOpen={isOpen}
       >
-        <DrawerContent bg="brand.950" minH="full">
+        <DrawerContent bg="brand.1000" minH="full">
           <DrawerBody>
             <VStack pt="100px">
               <VStack justify="center" spacing="8" as="nav">

@@ -1,10 +1,16 @@
 import { Box, ChakraProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { SectionTitle } from "../Texts";
 
 interface ISectionLayoutProp extends ChakraProps {
   children: ReactNode;
+  title?: string;
 }
-const SectionLayout = ({ children, ...chakraProps }: ISectionLayoutProp) => {
+const SectionLayout = ({
+  children,
+  title,
+  ...chakraProps
+}: ISectionLayoutProp) => {
   return (
     <Box
       {...chakraProps}
@@ -12,8 +18,9 @@ const SectionLayout = ({ children, ...chakraProps }: ISectionLayoutProp) => {
       minH="60vh"
       maxW="full"
       overflow={"hidden"}
-      py={8}
+      py={12}
     >
+      {title && <SectionTitle text={title} />}
       {children}
     </Box>
   );

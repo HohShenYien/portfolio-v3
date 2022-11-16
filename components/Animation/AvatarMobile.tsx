@@ -16,12 +16,12 @@ const AvatarMobile = () => {
       overflow="visible"
     >
       <m.div
-        initial={{
-          rotate: 0,
+        style={{
           display: "inline-block",
           transformOrigin: "bottom left",
           overflow: "visible",
         }}
+        initial={{ rotate: 0 }}
         animate={{ rotate: -65 }}
         transition={{
           type: "spring",

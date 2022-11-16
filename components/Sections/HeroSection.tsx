@@ -1,17 +1,11 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Image,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
-import { AvatarMobile, fadeInRight } from "../Animation";
+import { AvatarMobile, fadeIn, fadeInRight } from "../Animation";
 import Avatar from "../Animation/Avatar";
 import { ArrowLink } from "../Links";
 import { m } from "framer-motion";
+import { BackgroundWatermark } from "../Texts";
+import { heroContent } from "../Content";
 
 export interface IHeroSectionProp {
   mousePos: { x: number; y: number };
@@ -25,12 +19,16 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
 
   return (
     <SectionLayout pos="relative">
-      <Box pos="absolute"></Box>
+      <Box pos="absolute" as={m.div} {...fadeIn} transitionDelay="1s">
+        <BackgroundWatermark text={heroContent.watermarks.top} />
+        <BackgroundWatermark text={heroContent.watermarks.middle} ml={24} />
+        <BackgroundWatermark text={heroContent.watermarks.bottom} ml={12} />
+      </Box>
       {isMobile ? <AvatarMobile /> : <Avatar mousePos={mousePos} />}
-      <SectionContent zIndex="2" pos="relative">
+      <SectionContent zIndex="2" pos="relative" full>
         <Box
           maxW={{ md: "45vw", base: "100vw" }}
-          minH="100vh"
+          minH={{ base: "60vh", md: "90vh" }}
           pt={{ md: 24, base: "40vw" }}
           as={m.div}
           {...fadeInRight}
@@ -43,7 +41,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             fontSize={{ md: "lg", base: "md" }}
             fontWeight="thin"
           >
-            Hey there, I am
+            {heroContent.greeting}
           </Text>
           <Text
             color="white"
@@ -52,7 +50,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             lineHeight={1}
             mb={{ base: 2, md: 4 }}
           >
-            Shen Yien.
+            {heroContent.name}
           </Text>
           <Text
             color="gray.300"
@@ -60,11 +58,10 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             fontWeight="bold"
             lineHeight={1}
           >
-            Full Stack Developer.
+            {heroContent.title}
           </Text>
-          <Text color="gray.400" fontSize={{ md: "xl", base: "md" }} mt={6}>
-            I translate your ideas into fully functional features that add
-            values to your web application.
+          <Text color="gray.500" fontSize={{ md: "xl", base: "md" }} mt={6}>
+            {heroContent.description}
           </Text>
           <Flex
             mt={10}

@@ -19,22 +19,22 @@ const useNavStyles = (): ChakraProps => {
     undefined,
     true
   );
-  const { scrollAfter150, goingDown } = useMemo(() => {
+  const { scrollAfter100, goingDown } = useMemo(() => {
     return {
-      scrollAfter150: cur > 150,
+      scrollAfter100: cur > 100,
       goingDown: cur > prev,
     };
   }, [prev, cur]);
 
   const scrollAffectedStyles = useMemo(() => {
     return {
-      backdropFilter: `blur(${scrollAfter150 ? 8 : 0}px)`,
-      transform: `translateY(${goingDown && scrollAfter150 ? "-100%" : "0"})`,
-      bg: scrollAfter150 ? "rgba(23, 9, 47, 0.8)" : "transparent",
-      py: scrollAfter150 ? 0 : 2,
-      shadow: scrollAfter150 ? "md" : "none",
+      backdropFilter: `blur(${scrollAfter100 ? 8 : 0}px)`,
+      transform: `translateY(${goingDown && scrollAfter100 ? "-100%" : "0"})`,
+      bg: scrollAfter100 ? "rgba(23, 9, 47, 0.8)" : "transparent",
+      py: scrollAfter100 ? 0 : 2,
+      shadow: scrollAfter100 ? "md" : "none",
     };
-  }, [scrollAfter150, goingDown]);
+  }, [scrollAfter100, goingDown]);
 
   return {
     ...scrollAffectedStyles,
