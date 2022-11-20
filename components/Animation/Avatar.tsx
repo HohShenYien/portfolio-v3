@@ -69,6 +69,9 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
   }, [eyeLoc, mousePos]);
 
   const translationY = useMemo(() => {
+    if (mousePos.y > 600 || mousePos.x < 400) {
+      return 0;
+    }
     const distance = getDistance(
       avatarLoc.x,
       avatarLoc.y,

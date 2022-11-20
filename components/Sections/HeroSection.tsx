@@ -39,7 +39,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             color="brand.400"
             mb={{ md: 4, base: 2 }}
             fontSize={{ md: "lg", base: "md" }}
-            fontWeight="thin"
+            fontFamily="mono"
           >
             {heroContent.greeting}
           </Text>

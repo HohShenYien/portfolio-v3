@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
 import Lottie from "react-lottie-player";
-import codingAnimation from "../LottieFiles/coding.json";
 import { aboutContent } from "../Content";
 import { colors } from "../../styles/variables";
 import { m } from "framer-motion";
@@ -27,7 +26,7 @@ const AboutSection = () => {
           <Box as={m.div} {...fadeInRight}>
             <Lottie
               loop
-              animationData={codingAnimation}
+              path="/LottieFiles/coding.json"
               play
               rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
               style={{ width: "100%" }}
@@ -39,7 +38,7 @@ const AboutSection = () => {
               <Text
                 key={index}
                 lineHeight={1.6}
-                fontSize="lg"
+                fontSize={{ md: "lg", base: "md" }}
                 as={m.p}
                 {...(isMobile ? fadeInRight : fadeUp)}
               >

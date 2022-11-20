@@ -1,11 +1,11 @@
 import { SectionContent, SectionLayout } from "../Layouts";
-import { VerticalTimeline } from "../Timeline";
+import { ExperienceTimeline } from "../ExperienceTimeline";
 
 const ExperienceSection = () => {
   return (
     <SectionLayout title="WORK EXPERIENCE">
       <SectionContent>
-        <VerticalTimeline />
+        <ExperienceTimeline />
       </SectionContent>
     </SectionLayout>
   );

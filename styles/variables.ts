@@ -1,5 +1,5 @@
 const colors = {
-  text: "gray.300",
+  text: "gray.400",
   brand: {
     50: "rgba(167,139,250,0.2)", // this is for outline button special
     100: "rgba(139,92,246,0.4)",

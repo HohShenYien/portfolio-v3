@@ -23,8 +23,8 @@ const SectionTitle = ({ text }: ISectionTitleProp) => {
       <Text
         as="h2"
         color="whiteAlpha.800"
-        fontSize="4xl"
-        letterSpacing={"6px"}
+        fontSize={{ md: "4xl", base: "xl" }}
+        letterSpacing={{ md: "6px", base: "4px" }}
         fontWeight="medium"
       >
         {text}

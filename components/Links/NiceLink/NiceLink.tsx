@@ -5,11 +5,21 @@ import styles from "./NiceLink.module.scss";
 interface INiceLinkProp extends ChakraProps {
   children?: React.ReactNode;
   href: string;
+  blank?: boolean;
 }
 
-const NiceLink = ({ children, href, ...chakraProps }: INiceLinkProp) => {
+const NiceLink = ({
+  children,
+  href,
+  blank = false,
+  ...chakraProps
+}: INiceLinkProp) => {
   return (
-    <Link href={href} className={styles["nice-link"]}>
+    <Link
+      href={href}
+      className={styles["nice-link"]}
+      target={blank ? "_blank" : "_self"}
+    >
       <Text
         color="brand.400"
         {...chakraProps}

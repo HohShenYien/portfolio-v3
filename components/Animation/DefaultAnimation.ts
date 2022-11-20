@@ -1,7 +1,9 @@
 import { ChakraProps } from "@chakra-ui/react";
-import { AnimationProps } from "framer-motion";
+import { AnimationProps, TargetAndTransition } from "framer-motion";
 
-interface IAnimation extends ChakraProps, Omit<AnimationProps, "transition"> {}
+interface IAnimation extends ChakraProps, Omit<AnimationProps, "transition"> {
+  whileInView: TargetAndTransition;
+}
 
 const fadeInRight: IAnimation = {
   initial: {

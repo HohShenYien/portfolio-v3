@@ -6,6 +6,7 @@ import {
   AboutSection,
   ExperienceSection,
   HeroSection,
+  ProjectSection,
 } from "../components/Sections";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         <HeroSection mousePos={mousePos} />
         <AboutSection />
         <ExperienceSection />
+        <ProjectSection />
       </Box>
     </Box>
   );
