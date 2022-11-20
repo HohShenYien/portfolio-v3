@@ -1,0 +1,18 @@
+.projectImgContainer {
+  .projectImg {
+    transform: scale(1);
+    transition: all ease 200ms;
+  }
+  .overlay {
+    opacity: 0.7;
+    transition: all ease 200ms;
+  }
+  &:hover {
+    .overlay {
+      opacity: 0;
+    }
+    .projectImg {
+      transform: scale(1.1);
+    }
+  }
+}

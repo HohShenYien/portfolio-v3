@@ -115,7 +115,7 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
             animate={{ y: "0" }}
           >
             <Image
-              src="/images/avatar-me.svg"
+              src="/images/me/avatar-me.svg"
               width="8vw"
               alt="Avatar Me!"
               ref={avatarRef}
@@ -181,10 +181,10 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
       >
         {/* Either the real / fallback images loaded will trigger animation */}
         <Image
-          src="/images/me.png"
+          src="/images/me/me.png"
           fallback={
             <Image
-              src="/images/me-low.png"
+              src="/images/me/me-low.png"
               alt="This is me in lower resolution"
               width="60vw"
               onLoad={() => setImageLoaded(true)}

@@ -46,9 +46,10 @@ const ExperienceDescription = ({
             color={"white"}
             fontWeight="semibold"
             fontSize={{ md: "2xl", base: "lg" }}
+            lineHeight={{ base: 1.2, md: "unset" }}
           >
             {title}{" "}
-            <Text as="span" display={{ base: "none", md: "inline" }}>
+            <Text as="span" display={{ base: "none", sm: "inline" }}>
               @{" "}
             </Text>
             <NiceLink
@@ -60,7 +61,7 @@ const ExperienceDescription = ({
               {company.name}
             </NiceLink>
           </Text>
-          <Text color="gray.500" fontSize="sm">
+          <Text color="gray.500" fontSize="sm" mt={{ md: 0, base: 2 }}>
             {dates.start} - {dates.end}
           </Text>
         </Box>

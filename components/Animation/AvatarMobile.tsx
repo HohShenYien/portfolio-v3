@@ -31,7 +31,7 @@ const AvatarMobile = () => {
         }}
       >
         <Image
-          src="/images/me-low.png"
+          src="/images/me/me-low.png"
           onLoad={() => setImageLoaded(true)}
           alt="This is me"
           width="100vw"

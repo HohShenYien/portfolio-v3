@@ -13,10 +13,10 @@ const SectionContent = ({
   return (
     <Box
       {...chakraProps}
-      maxW="7xl"
+      maxW="6xl"
       mx="auto"
       px={{ base: 4, md: 6, "2xl": 0 }}
-      py={full ? 0 : { base: 4, md: 16 }}
+      py={full ? 0 : { base: 8, md: 16 }}
     >
       {children}
     </Box>

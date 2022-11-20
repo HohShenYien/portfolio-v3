@@ -1,6 +1,8 @@
 import {
   Box,
   Flex,
+  Grid,
+  Image,
   SimpleGrid,
   Text,
   useBreakpointValue,
@@ -11,7 +13,7 @@ import Lottie from "react-lottie-player";
 import { aboutContent } from "../Content";
 import { colors } from "../../styles/variables";
 import { m } from "framer-motion";
-import { fadeInRight, fadeUp } from "../Animation";
+import { CodingAbout, fadeInRight, fadeUp } from "../Animation";
 
 const AboutSection = () => {
   const isMobile = useBreakpointValue({
@@ -22,16 +24,8 @@ const AboutSection = () => {
   return (
     <SectionLayout pos="relative" title="WHO I AM">
       <SectionContent full>
-        <SimpleGrid columns={{ base: 1, md: 2 }} mt={{ base: -8, md: -16 }}>
-          <Box as={m.div} {...fadeInRight}>
-            <Lottie
-              loop
-              path="/LottieFiles/coding.json"
-              play
-              rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
-              style={{ width: "100%" }}
-            />
-          </Box>
+        <Grid templateColumns={{ md: "1fr 1fr", base: "1fr" }}>
+          <CodingAbout />
 
           <VStack color={colors.text} spacing={4} justifyContent="center">
             {aboutContent.descriptions.map((content, index) => (
@@ -46,7 +40,7 @@ const AboutSection = () => {
               </Text>
             ))}
           </VStack>
-        </SimpleGrid>
+        </Grid>
       </SectionContent>
     </SectionLayout>
   );
