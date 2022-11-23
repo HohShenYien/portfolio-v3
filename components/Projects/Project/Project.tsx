@@ -12,14 +12,20 @@ import { colors } from "../../../styles/variables";
 import { fadeUp } from "../../Animation";
 import style from "./Project.module.scss";
 import { m } from "framer-motion";
+import { CustomImage, generateImgurUrl } from "../../Image";
+import { useImageStore } from "../../../store";
+
+interface IProject {}
 
 const Project = () => {
+  const imageStore = useImageStore();
   return (
-    <Grid templateColumns={"7fr 5fr"} as={m.div} {...fadeUp}>
-      <GridItem
+    <Flex as={m.div} {...fadeUp} flexDir="row-reverse">
+      <Box
         pos="relative"
         overflow="hidden"
         className={style.projectImgContainer}
+        flex="7"
       >
         <Box
           pos="absolute"
@@ -30,18 +36,24 @@ const Project = () => {
           bg={`${colors.brand[950]}`}
           className={style.overlay}
           zIndex="2"
+          onClick={() =>
+            imageStore?.setSrc?.(
+              generateImgurUrl({ size: "full", imgurId: "hhAAMKM" })
+            )
+          }
         />
-        <Image
-          src="https://i.imgur.com/hhAAMKM.png"
+        <CustomImage
+          imgurId="hhAAMKM"
           alt="test"
           width="100%"
           className={style.projectImg}
+          size="huge thumbnail"
         />
-      </GridItem>
+      </Box>
 
       <Flex
         flexDir="column"
-        flex="1"
+        flex="5"
         justifyContent="center"
         alignItems="stretch"
         width="110%"
@@ -92,8 +104,7 @@ const Project = () => {
           ))}
         </Flex>
       </Flex>
-      <Box></Box>
-    </Grid>
+    </Flex>
   );
 };
 

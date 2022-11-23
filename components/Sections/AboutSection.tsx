@@ -14,6 +14,7 @@ import { aboutContent } from "../Content";
 import { colors } from "../../styles/variables";
 import { m } from "framer-motion";
 import { CodingAbout, fadeInRight, fadeUp } from "../Animation";
+import { CustomImage } from "../Image";
 
 const AboutSection = () => {
   const isMobile = useBreakpointValue({
@@ -23,10 +24,9 @@ const AboutSection = () => {
 
   return (
     <SectionLayout pos="relative" title="WHO I AM">
-      <SectionContent full>
+      <SectionContent>
         <Grid templateColumns={{ md: "1fr 1fr", base: "1fr" }}>
           <CodingAbout />
-
           <VStack color={colors.text} spacing={4} justifyContent="center">
             {aboutContent.descriptions.map((content, index) => (
               <Text

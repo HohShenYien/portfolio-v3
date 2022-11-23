@@ -1,4 +1,4 @@
-import { Mark, Text } from "@chakra-ui/react";
+import { Text, Mark } from "@chakra-ui/react";
 import { colors } from "../../styles/variables";
 
 interface IHighlighterProp {

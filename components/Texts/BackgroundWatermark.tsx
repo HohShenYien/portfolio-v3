@@ -10,7 +10,7 @@ const BackgroundWatermark = ({
 }: IBackgroundWatermarkProp) => {
   return (
     <Text
-      color="#FFFFFF10"
+      color="#FFFFFF09"
       fontWeight="bolder"
       fontSize="290px"
       lineHeight="0.8"

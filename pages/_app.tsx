@@ -20,6 +20,7 @@ import "@fontsource/fira-code/600.css";
 import "@fontsource/fira-code/700.css";
 
 import { colors } from "../styles/variables";
+import { ImageViewer } from "../components/Image";
 
 const theme = extendTheme({
   colors: {
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <LazyMotion features={domAnimation}>
         <Component {...pageProps} />
+        <ImageViewer />
       </LazyMotion>
     </ChakraProvider>
   );

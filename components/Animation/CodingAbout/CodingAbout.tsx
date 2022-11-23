@@ -1,7 +1,5 @@
 import { Box, Icon, Image } from "@chakra-ui/react";
 import { m } from "framer-motion";
-import { fadeInRight } from "../DefaultAnimation";
-import { Search } from "react-feather";
 import LanguageBubble from "./LanguageBubble";
 
 const CodingAbout = () => {

@@ -42,7 +42,7 @@ const useNavStyles = (): ChakraProps => {
     top: "0",
     left: "0",
     right: "0",
-    zIndex: "9999",
+    zIndex: "99",
     transition: "all ease-in 200ms",
   };
 };

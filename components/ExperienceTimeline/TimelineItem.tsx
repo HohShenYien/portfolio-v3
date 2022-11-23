@@ -4,6 +4,7 @@ import { spaceBetween } from "./timelineVariables";
 import ExperienceDescription from "./ExperienceDescription";
 import { IExperienceProps } from ".";
 import { useEffect, useRef, useState } from "react";
+import { CustomImage } from "../Image";
 
 interface ITimelineItem extends IExperienceProps {
   timelinePosition: number;
@@ -49,13 +50,13 @@ const TimelineItem = ({ timelinePosition, ...props }: ITimelineItem) => {
           }}
           animate={activated ? { rotate: props.angle, opacity: 1 } : {}}
         >
-          <AspectRatio ratio={4 / 3}>
-            <Image
-              src="https://i.imgur.com/6rE2F2Q.jpg"
-              alt="test image"
-              ref={pic}
-            />
-          </AspectRatio>
+          <CustomImage
+            imgurId="6rE2F2Q"
+            format="jpg"
+            alt="test image"
+            ref={pic}
+            aspectRatio={4 / 3}
+          />
         </m.div>
       </Box>
 

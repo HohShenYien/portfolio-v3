@@ -9,20 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.3.6",
+    "@chakra-ui/react": "2.4.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/fira-code": "^4.5.12",
     "@fontsource/poppins": "^4.5.10",
     "@n8tb1t/use-scroll-position": "^2.0.3",
-    "framer-motion": "^6",
+    "framer-motion": "^7.0.0",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
     "react-lottie-player": "^1.5.0",
     "react-use-rect": "^2.0.4",
-    "sass": "^1.56.0"
+    "sass": "^1.56.0",
+    "zustand": "^4.1.4"
   },
   "devDependencies": {
     "@types/node": "18.11.8",
