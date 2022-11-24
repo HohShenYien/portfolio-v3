@@ -43,10 +43,11 @@ const ExperienceDescription = ({
       >
         <Box py={1} px={0}>
           <Text
-            color={"white"}
+            color={"gray.200"}
             fontWeight="semibold"
-            fontSize={{ md: "2xl", base: "lg" }}
+            fontSize={{ md: "xl", base: "lg" }}
             lineHeight={{ base: 1.2, md: "unset" }}
+            as="h4"
           >
             {title}{" "}
             <Text as="span" display={{ base: "none", sm: "inline" }}>

@@ -3,7 +3,7 @@ import { ExperienceTimeline } from "../ExperienceTimeline";
 
 const ExperienceSection = () => {
   return (
-    <SectionLayout title="WORK EXPERIENCE">
+    <SectionLayout title="WHERE I WORKED">
       <SectionContent>
         <ExperienceTimeline />
       </SectionContent>

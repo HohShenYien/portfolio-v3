@@ -1,11 +1,4 @@
-import {
-  Modal,
-  ModalContent,
-  ModalOverlay,
-  useDisclosure,
-  Image,
-} from "@chakra-ui/react";
-import { AnimatePresence, m } from "framer-motion";
+import { Modal, ModalContent, ModalOverlay, Image } from "@chakra-ui/react";
 import { useImageStore } from "../../store";
 
 const ImageViewer = () => {
@@ -14,13 +7,13 @@ const ImageViewer = () => {
     imageStore?.isOpen && (
       <Modal
         isOpen={imageStore?.isOpen ?? false}
-        onClose={imageStore?.onClose}
+        onClose={() => imageStore?.onClose?.()}
         size="full"
       >
         <ModalOverlay />
         <ModalContent
           bg="transparent"
-          onClick={imageStore?.onClose}
+          onClick={() => imageStore?.onClose?.()}
           justifyContent="center"
         >
           <Image

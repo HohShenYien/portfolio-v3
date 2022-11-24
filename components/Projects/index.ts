@@ -1,12 +1,15 @@
 import { ReactNode } from "react";
-import { Project } from "./Project";
+import { FeaturedProject } from "./FeaturedProject";
+import { OtherProjects } from "./OtherProjects";
 
-interface IProject {
+export interface IProject {
   name: string;
-  subtitle: string;
+  type: string;
   description: ReactNode;
   tags: string[];
   img: string;
+  github?: string;
+  link?: string;
 }
 
-export { Project };
+export { FeaturedProject, OtherProjects };

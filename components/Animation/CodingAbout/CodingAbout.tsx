@@ -1,17 +1,12 @@
 import { Box, Icon, Image } from "@chakra-ui/react";
 import { m } from "framer-motion";
+import CodingGuy from "./CodingGuy";
 import LanguageBubble from "./LanguageBubble";
 
 const CodingAbout = () => {
   return (
-    <Box
-      as={m.div}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      py={8}
-    >
-      <Box display="inline-block" pos="relative">
+    <Box as={m.div} display="flex" justifyContent="center" alignItems="center">
+      <Box display="inline-block" pos="relative" flex={1}>
         <Image
           src="/images/coding/terminal.svg"
           alt="terminal"
@@ -109,12 +104,7 @@ const CodingAbout = () => {
           left="10%"
           scale={1.4}
         />
-        <Image
-          src="/images/coding/code-thinking.svg"
-          alt="thinking"
-          pos="relative"
-          zIndex="2"
-        />
+        <CodingGuy />
       </Box>
     </Box>
   );

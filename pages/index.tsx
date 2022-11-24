@@ -7,6 +7,7 @@ import {
   ExperienceSection,
   HeroSection,
   ProjectSection,
+  SkillSection,
 } from "../components/Sections";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <AboutSection />
         <ExperienceSection />
         <ProjectSection />
+        <SkillSection />
       </Box>
     </Box>
   );

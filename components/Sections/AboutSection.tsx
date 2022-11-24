@@ -25,7 +25,7 @@ const AboutSection = () => {
   return (
     <SectionLayout pos="relative" title="WHO I AM">
       <SectionContent>
-        <Grid templateColumns={{ md: "1fr 1fr", base: "1fr" }}>
+        <Grid templateColumns={{ md: "1fr 1fr", base: "1fr" }} gap={8}>
           <CodingAbout />
           <VStack color={colors.text} spacing={4} justifyContent="center">
             {aboutContent.descriptions.map((content, index) => (
@@ -34,7 +34,7 @@ const AboutSection = () => {
                 lineHeight={1.6}
                 fontSize={{ md: "lg", base: "md" }}
                 as={m.p}
-                {...(isMobile ? fadeInRight : fadeUp)}
+                {...fadeUp}
               >
                 {content}
               </Text>

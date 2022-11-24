@@ -4,14 +4,8 @@ import {
   ChakraProps,
   forwardRef,
   Image,
-  useDisclosure,
 } from "@chakra-ui/react";
-import {
-  ImgurSize,
-  generateImgurUrl,
-  generateFallbackSrc,
-  ImageViewer,
-} from ".";
+import { ImgurSize, generateImgurUrl, generateFallbackSrc } from ".";
 import { m } from "framer-motion";
 import { useCallback, useMemo } from "react";
 import { useImageStore } from "../../store";
@@ -24,6 +18,7 @@ interface ImageProps extends ChakraProps, React.ComponentProps<As> {
   src?: string;
   fallbackSrc?: string;
   aspectRatio?: number;
+  canOpen?: boolean;
 }
 
 const CustomImage = forwardRef(
@@ -36,6 +31,7 @@ const CustomImage = forwardRef(
       src,
       fallbackSrc,
       aspectRatio,
+      canOpen = true,
       ...props
     }: ImageProps,
     ref
@@ -45,12 +41,14 @@ const CustomImage = forwardRef(
       return src ?? generateImgurUrl({ size, imgurId, format });
     }, [size, imgurId, format, src]);
     const imageStore = useImageStore();
+
     const openImg = useCallback(() => {
+      if (!canOpen) return;
       const fullSrc =
         // @ts-ignore
         src ?? generateImgurUrl({ size: "full", imgurId, format });
       imageStore?.setSrc?.(fullSrc);
-    }, [format, imageStore, imgurId, src]);
+    }, [format, imageStore, imgurId, src, canOpen]);
 
     const image = (
       <>
@@ -69,6 +67,7 @@ const CustomImage = forwardRef(
           as={m.img}
           layoutId={imgSrc}
           ref={ref}
+          cursor={canOpen ? "pointer" : ""}
         />
       </>
     );
