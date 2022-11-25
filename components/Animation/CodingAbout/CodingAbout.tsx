@@ -82,7 +82,7 @@ const CodingAbout = () => {
         <LanguageBubble
           w={8}
           h={8}
-          lang="next-js"
+          lang="nextjs"
           top="62%"
           right="50%"
           zIndex="3"

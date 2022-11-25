@@ -1,16 +1,11 @@
 import { Grid } from "@chakra-ui/react";
-import { IProject } from "..";
-import { m, useAnimationControls } from "framer-motion";
-import OtherProject from "./OtherProject";
-import useOnScreen from "../../../hooks/useOnScreen";
-import { useEffect, useRef } from "react";
-import { useScrollSeqAnimation } from "../../../hooks";
+import { useRef } from "react";
+import { useScrollSeqAnimation } from "../../hooks";
+import skillContent from "../Content/Home/skillContent";
+import SkillCard from "./SkillCard";
+import { m } from "framer-motion";
 
-interface IOtherProjectsProps {
-  projects: IProject[];
-}
-
-const OtherProjects = ({ projects }: IOtherProjectsProps) => {
+const SkillGrid = () => {
   const gridRef = useRef<HTMLDivElement>(null);
   const fadeUpControls = useScrollSeqAnimation({
     ref: gridRef,
@@ -24,21 +19,21 @@ const OtherProjects = ({ projects }: IOtherProjectsProps) => {
   return (
     <Grid
       templateColumns={{ md: "repeat(3, 1fr)", base: "1fr" }}
-      gap={{ md: 4, base: 6 }}
+      gap={4}
       ref={gridRef}
     >
-      {projects.map((project, index) => (
+      {skillContent.map((content, index) => (
         <m.div
           key={index}
           initial={{ opacity: 0, translateY: 30 }}
           animate={fadeUpControls}
           custom={index}
         >
-          <OtherProject {...project} />
+          <SkillCard {...content} delay={(index + 1) * 0.2} gridRef={gridRef} />
         </m.div>
       ))}
     </Grid>
   );
 };
 
-export default OtherProjects;
+export default SkillGrid;
