@@ -1,7 +1,7 @@
 const heroContent = {
-  greeting: "Guess who? It is",
+  greeting: "Guess who? It's",
   name: "Shen Yien.",
-  title: "Full Stack Developer",
+  title: "Full Stack Developer.",
   description:
     "I translate your ideas into fully functional features that add values to your web application.",
   cta: {

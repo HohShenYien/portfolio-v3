@@ -108,12 +108,35 @@ const skillContent: SkillGroup[] = [
     ],
   },
   {
-    name: "Programming Languages",
+    name: "Languages",
     skills: [
-      { name: "Python", progress: 30, description: "" },
-      { name: "Javascript", progress: 30, description: "" },
-      { name: "Java", progress: 30, description: "" },
-      { name: "PHP", progress: 30, description: "" },
+      {
+        name: "Python",
+        progress: 85,
+        description:
+          "In-depth knowledge of Python from my years of experience using it across various projects",
+        emoji: "heart",
+      },
+      {
+        name: "Javascript",
+        progress: 80,
+        description:
+          "Gotten better with Javascript since the use of various Javascript frameworks",
+        emoji: "fire",
+      },
+      {
+        name: "PHP",
+        progress: 70,
+        description: "Used PHP professionally alongside Laravel",
+        emoji: "heart",
+      },
+      {
+        name: "Java",
+        progress: 70,
+        description:
+          "Having decent knowledge of Java due to the wide use of it in the world of DSA",
+        emoji: "cool",
+      },
     ],
   },
   {
@@ -125,8 +148,43 @@ const skillContent: SkillGroup[] = [
         description: "Can't live without Typescript!",
         emoji: "heart",
       },
-      { name: "Python", progress: 30, description: "" },
-      { name: "Python", progress: 30, description: "" },
+      {
+        name: "Git",
+        progress: 40,
+        description:
+          "My Git knowledge is sufficient for all sorts of collaboration",
+        emoji: "cool",
+      },
+      {
+        name: "Bash",
+        progress: 30,
+        description:
+          "Rather confident to setup any development environment in Linux",
+        emoji: "monocle",
+      },
+    ],
+  },
+  {
+    name: "Extra",
+    skills: [
+      {
+        name: "Agile",
+        progress: 70,
+        description: "Professional working experience in an agile environment",
+        emoji: "cool",
+      },
+      {
+        name: "Test Driven",
+        progress: 60,
+        description: "Working in a test-driven environment during my past job",
+        emoji: "cool",
+      },
+      {
+        name: "Design Patterns",
+        progress: 40,
+        description: "Studied major patterns from Head FIrst series",
+        emoji: "heart",
+      },
     ],
   },
 ];

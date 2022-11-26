@@ -8,6 +8,10 @@ export interface IExperienceProps {
   company: {
     name: string;
     url: string;
+    image: {
+      id: string;
+      format?: string;
+    };
   };
   dates: {
     start: string;

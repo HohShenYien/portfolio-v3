@@ -4,17 +4,22 @@ import { spaceBetween } from "./timelineVariables";
 import ExperienceDescription from "./ExperienceDescription";
 import { IExperienceProps } from ".";
 import { useEffect, useRef, useState } from "react";
-import { CustomImage } from "../Image";
+import { CustomImage, generateImgurUrl } from "../Image";
 
 interface ITimelineItem extends IExperienceProps {
   timelinePosition: number;
 }
 
-const TimelineItem = ({ timelinePosition, ...props }: ITimelineItem) => {
+const TimelineItem = ({
+  timelinePosition,
+  company,
+  ...props
+}: ITimelineItem) => {
   const [activated, setActivated] = useState(false);
   const bubble = useRef<HTMLDivElement>(null);
 
   const pic = useRef<HTMLImageElement>(null);
+  const { image, name } = company;
 
   useEffect(() => {
     const rect = bubble.current?.getBoundingClientRect() ?? {
@@ -51,16 +56,16 @@ const TimelineItem = ({ timelinePosition, ...props }: ITimelineItem) => {
           animate={activated ? { rotate: props.angle, opacity: 1 } : {}}
         >
           <CustomImage
-            imgurId="6rE2F2Q"
-            format="jpg"
-            alt="test image"
+            imgurId={image.id}
+            format={image.format}
+            alt={name}
             ref={pic}
             aspectRatio={4 / 3}
           />
         </m.div>
       </Box>
 
-      <ExperienceDescription activated={activated} {...props}>
+      <ExperienceDescription activated={activated} {...props} company={company}>
         <Box
           pos="absolute"
           left={{ md: -spaceBetween / 2, base: 0 }}
@@ -77,8 +82,11 @@ const TimelineItem = ({ timelinePosition, ...props }: ITimelineItem) => {
         >
           <AspectRatio ratio={1}>
             <Image
-              src={props.logo}
-              alt={props.company.name}
+              src={generateImgurUrl({
+                size: "small square",
+                imgurId: props.logo,
+              })}
+              alt={name}
               rounded="full"
               objectPosition="center center"
             />

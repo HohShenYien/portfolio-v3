@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { colors } from "../../../styles/variables";
 import { fadeUp } from "../../Animation";
 import { m } from "framer-motion";
@@ -13,7 +13,7 @@ interface IProjectProps extends IProject {
 const FeaturedProject = ({
   name,
   type,
-  description,
+  descriptions,
   tags,
   img,
   inverted = false,
@@ -61,15 +61,15 @@ const FeaturedProject = ({
           {name}
         </Text>
         <Box pos="relative" minH="50%" my={4}>
-          <Box
+          <VStack
             color={colors.text}
             pos="relative"
             zIndex="2"
             px={{ md: 6, base: 0 }}
             py={{ md: 3, base: 0 }}
           >
-            {description}
-          </Box>
+            {descriptions}
+          </VStack>
           <Box
             bg="brand.950"
             pos="absolute"

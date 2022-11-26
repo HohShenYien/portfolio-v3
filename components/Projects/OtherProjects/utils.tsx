@@ -14,6 +14,7 @@ export function getProjectIcon(type: string): ComponentType {
     case "desktop":
       return Laptop2;
     case "web":
+    case "website":
       return Globe;
     case "mobile":
       return Smartphone;

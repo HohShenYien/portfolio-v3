@@ -9,7 +9,7 @@ import ProjectLinks from "../ProjectLinks";
 const OtherProject = ({
   name,
   type,
-  description,
+  descriptions,
   tags,
   img,
   github,
@@ -19,7 +19,7 @@ const OtherProject = ({
   return (
     <Box
       bgImage={`url(${generateImgurUrl({
-        size: "large thumbnail",
+        size: "medium thumbnail",
         imgurId: img,
       })})`}
       pos="relative"
@@ -65,7 +65,7 @@ const OtherProject = ({
           {name}
         </Text>
         <VStack alignItems="flex-start" color={colors.text}>
-          {description}
+          {descriptions}
         </VStack>
         <Box flex="1" />
         <HStack flexWrap="wrap" mt={8}>

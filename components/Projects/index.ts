@@ -5,7 +5,7 @@ import { OtherProjects } from "./OtherProjects";
 export interface IProject {
   name: string;
   type: string;
-  description: ReactNode;
+  descriptions: ReactNode[];
   tags: string[];
   img: string;
   github?: string;

@@ -3,7 +3,7 @@ import { SkillGrid } from "../Skills";
 
 const SkillSection = () => {
   return (
-    <SectionLayout title="WHAT I KNOW">
+    <SectionLayout title="WHAT I USE">
       <SectionContent>
         <SkillGrid />
       </SectionContent>
