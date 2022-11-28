@@ -17,7 +17,7 @@ const Highlighter = ({ text, color = colors.text }: IHighlighterProp) => {
         right: 0,
         bottom: 0,
         height: 3,
-        bg: "brand.900",
+        bg: "brand.700",
         zIndex: 0,
         opacity: 0.7,
         transition: "height ease-in 200ms",

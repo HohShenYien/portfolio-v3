@@ -39,7 +39,6 @@ const FeaturedProject = ({
         mr={{ md: inverted ? "-11%" : "0", base: 0 }}
         pos="relative"
         zIndex="3"
-        textAlign={{ md: inverted ? "start" : "end", base: "start" }}
         px={{ base: 2, md: 0 }}
         py={{ base: 4, md: 0 }}
       >
@@ -49,6 +48,7 @@ const FeaturedProject = ({
           lineHeight={1}
           fontSize={"sm"}
           mb={{ base: 1, md: 0 }}
+          textAlign={{ md: inverted ? "start" : "end", base: "start" }}
         >
           {type}
         </Text>
@@ -57,6 +57,7 @@ const FeaturedProject = ({
           fontSize={{ md: "2xl", base: "lg" }}
           fontWeight="semibold"
           as="h4"
+          textAlign={{ md: inverted ? "start" : "end", base: "start" }}
         >
           {name}
         </Text>
@@ -67,6 +68,7 @@ const FeaturedProject = ({
             zIndex="2"
             px={{ md: 6, base: 0 }}
             py={{ md: 3, base: 0 }}
+            alignItems="flex-start"
           >
             {descriptions}
           </VStack>

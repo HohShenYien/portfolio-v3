@@ -56,18 +56,18 @@ export default function MobileNavMain({ navStyles }: MainNavProps) {
       <Box
         display="flex"
         px="4"
-        alignItems="flex-end"
+        alignItems="center"
         justifyContent="space-between"
         pos="relative"
       >
         <Link href="/">
           <HStack alignItems="flex-end" spacing={1}>
-            <Image alt="Logo" src="/logo.svg" height={12} />
+            <Image alt="Logo" src="/logo.svg" height={9} />
             <Text
               color="brand.400"
-              fontSize="4xl"
+              fontSize="3xl"
               fontWeight="bold"
-              lineHeight={1}
+              lineHeight={0.75}
             >
               hen Yien
             </Text>
