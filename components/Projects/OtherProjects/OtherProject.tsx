@@ -68,7 +68,7 @@ const OtherProject = ({
           {descriptions}
         </VStack>
         <Box flex="1" />
-        <HStack flexWrap="wrap" mt={8}>
+        <HStack flexWrap="wrap" mt={8} spacing={2}>
           {tags.map((tag, index) => (
             <Text
               key={index}

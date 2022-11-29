@@ -98,7 +98,13 @@ const projectContent: ProjectContentContent = {
     {
       name: "Pomodo App",
       type: "Desktop Application",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          An attempt to practise <Highlighter text="Rust" /> and{" "}
+          <Highlighter text="Angular" /> by building a simple Pomodoro desktop
+          app.
+        </Text>,
+      ],
       tags: ["Angular", "Tauri", "Rust"],
       img: "R6tOWEc",
       github: "https://github.com/HohShenYien/pomodo",
@@ -106,15 +112,26 @@ const projectContent: ProjectContentContent = {
     {
       name: "APAC Mailer",
       type: "Desktop Application",
-      descriptions: [],
-      tags: ["Vue", "Electron", "Vuetify"],
+      descriptions: [
+        <Text key={0}>
+          A utility app that helps my club in{" "}
+          <Highlighter text="bulk sending emails" /> and certificates to event
+          participants.
+        </Text>,
+      ],
+      tags: ["Vue", "Electron", "Vuetify", "Flask"],
       img: "bPSwnPS",
       github: "https://github.com/HohShenYien/pomodo",
     },
     {
       name: "APAC Website",
       type: "Website",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          A SPA website built for my university club to display various
+          information.
+        </Text>,
+      ],
       tags: ["React", "Next.js", "Chakra-ui"],
       img: "CFDBiPs",
       github: "apu-apac.netlify.app/",
@@ -123,7 +140,16 @@ const projectContent: ProjectContentContent = {
     {
       name: "v2 Website",
       type: "Website",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          My second attempt in rebuilding my website after learning about Vue.
+          Tried to design uniquely but ended up rather superflous.
+        </Text>,
+        <Text key={1}>
+          However, it was an amazing learning experience that boosted up my
+          skills.
+        </Text>,
+      ],
       tags: ["Vue", "Nuxt", "Vuetify"],
       img: "0wuU2uX",
       github: "https://github.com/HohShenYien/personal-blog",
@@ -132,7 +158,15 @@ const projectContent: ProjectContentContent = {
     {
       name: "Nutribot",
       type: "Desktop Application",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          A chatbot that recommends on <Highlighter text="users' diet" /> based
+          on disease names and symptoms.
+        </Text>,
+        <Text key={1}>
+          Made for my universiy assignment with own chatbot implementation.
+        </Text>,
+      ],
       tags: ["Python", "PyQT", "Tensorflow", "NLTK"],
       img: "Act0oub",
       github:
@@ -141,7 +175,12 @@ const projectContent: ProjectContentContent = {
     {
       name: "Pomodoro Focus",
       type: "Mobile Application",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          A Pomodoro Timer application. It was the final assignment for{" "}
+          <NiceLink href="https://cs50.harvard.edu/x/2020/">CS50 2020</NiceLink>
+        </Text>,
+      ],
       tags: ["Java", "Android"],
       img: "kUUpawE",
       github: "https://github.com/HohShenYien/Pomodoro_Focus",
@@ -149,7 +188,12 @@ const projectContent: ProjectContentContent = {
     {
       name: "Pokedex",
       type: "Mobile Application",
-      descriptions: [],
+      descriptions: [
+        <Text key={0}>
+          A simple Pokedex Android application which was my first attempt in
+          building Android app.
+        </Text>,
+      ],
       tags: ["Java", "Android"],
       img: "x4DuDJk",
       github: "https://github.com/HohShenYien/Pokedex",
