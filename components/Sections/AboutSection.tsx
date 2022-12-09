@@ -1,13 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Image,
-  SimpleGrid,
-  Text,
-  useBreakpointValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Grid, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
 import { aboutContent } from "../Content";
 import { colors } from "../../styles/variables";

@@ -19,7 +19,7 @@ const footerContent = {
   quote: "Stay Hungry, Stay Foolish",
   links: [
     { url: "/", name: "Home" },
-    { url: "/", name: "Project Archives" },
+    { url: "/projects", name: "Project Archives" },
     { url: "/", name: "Readings" },
     { url: "/", name: "Goals" },
   ],

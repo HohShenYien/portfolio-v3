@@ -6,13 +6,8 @@ import { fadeDown } from "../../Animation";
 import headers from "./headers";
 import { MainNavProps } from ".";
 import { Logo } from "../../Image";
-import { useRouter } from "next/router";
-import { useMemo } from "react";
 
-export default function DesktopNavMain({ navStyles }: MainNavProps) {
-  const router = useRouter();
-  const isHome = useMemo(() => router.pathname === "/", [router]);
-
+export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
   return (
     <Box as="header" {...navStyles} display={{ base: "none", md: "block" }}>
       <Box

@@ -4,23 +4,27 @@ import {
   DrawerBody,
   DrawerContent,
   HStack,
-  Image,
+  Link,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { MainNavProps } from ".";
+import { useCallback, useEffect, useState } from "react";
+import { MainNavProps, navigateTo } from ".";
 import { MobileNavBtn } from "..";
 import { Logo } from "../../Image";
 import headers from "./headers";
 
-export default function MobileNavMain({ navStyles }: MainNavProps) {
+export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [startAnim, setStartAnim] = useState(false);
   useEffect(() => {
     setStartAnim(isOpen);
   }, [isOpen]);
+
+  const onClick = useCallback((id: string) => {
+    setIsOpen(false);
+    navigateTo(`/#${id}`);
+  }, []);
 
   return (
     <Box as="header" {...navStyles} display={{ base: "block", md: "none" }}>
@@ -35,7 +39,10 @@ export default function MobileNavMain({ navStyles }: MainNavProps) {
               <VStack justify="center" spacing="8" as="nav">
                 {headers.map((header, index) => (
                   <Box key={header.id} overflowY="hidden">
-                    <Link href={header.id}>
+                    <Link
+                      href={isHome ? undefined : `/#${header.id}`}
+                      onClick={() => isHome && onClick(header.id)}
+                    >
                       <Text
                         fontSize="4xl"
                         color="white"

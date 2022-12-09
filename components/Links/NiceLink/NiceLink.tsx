@@ -1,5 +1,6 @@
 import { ChakraProps, Text, Link } from "@chakra-ui/react";
 import React from "react";
+import { navigateTo } from "../../NavBars/MainNav";
 import styles from "./NiceLink.module.scss";
 
 interface INiceLinkProp extends ChakraProps {
@@ -8,13 +9,6 @@ interface INiceLinkProp extends ChakraProps {
   blank?: boolean;
   isHome?: boolean;
 }
-
-const navigateTo = (href: string) => {
-  const id = href.split("#")[1];
-  document.getElementById(id)?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
 
 const NiceLink = ({
   children,

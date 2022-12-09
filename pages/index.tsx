@@ -2,6 +2,8 @@ import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import { MouseEventHandler, useState } from "react";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { generateImgurUrl } from "../components/Image";
 import { MainNavWrapper } from "../components/NavBars/MainNav";
 import {
   AboutSection,
@@ -20,14 +22,13 @@ export default function Home() {
 
   return (
     <Box as="div" bg="brand.1000" onMouseMove={onMouseMove}>
-      <Head>
-        <title>Shen Yien</title>
-        <meta
-          name="description"
-          content="Shen Yien is a fullstack web developer who specializes in delivering exceptional digital experiences"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header
+        description="Shen Yien is a fullstack web developer who specializes in delivering exceptional digital experiences"
+        image={generateImgurUrl({
+          size: "medium thumbnail",
+          imgurId: "nPrJjja",
+        })}
+      />
       <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
         <HeroSection mousePos={mousePos} />
