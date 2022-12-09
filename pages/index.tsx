@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import { MouseEventHandler, useState } from "react";
+import { Footer } from "../components/Footer";
 import { MainNavWrapper } from "../components/NavBars/MainNav";
 import {
   AboutSection,
@@ -35,6 +36,7 @@ export default function Home() {
         <ProjectSection />
         <SkillSection />
       </Box>
+      <Footer />
     </Box>
   );
 }

@@ -5,10 +5,12 @@ import { SectionTitle } from "../Texts";
 interface ISectionLayoutProp extends ChakraProps {
   children: ReactNode;
   title?: string;
+  id: string;
 }
 const SectionLayout = ({
   children,
   title,
+  id,
   ...chakraProps
 }: ISectionLayoutProp) => {
   return (
@@ -19,6 +21,7 @@ const SectionLayout = ({
       maxW="full"
       overflow={"hidden"}
       py={12}
+      id={id}
     >
       {title && <SectionTitle text={title} />}
       {children}

@@ -18,7 +18,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
   });
 
   return (
-    <SectionLayout pos="relative">
+    <SectionLayout pos="relative" id="hero">
       <Box pos="absolute" as={m.div} {...fadeIn} transitionDelay="1s" top="0">
         <BackgroundWatermark text={heroContent.watermarks.top} />
         <BackgroundWatermark text={heroContent.watermarks.middle} ml={24} />

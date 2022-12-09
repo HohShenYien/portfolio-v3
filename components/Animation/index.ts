@@ -4,3 +4,4 @@ import { CodingAbout } from "./CodingAbout";
 
 export { Avatar, AvatarMobile, CodingAbout };
 export * from "./DefaultAnimation";
+export * from "./Lottie";

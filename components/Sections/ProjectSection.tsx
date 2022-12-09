@@ -2,12 +2,13 @@ import { Box, Grid, Text, VStack } from "@chakra-ui/react";
 import { projectContent } from "../Content";
 import { SectionContent, SectionLayout } from "../Layouts";
 import { NiceLink } from "../Links";
+import headers from "../NavBars/MainNav/headers";
 import { FeaturedProject } from "../Projects";
 import { OtherProjects } from "../Projects/OtherProjects";
 
 const ProjectSection = () => {
   return (
-    <SectionLayout title="WHAT I BUILT">
+    <SectionLayout title="WHAT I BUILT" id={headers[2].id}>
       <SectionContent>
         <VStack spacing={{ md: 16, base: 12 }}>
           {projectContent.featured.map((proj, index) => (

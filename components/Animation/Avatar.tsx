@@ -179,20 +179,11 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
         }}
         onAnimationComplete={() => setRotated(true)}
       >
-        {/* Either the real / fallback images loaded will trigger animation */}
         <Image
-          src="/images/me/me.png"
-          fallback={
-            <Image
-              src="/images/me/me-low.png"
-              alt="This is me in lower resolution"
-              width="60vw"
-              onLoad={() => setImageLoaded(true)}
-            />
-          }
-          onLoad={() => setImageLoaded(true)}
-          alt="This is me"
+          src="/images/me/me-low.png"
+          alt="This is me "
           width="60vw"
+          onLoad={() => setImageLoaded(true)}
         />
       </m.div>
     </Box>

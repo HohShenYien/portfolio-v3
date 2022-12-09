@@ -9,12 +9,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
-import Lottie from "react-lottie-player";
 import { aboutContent } from "../Content";
 import { colors } from "../../styles/variables";
 import { m } from "framer-motion";
 import { CodingAbout, fadeInRight, fadeUp } from "../Animation";
-import { CustomImage } from "../Image";
+import headers from "../NavBars/MainNav/headers";
 
 const AboutSection = () => {
   const isMobile = useBreakpointValue({
@@ -23,7 +22,7 @@ const AboutSection = () => {
   });
 
   return (
-    <SectionLayout pos="relative" title="WHO I AM">
+    <SectionLayout pos="relative" title="WHO I AM" id={headers[0].id}>
       <SectionContent>
         <Grid templateColumns={{ md: "1fr 1fr", base: "1fr" }} gap={8}>
           <CodingAbout />

@@ -12,6 +12,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MainNavProps } from ".";
 import { MobileNavBtn } from "..";
+import { Logo } from "../../Image";
 import headers from "./headers";
 
 export default function MobileNavMain({ navStyles }: MainNavProps) {
@@ -62,11 +63,11 @@ export default function MobileNavMain({ navStyles }: MainNavProps) {
       >
         <Link href="/">
           <HStack alignItems="flex-end" spacing={1}>
-            <Image alt="Logo" src="/logo.svg" height={9} />
+            <Logo height={8} />
             <Text
               color="brand.400"
               fontSize="3xl"
-              fontWeight="bold"
+              fontWeight="semibold"
               lineHeight={0.75}
             >
               hen Yien

@@ -15,10 +15,6 @@ const headers = [
     title: "Skills",
     id: "skills",
   },
-  {
-    title: "Blogs",
-    id: "blogs",
-  },
 ];
 
 export default headers;

@@ -23,8 +23,20 @@ const experienceContent: { experiences: IExperienceProps[] } = {
           <NiceLink href="https://loopfoods.app/">web application</NiceLink> via
           API and webhooks
         </>,
+        <>
+          Started the migration of existing code base from Nest.js to TRPC and
+          from React to Next.js
+        </>,
       ],
-      techs: ["Nestjs", "Next.js", "React", "Django", "Stripe"],
+      techs: [
+        "Nestjs",
+        "Next.js",
+        "TRPC",
+        "React",
+        "Prisma",
+        "Django",
+        "Stripe",
+      ],
       logo: "aCaRVRv",
       angle: -20,
     },

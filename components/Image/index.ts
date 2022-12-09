@@ -1,5 +1,6 @@
 import ImageViewer from "./ImageViewer";
 import CustomImage from "./CustomImage";
+import Logo from "./Logo";
 
 export type ImgurSize =
   | "small square"
@@ -12,4 +13,4 @@ export type ImgurSize =
 
 export * from "./utils";
 
-export { CustomImage, ImageViewer };
+export { CustomImage, ImageViewer, Logo };

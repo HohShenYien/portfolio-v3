@@ -6,19 +6,29 @@ interface INiceLinkProp extends ChakraProps {
   children?: React.ReactNode;
   href: string;
   blank?: boolean;
+  isHome?: boolean;
 }
+
+const navigateTo = (href: string) => {
+  const id = href.split("#")[1];
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
 
 const NiceLink = ({
   children,
   href,
   blank = false,
+  isHome,
   ...chakraProps
 }: INiceLinkProp) => {
   return (
     <Link
-      href={href}
+      href={isHome ? undefined : href}
       className={styles["nice-link"]}
       target={blank ? "_blank" : "_self"}
+      onClick={() => isHome && navigateTo(href)}
     >
       <Text
         color="brand.400"

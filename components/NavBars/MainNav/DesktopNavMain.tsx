@@ -5,27 +5,33 @@ import { m } from "framer-motion";
 import { fadeDown } from "../../Animation";
 import headers from "./headers";
 import { MainNavProps } from ".";
+import { Logo } from "../../Image";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 
 export default function DesktopNavMain({ navStyles }: MainNavProps) {
+  const router = useRouter();
+  const isHome = useMemo(() => router.pathname === "/", [router]);
+
   return (
     <Box as="header" {...navStyles} display={{ base: "none", md: "block" }}>
       <Box
         maxW="7xl"
         mx="auto"
         display="flex"
-        py="2"
+        py="4"
         alignItems="center"
         justifyContent="space-between"
         px={{ base: 6, "2xl": 0 }}
       >
         <Link href="/">
           <HStack alignItems="flex-end" spacing={1}>
-            <Image alt="Logo" src="/logo.svg" height={12} />
+            <Logo />
             <Text
               color="brand.400"
               fontSize="4xl"
-              fontWeight="bold"
-              lineHeight={1}
+              fontWeight="semibold"
+              lineHeight={0.75}
             >
               hen Yien
             </Text>
@@ -42,7 +48,7 @@ export default function DesktopNavMain({ navStyles }: MainNavProps) {
                 fontSize="sm"
                 fontWeight="light"
               >
-                <NiceLink href={`#${header.id}`} color="white">
+                <NiceLink href={`/#${header.id}`} color="white" isHome={isHome}>
                   {header.title}
                 </NiceLink>
               </Box>
