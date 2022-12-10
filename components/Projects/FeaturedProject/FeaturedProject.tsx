@@ -1,6 +1,6 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
-import { colors } from "../../../styles/variables";
-import { fadeUp } from "../../Animation";
+import { colors } from "styles/variables";
+import { fadeUp } from "components/Animation";
 import { m } from "framer-motion";
 import { IProject } from "..";
 import FeaturedProjectImage from "./FeaturedProjectImage";

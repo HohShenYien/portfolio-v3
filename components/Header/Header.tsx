@@ -9,7 +9,7 @@ interface IHeaderProps {
 const Header = ({ description, title, image }: IHeaderProps) => {
   return (
     <Head>
-      <title>{title && `${title} | `}Shen Yien</title>
+      <title>{(title ? `${title} | ` : "") + "Shen Yien"}</title>
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
@@ -18,7 +18,7 @@ const Header = ({ description, title, image }: IHeaderProps) => {
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:title"
-        content={(title && `${title} | `) + "Shen Yien"}
+        content={(title ? `${title} | ` : "") + "Shen Yien"}
       />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />

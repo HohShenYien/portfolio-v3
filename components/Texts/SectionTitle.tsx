@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 interface ISectionTitleProp {
   text: string;
@@ -6,30 +6,20 @@ interface ISectionTitleProp {
 
 const SectionTitle = ({ text }: ISectionTitleProp) => {
   return (
-    <Box
-      pos="relative"
-      _before={{
-        content: '""',
-        width: "50px",
-        height: "2px",
-        backgroundColor: "whiteAlpha.800",
-        position: "absolute",
-        left: "0",
-        top: "50%",
-        transform: "translateY(-50%)",
-      }}
-      pl={"70px"}
-    >
+    <Flex pos="relative" alignItems="center">
+      <Box bg="whiteAlpha.800" h="2px" w="16" />
       <Text
         as="h2"
         color="whiteAlpha.800"
         fontSize={{ md: "4xl", base: "xl" }}
         letterSpacing={{ md: "6px", base: "4px" }}
         fontWeight="medium"
+        display="inline-block"
+        mx={4}
       >
         {text}
       </Text>
-    </Box>
+    </Flex>
   );
 };
 

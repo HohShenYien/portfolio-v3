@@ -12,4 +12,13 @@ export interface IProject {
   link?: string;
 }
 
+export interface IProjectArchive extends IProject {
+  year: number;
+  location: string;
+}
+
+export interface IProjectArchives extends Record<string, IProjectArchive[]> {}
+
+export * from "./ProjectArchives";
+
 export { FeaturedProject, OtherProjects };

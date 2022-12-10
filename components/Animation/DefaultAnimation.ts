@@ -16,7 +16,7 @@ const fadeInRight: IAnimation = {
     translateX: 0,
     opacity: 1,
   },
-  transition: "all ease-in 0.25s",
+  transition: "all linear 0.2s",
 };
 
 const fadeInLeft: IAnimation = {
@@ -30,12 +30,12 @@ const fadeInLeft: IAnimation = {
     translateX: 0,
     opacity: 1,
   },
-  transition: "all ease-in 0.25s",
+  transition: "all linear 0.2s",
 };
 
 const fadeUp: IAnimation = {
   initial: {
-    translateY: 60,
+    translateY: 30,
     opacity: 0,
   },
   // @ts-ignore
@@ -44,7 +44,7 @@ const fadeUp: IAnimation = {
     translateY: 0,
     opacity: 1,
   },
-  transition: "all linear 0.3s",
+  transition: "all linear 0.2s",
 };
 
 const fadeDown: IAnimation = {

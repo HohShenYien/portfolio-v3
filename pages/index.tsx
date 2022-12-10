@@ -1,17 +1,16 @@
 import { Box } from "@chakra-ui/react";
-import Head from "next/head";
 import { MouseEventHandler, useState } from "react";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { generateImgurUrl } from "../components/Image";
-import { MainNavWrapper } from "../components/NavBars/MainNav";
+import { Footer } from "components/Footer";
+import { Header } from "components/Header";
+import { generateImgurUrl, ImageViewer } from "components/Image";
+import { MainNavWrapper } from "components/NavBars/MainNav";
 import {
   AboutSection,
   ExperienceSection,
   HeroSection,
   ProjectSection,
   SkillSection,
-} from "../components/Sections";
+} from "components/Sections";
 
 export default function Home() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -25,10 +24,11 @@ export default function Home() {
       <Header
         description="Shen Yien is a fullstack web developer who specializes in delivering exceptional digital experiences"
         image={generateImgurUrl({
-          size: "medium thumbnail",
+          size: "large thumbnail",
           imgurId: "nPrJjja",
         })}
       />
+      <ImageViewer />
       <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
         <HeroSection mousePos={mousePos} />

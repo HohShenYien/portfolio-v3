@@ -6,7 +6,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import { colors } from "../../styles/variables";
+import { colors } from "styles/variables";
 import { NiceLink } from "../Links";
 import { IExperienceProps } from ".";
 import { ReactNode } from "react";

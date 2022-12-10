@@ -1,7 +1,7 @@
 import { Grid, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
 import { aboutContent } from "../Content";
-import { colors } from "../../styles/variables";
+import { colors } from "styles/variables";
 import { m } from "framer-motion";
 import { CodingAbout, fadeInRight, fadeUp } from "../Animation";
 import headers from "../NavBars/MainNav/headers";

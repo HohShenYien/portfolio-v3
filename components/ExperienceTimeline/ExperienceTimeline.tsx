@@ -1,7 +1,7 @@
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import { m, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { colors } from "../../styles/variables";
+import { colors } from "styles/variables";
 import { experienceContent } from "../Content";
 import TimelineItem from "./TimelineItem";
 import { spaceBetween } from "./timelineVariables";

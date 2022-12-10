@@ -1,7 +1,7 @@
 import { Box, Image, PositionProps } from "@chakra-ui/react";
 import { m } from "framer-motion";
 import { useMemo } from "react";
-import { colors } from "../../../styles/variables";
+import { colors } from "styles/variables";
 
 interface ILangBubbleProps extends PositionProps {
   w?: number;

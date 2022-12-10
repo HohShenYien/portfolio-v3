@@ -79,7 +79,7 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
       mousePos.y
     );
     const motion = distance / 10;
-    return 60 - Math.min(Math.max(0, motion), 60);
+    return 60 - motion > 20 ? 60 : 0;
   }, [mousePos, avatarLoc]);
 
   return (

@@ -1,0 +1,17 @@
+.container {
+  .image {
+    transform: scale(1);
+    aspect-ratio: 4 / 3;
+    transition: all linear 100ms;
+  }
+  &:hover {
+    .image {
+      transform: scale(1.3);
+    }
+    .imageContainer {
+      &::after {
+        opacity: 0.2;
+      }
+    }
+  }
+}

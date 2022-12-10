@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Lottie from "react-lottie-player";
-import { colors } from "../../../styles/variables";
-import { peace } from "../../Animation";
+import { colors } from "styles/variables";
+import { Peace, peace } from "components/Animation";
 
 const footerContent = {
   copyright: (
@@ -13,7 +13,8 @@ const footerContent = {
       fontSize={{ base: "sm", md: "md" }}
     >
       © 2022 No rights reserved. We live in a free world{" "}
-      <Lottie loop play animationData={peace} style={{ height: 40 }} />
+      {/* <Lottie animationData={peace} style={{ height: 40 }} /> */}
+      <Peace />
     </Box>
   ),
   quote: "Stay Hungry, Stay Foolish",

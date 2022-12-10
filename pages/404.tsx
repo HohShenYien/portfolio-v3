@@ -1,11 +1,11 @@
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Lottie from "react-lottie-player";
-import { error404, fadeIn, fadeUp } from "../components/Animation";
-import { Footer } from "../components/Footer";
-import { ArrowLink } from "../components/Links";
-import { MainNavWrapper } from "../components/NavBars/MainNav";
-import { colors } from "../styles/variables";
+import { error404, fadeIn, fadeUp } from "components/Animation";
+import { Footer } from "components/Footer";
+import { ArrowLink } from "components/Links";
+import { MainNavWrapper } from "components/NavBars/MainNav";
+import { colors } from "styles/variables";
 import { m } from "framer-motion";
 
 export default function Home() {

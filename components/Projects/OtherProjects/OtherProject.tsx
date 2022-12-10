@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, Icon, Text, VStack } from "@chakra-ui/react";
-import { colors } from "../../../styles/variables";
+import { colors } from "styles/variables";
 import { generateImgurUrl } from "../../Image";
-import { useImageStore } from "../../../store";
+import { useImageStore } from "store";
 import { IProject } from "..";
 import { getProjectIcon } from "./utils";
 import ProjectLinks from "../ProjectLinks";
