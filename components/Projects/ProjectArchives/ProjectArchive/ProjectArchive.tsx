@@ -7,8 +7,9 @@ import {
   Text,
   Image,
   Tooltip,
+  AspectRatio,
 } from "@chakra-ui/react";
-import { generateImgurUrl } from "components/Image";
+import { generateImgurUrl, ImgurImage } from "components/Image";
 import { IProjectArchive } from "../..";
 import { getProjectIcon } from "../../OtherProjects/utils";
 import ProjectLinks from "../../ProjectLinks";
@@ -17,14 +18,14 @@ import style from "./ProjectArchive.module.scss";
 const ProjectArchive = ({
   name,
   type,
-  descriptions,
   tags,
   img,
   github,
   link,
 }: IProjectArchive) => {
   return (
-    <Box
+    <Flex
+      flexDir="column"
       bgColor="brand.950"
       pos="relative"
       h="100%"
@@ -51,13 +52,15 @@ const ProjectArchive = ({
         pos="relative"
         className={style.imageContainer}
       >
-        <Image
-          src={generateImgurUrl({ size: "large thumbnail", imgurId: img })}
+        <ImgurImage
+          imgurId={img}
           alt={name}
           className={style.image}
+          size="large thumbnail"
+          aspectRatio={4 / 3}
         />
       </Box>
-      <Box px={6} py={3}>
+      <Flex px={6} py={3} flex={1} flexDir="column">
         <HStack mb={2}>
           <Tooltip label={type} placement="top">
             <Icon as={getProjectIcon(type)} color="brand.400" boxSize={12} />
@@ -68,27 +71,22 @@ const ProjectArchive = ({
         <Text color="gray.200" fontSize="xl" fontWeight="semibold" as="h3">
           {name}
         </Text>
-        {/* <VStack alignItems="flex-start" color={colors.text}>
-          {descriptions.map((description, idx) => (
-            <Text key={idx}>{description}</Text>
-          ))}
-        </VStack> */}
         <Box flex="1" />
-        <HStack flexWrap="wrap" mt={8} spacing={2}>
+        <Flex flexWrap="wrap" mt={8}>
           {tags.map((tag, index) => (
             <Text
               key={index}
               color="gray.500"
-              mr={2}
+              mr={4}
               fontSize="sm"
               fontFamily="mono"
             >
               {tag}
             </Text>
           ))}
-        </HStack>
-      </Box>
-    </Box>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 

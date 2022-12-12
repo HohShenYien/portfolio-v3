@@ -7,8 +7,6 @@ import {
 } from "@chakra-ui/react";
 import { ImgurSize, generateImgurUrl, generateFallbackSrc } from ".";
 import { m } from "framer-motion";
-import { useCallback, useMemo } from "react";
-import { useImageStore } from "../../store";
 
 interface ImageProps extends ChakraProps, React.ComponentProps<As> {
   imgurId?: string; // imgur id
@@ -18,10 +16,9 @@ interface ImageProps extends ChakraProps, React.ComponentProps<As> {
   src?: string;
   fallbackSrc?: string;
   aspectRatio?: number;
-  canOpen?: boolean;
 }
 
-const CustomImage = forwardRef(
+const ImgurImage = forwardRef(
   (
     {
       imgurId,
@@ -31,29 +28,16 @@ const CustomImage = forwardRef(
       src,
       fallbackSrc,
       aspectRatio,
-      canOpen = true,
       ...props
     }: ImageProps,
     ref
   ) => {
-    const imgSrc = useMemo(() => {
-      // @ts-ignore
-      return src ?? generateImgurUrl({ size, imgurId, format });
-    }, [size, imgurId, format, src]);
-    const imageStore = useImageStore();
-
-    const openImg = useCallback(() => {
-      if (!canOpen) return;
-      const fullSrc =
-        // @ts-ignore
-        src ?? generateImgurUrl({ size: "full", imgurId, format });
-      imageStore?.setSrc?.(fullSrc);
-    }, [format, imageStore, imgurId, src, canOpen]);
+    // @ts-ignore
+    const imgSrc = src ?? generateImgurUrl({ size, imgurId, format });
 
     const image = (
       <>
         <Image
-          onClick={openImg}
           {...props}
           alt={alt}
           // @ts-ignore
@@ -67,7 +51,6 @@ const CustomImage = forwardRef(
           as={m.img}
           layoutId={imgSrc}
           ref={ref}
-          cursor={canOpen ? "pointer" : ""}
         />
       </>
     );
@@ -79,6 +62,6 @@ const CustomImage = forwardRef(
   }
 );
 
-CustomImage.displayName = "Custom Image";
+ImgurImage.displayName = "Custom Image";
 
-export default CustomImage;
+export default ImgurImage;

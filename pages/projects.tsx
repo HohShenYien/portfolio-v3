@@ -8,6 +8,7 @@ import { generateImgurUrl } from "components/Image";
 import { SectionLayout, SectionContent } from "components/Layouts";
 import { MainNavWrapper } from "components/NavBars/MainNav";
 import { ProjectArchives } from "components/Projects";
+import { ProjectViewer } from "components/Projects";
 import { m } from "framer-motion";
 
 export default function Project() {
@@ -22,11 +23,12 @@ export default function Project() {
         })}
       />
       <MainNavWrapper />
+      <ProjectViewer />
       <Box as="main" minH="100vh" pt={12}>
         <SectionLayout id="projects">
           <SectionContent>
             <Text
-              fontSize="5xl"
+              fontSize={{ md: "5xl", base: "3xl" }}
               fontWeight="semibold"
               color="whiteAlpha.800"
               textAlign="center"
@@ -38,7 +40,7 @@ export default function Project() {
             <Text
               color="brand.300"
               fontFamily="mono"
-              fontSize="xl"
+              fontSize={{ md: "xl", base: "lg" }}
               textAlign="center"
               mb={2}
               as={m.p}

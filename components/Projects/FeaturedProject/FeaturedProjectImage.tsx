@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { useImageStore } from "store";
 import { colors } from "styles/variables";
-import { CustomImage, generateImgurUrl } from "../../Image";
+import { ImgurImage, generateImgurUrl } from "components/Image";
 import style from "./FeaturedProjectImage.module.scss";
 
 interface IFeaturedProjectImageProp {
@@ -34,7 +34,7 @@ const FeaturedProjectImage = ({ image, alt }: IFeaturedProjectImageProp) => {
         }
         cursor="pointer"
       />
-      <CustomImage
+      <ImgurImage
         imgurId={image}
         alt={alt}
         width="100%"

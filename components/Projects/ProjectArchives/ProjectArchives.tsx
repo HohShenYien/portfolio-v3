@@ -14,7 +14,7 @@ const ProjectArchives = ({ projects }: IProjectArchivesProps) => {
       {Object.keys(projects)
         .sort((a, b) => +b - +a)
         .map((year) => (
-          <Box key={year} mt={12} pos="relative">
+          <Box key={year} mt={{ md: 12, base: 20 }} pos="relative">
             <Text
               color="brand.500"
               fontWeight="medium"

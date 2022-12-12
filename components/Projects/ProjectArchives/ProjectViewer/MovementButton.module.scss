@@ -1,0 +1,22 @@
+$transition-time: 100ms;
+.image {
+  .container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $transition-time ease-in;
+    .button {
+      transform: translateY(-50%);
+      border-radius: 999px;
+      background-color: #fff;
+    }
+  }
+  &:hover {
+    .container {
+      background-color: #0001;
+    }
+  }
+}

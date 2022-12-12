@@ -4,7 +4,8 @@ import { spaceBetween } from "./timelineVariables";
 import ExperienceDescription from "./ExperienceDescription";
 import { IExperienceProps } from ".";
 import { useEffect, useRef, useState } from "react";
-import { CustomImage, generateImgurUrl } from "../Image";
+import { ImgurImage, generateImgurUrl } from "../Image";
+import { useImageStore } from "store";
 
 interface ITimelineItem extends IExperienceProps {
   timelinePosition: number;
@@ -20,6 +21,8 @@ const TimelineItem = ({
 
   const pic = useRef<HTMLImageElement>(null);
   const { image, name } = company;
+
+  const setSrc = useImageStore((state) => state.setSrc);
 
   useEffect(() => {
     const rect = bubble.current?.getBoundingClientRect() ?? {
@@ -55,12 +58,16 @@ const TimelineItem = ({
           }}
           animate={activated ? { rotate: props.angle, opacity: 1 } : {}}
         >
-          <CustomImage
+          <ImgurImage
             imgurId={image.id}
             format={image.format}
             alt={name}
             ref={pic}
             aspectRatio={4 / 3}
+            cursor="pointer"
+            onClick={() =>
+              setSrc?.(generateImgurUrl({ size: "full", imgurId: image.id }))
+            }
           />
         </m.div>
       </Box>
@@ -80,17 +87,13 @@ const TimelineItem = ({
           transition="background-color ease-in 300ms"
           ref={bubble}
         >
-          <AspectRatio ratio={1}>
-            <Image
-              src={generateImgurUrl({
-                size: "small square",
-                imgurId: props.logo,
-              })}
-              alt={name}
-              rounded="full"
-              objectPosition="center center"
-            />
-          </AspectRatio>
+          <ImgurImage
+            imgurId={props.logo}
+            size="small square"
+            alt={name}
+            rounded="full"
+            objectPosition="center center"
+          />
         </Box>
       </ExperienceDescription>
     </Grid>

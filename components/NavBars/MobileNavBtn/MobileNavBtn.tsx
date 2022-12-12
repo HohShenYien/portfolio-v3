@@ -1,10 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import styles from "./MobileNavBtn.module.scss";
-import { Dispatch, SetStateAction } from "react";
 import { m } from "framer-motion";
 
 interface IMobileNavBtnProp {
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsOpen: (value: boolean) => void;
   isOpen: boolean;
 }
 

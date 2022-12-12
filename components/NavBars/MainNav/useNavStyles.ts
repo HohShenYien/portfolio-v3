@@ -1,14 +1,12 @@
 import { ChakraProps } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { useImageStore } from "../../../store";
 
 const useNavStyles = (): ChakraProps => {
   const [{ prev, cur }, setScrollPos] = useState({
     prev: 0,
     cur: 0,
   });
-  const imageStore = useImageStore();
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
@@ -38,10 +36,7 @@ const useNavStyles = (): ChakraProps => {
     };
   }, [scrollAfter100, goingDown]);
 
-  const zIndex = useMemo(
-    () => (imageStore?.isOpen ? "99" : "1500"),
-    [imageStore]
-  );
+  const zIndex = 1500;
 
   return {
     ...scrollAffectedStyles,
@@ -49,7 +44,7 @@ const useNavStyles = (): ChakraProps => {
     top: "0",
     left: "0",
     right: "0",
-    zIndex,
+    zIndex: 1100,
     transition: "all ease-in 200ms",
   };
 };

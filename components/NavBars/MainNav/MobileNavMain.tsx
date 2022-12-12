@@ -8,23 +8,24 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MainNavProps, navigateTo } from ".";
 import { MobileNavBtn } from "..";
 import { Logo } from "../../Image";
 import headers from "./headers";
 
 export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
-  const [isOpen, setIsOpen] = useState(false);
   const [startAnim, setStartAnim] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     setStartAnim(isOpen);
   }, [isOpen]);
 
-  const onClick = useCallback((id: string) => {
+  const onClick = (id: string) => {
     setIsOpen(false);
     navigateTo(`/#${id}`);
-  }, []);
+  };
 
   return (
     <Box as="header" {...navStyles} display={{ base: "block", md: "none" }}>
@@ -33,7 +34,12 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
         onClose={() => setIsOpen(false)}
         isOpen={isOpen}
       >
-        <DrawerContent bg="brand.1000" minH="full">
+        <DrawerContent
+          bg="brand.1000"
+          minH="full"
+          style={{ zIndex: 1000 }}
+          containerProps={{ zIndex: 1000 }}
+        >
           <DrawerBody>
             <VStack pt="100px">
               <VStack justify="center" spacing="8" as="nav">

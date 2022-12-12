@@ -185,19 +185,6 @@ const projectContent: ProjectContentContent = {
       img: "kUUpawE",
       github: "https://github.com/HohShenYien/Pomodoro_Focus",
     },
-    {
-      name: "Pokedex",
-      type: "Mobile Application",
-      descriptions: [
-        <Text key={0}>
-          A simple Pokedex Android application which was my first attempt in
-          building Android app.
-        </Text>,
-      ],
-      tags: ["Java", "Android"],
-      img: "x4DuDJk",
-      github: "https://github.com/HohShenYien/Pokedex",
-    },
   ],
 };
 export default projectContent;

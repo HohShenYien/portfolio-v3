@@ -24,7 +24,7 @@ const ProjectSection = () => {
           >
             Some Other Interesting Projects
           </Text>
-          <NiceLink href="#">Project Archives</NiceLink>
+          <NiceLink href="/projects">Project Archives</NiceLink>
         </Box>
         <OtherProjects projects={projectContent.others} />
       </SectionContent>

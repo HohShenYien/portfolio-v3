@@ -30,6 +30,11 @@ const theme = extendTheme({
     body: `Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
     mono: `"Fira Code", monospace`,
   },
+  components: {
+    Drawer: {
+      zIndex: 1000,
+    },
+  },
 });
 
 export default function App({ Component, pageProps }: AppProps) {
