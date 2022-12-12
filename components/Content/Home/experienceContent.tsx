@@ -57,8 +57,8 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Developed a customizable{" "}
-          <Highlighter text="Vendor Self Registration Form" /> to aid business
-          users collecting info from their procurement vendors.
+          <Highlighter>Vendor Self Registration Form</Highlighter> to aid
+          business users collecting info from their procurement vendors.
         </>,
         <>Reduced the loading time of the system by over 1 second.</>,
         <>
@@ -70,8 +70,9 @@ const experienceContent: { experiences: IExperienceProps[] } = {
           experience.
         </>,
         <>
-          Integrated <Highlighter text="QuickBooks & XERO" /> API and webhook
-          into the system which receives over thousand of usages each month.
+          Integrated <Highlighter>QuickBooks & XERO</Highlighter> API and
+          webhook into the system which receives over thousand of usages each
+          month.
         </>,
       ],
       techs: ["Tailwind", "Laravel", "Vue.js", "PHP"],
@@ -98,8 +99,8 @@ const experienceContent: { experiences: IExperienceProps[] } = {
           <NiceLink href="https://coffeeathome.quintagen.com" blank>
             web application
           </NiceLink>{" "}
-          for Starbucks&rsquo; <Highlighter text="Coffee at Home" /> Event that
-          receives more than 14k usages.
+          for Starbucks&rsquo; <Highlighter>Coffee at Home</Highlighter> Event
+          that receives more than 14k usages.
         </>,
         <>
           Built and maintained E-Commerce Websites with thousands of

@@ -30,6 +30,7 @@ const ProjectArchive = ({
       pos="relative"
       h="100%"
       transition={"all ease-out 100ms"}
+      cursor="pointer"
       _hover={{
         transform: "translateY(-8px)",
         bgColor: "brand.900",

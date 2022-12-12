@@ -51,7 +51,7 @@ const ProjectViewerContent = ({
         <Text color="gray.400" fontSize="2xl" fontWeight="semibold" mt={-1}>
           {name}
         </Text>
-        <VStack mt={4}>
+        <VStack mt={4} alignItems="flex-start">
           {descriptions.map((description, index) => (
             <Text color={colors.text} key={index}>
               {description}

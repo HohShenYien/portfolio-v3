@@ -23,10 +23,10 @@ const projectContent: ProjectContentContent = {
           focus on residents&apos; personal safety.
         </Text>,
         <Text key={1}>
-          It consists of <Highlighter text="Prototype Design" />,{" "}
-          <Highlighter text="Business Proposal" />, and a{" "}
-          <Highlighter text="Working Prototype" />. In the end, we managed to
-          come out as champion of the hackathon🏆.
+          It consists of <Highlighter>Prototype Design</Highlighter>,{" "}
+          <Highlighter>Business Proposal</Highlighter>, and a{" "}
+          <Highlighter>Working Prototype</Highlighter>. In the end, we managed
+          to come out as champion of the hackathon🏆.
         </Text>,
       ],
       tags: ["Django", "React Native"],
@@ -38,14 +38,15 @@ const projectContent: ProjectContentContent = {
       type: "Web Application",
       descriptions: [
         <Text key={0}>
-          A <Highlighter text="digital solution" /> in replacing traditional pen
-          & paper forms for large companies in collecting & registering their
-          vendors information.
+          A <Highlighter>digital solution</Highlighter> in replacing traditional
+          pen & paper forms for large companies in collecting & registering
+          their vendors information.
         </Text>,
         <Text key={1}>
-          This module features a <Highlighter text="fully customizable" /> form
-          like Google Form, but more! It <Highlighter text="prefills" /> data
-          collected into new entities while remaining fully fluid and dynamic.
+          This module features a <Highlighter>fully customizable</Highlighter>{" "}
+          form like Google Form, but more! It{" "}
+          <Highlighter>prefills</Highlighter> data collected into new entities
+          while remaining fully fluid and dynamic.
         </Text>,
       ],
       tags: ["Vue", "Laravel", "Tailwind"],
@@ -57,13 +58,13 @@ const projectContent: ProjectContentContent = {
       descriptions: [
         <Text key={0}>
           Started off as an E-Album builder, developed into a{" "}
-          <Highlighter text="wix-like" /> template based website editor.
+          <Highlighter>wix-like</Highlighter> template based website editor.
         </Text>,
         <Text key={1}>
           It features a dynamic, online{" "}
-          <Highlighter text="personal webpage editor" /> with a straight forward
-          user interface to allow users customizing their own event website
-          easily.
+          <Highlighter>personal webpage editor</Highlighter> with a straight
+          forward user interface to allow users customizing their own event
+          website easily.
         </Text>,
       ],
       tags: ["Vue", "Laravel", "Vuetify"],
@@ -76,8 +77,8 @@ const projectContent: ProjectContentContent = {
       descriptions: [
         <Text key={0}>
           Coffee At Home is an experimental journey in Malaysia held by none
-          other than <Highlighter text="Starbucks" />. As of 2023, more than 14k
-          Malaysians have participated in the event using this application.
+          other than <Highlighter>Starbucks</Highlighter>. As of 2023, more than
+          14k Malaysians have participated in the event using this application.
         </Text>,
         <Text key={1}>
           It features a user-friendly event interface in guiding the users from
@@ -100,9 +101,9 @@ const projectContent: ProjectContentContent = {
       type: "Desktop Application",
       descriptions: [
         <Text key={0}>
-          An attempt to practise <Highlighter text="Rust" /> and{" "}
-          <Highlighter text="Angular" /> by building a simple Pomodoro desktop
-          app.
+          An attempt to practise <Highlighter>Rust</Highlighter> and{" "}
+          <Highlighter>Angular</Highlighter> by building a simple Pomodoro
+          desktop app.
         </Text>,
       ],
       tags: ["Angular", "Tauri", "Rust"],
@@ -115,8 +116,8 @@ const projectContent: ProjectContentContent = {
       descriptions: [
         <Text key={0}>
           A utility app that helps my club in{" "}
-          <Highlighter text="bulk sending emails" /> and certificates to event
-          participants.
+          <Highlighter>bulk sending emails</Highlighter> and certificates to
+          event participants.
         </Text>,
       ],
       tags: ["Vue", "Electron", "Vuetify", "Flask"],
@@ -160,8 +161,8 @@ const projectContent: ProjectContentContent = {
       type: "Desktop Application",
       descriptions: [
         <Text key={0}>
-          A chatbot that recommends on <Highlighter text="users' diet" /> based
-          on disease names and symptoms.
+          A chatbot that recommends on <Highlighter>users' diet</Highlighter>{" "}
+          based on disease names and symptoms.
         </Text>,
         <Text key={1}>
           Made for my universiy assignment with own chatbot implementation.

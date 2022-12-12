@@ -21,8 +21,8 @@ const footerContent = {
   links: [
     { url: "/", name: "Home" },
     { url: "/projects", name: "Project Archives" },
-    { url: "/", name: "Readings" },
-    { url: "/", name: "Goals" },
+    { url: "/readings", name: "Readings" },
+    // { url: "/", name: "Goals" },
   ],
   socials: [
     { url: "https://github.com/HohShenYien", icon: "github" },

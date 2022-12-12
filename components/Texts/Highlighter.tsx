@@ -1,12 +1,13 @@
 import { Text, Mark } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import { colors } from "styles/variables";
 
 interface IHighlighterProp {
-  text: string;
   color?: string;
+  children?: ReactNode;
 }
 
-const Highlighter = ({ text, color = colors.text }: IHighlighterProp) => {
+const Highlighter = ({ color = colors.text, children }: IHighlighterProp) => {
   return (
     <Mark
       color={color}
@@ -35,7 +36,7 @@ const Highlighter = ({ text, color = colors.text }: IHighlighterProp) => {
       cursor={"default"}
     >
       <Text as="span" pos="relative" display="inline" zIndex={1}>
-        {text}
+        {children}
       </Text>
     </Mark>
   );

@@ -1,4 +1,6 @@
+@import "/styles/variables.scss";
 $transition-time: 100ms;
+
 .image {
   .container {
     display: flex;
@@ -8,15 +10,54 @@ $transition-time: 100ms;
     align-items: center;
     justify-content: center;
     transition: background-color $transition-time ease-in;
+    animation: hideContainer calc($transition-time * 20) ease-in;
+    cursor: pointer;
     .button {
+      transition: all $transition-time ease-in;
       transform: translateY(-50%);
       border-radius: 999px;
-      background-color: #fff;
+      background-color: $brand-100;
+      animation: hideButton calc($transition-time * 20) ease-in;
+      opacity: 0;
+      &:hover {
+        background-color: $brand-300;
+      }
     }
   }
   &:hover {
     .container {
-      background-color: #0001;
+      background-color: #0004;
     }
+    .button {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes hideButton {
+  0% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hideContainer {
+  0% {
+    background-color: #0004;
+  }
+
+  95% {
+    background-color: #0004;
+  }
+
+  100% {
+    background-color: #0000;
   }
 }

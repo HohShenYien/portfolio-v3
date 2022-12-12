@@ -4,6 +4,7 @@ import { IProjectArchive } from "components/Projects";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ReactNode, useMemo } from "react";
 import { useProjectViewerStore } from "store";
+import { colors } from "styles/variables";
 import style from "./MovementButton.module.scss";
 
 interface IProjectViewerContainerProps {
@@ -53,8 +54,11 @@ const ProjectViewerContainer = ({
           >
             <IconButton
               aria-label="Previous Project"
-              icon={<ChevronLeft size="36px" color="#DDD" />}
+              icon={<ChevronLeft size="36px" color={colors.brand[500]} />}
               className={style.button}
+              _focusVisible={{
+                outlineColor: "brand.400",
+              }}
             />
           </Box>
         )}
@@ -67,8 +71,11 @@ const ProjectViewerContainer = ({
           >
             <IconButton
               aria-label="Next Project"
-              icon={<ChevronRight size="36px" color="#DDD" />}
+              icon={<ChevronRight size="36px" color={colors.brand[500]} />}
               className={style.button}
+              _focusVisible={{
+                outlineColor: "brand.400",
+              }}
             />
           </Box>
         )}

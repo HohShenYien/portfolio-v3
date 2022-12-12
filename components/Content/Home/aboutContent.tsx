@@ -5,7 +5,7 @@ import { Highlighter } from "../../Texts";
 const aboutContent = {
   descriptions: [
     <>
-      Hello! My name is <Highlighter text="Shen Yien" /> and I&apos;m a
+      Hello! My name is <Highlighter>Shen Yien</Highlighter> and I&apos;m a
       Malaysian fullstack developer specializing in Laravel & Vue. My journey
       began with solving problems from{" "}
       <NiceLink href="https://projecteuler.net/">The Euler Project</NiceLink>{" "}
@@ -17,9 +17,9 @@ const aboutContent = {
       <NiceLink href="https://www.quintagen.com/">software house</NiceLink>, a{" "}
       <NiceLink href="https://www.mindworks.xyz/">technology agency</NiceLink>,
       and a <NiceLink href="https://adam-procure.com/">SaaS start-up</NiceLink>.
-      Currently, I focus on developing <Highlighter text="Web Applications" />{" "}
-      that solve users&apos; pain points and make world a better place to live
-      in!
+      Currently, I focus on developing{" "}
+      <Highlighter>Web Applications</Highlighter> that solve users&apos; pain
+      points and make world a better place to live in!
     </>,
     <>
       I also maintain a <NiceLink href="#">blog</NiceLink> about my journey as a
