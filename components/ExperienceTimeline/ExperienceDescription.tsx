@@ -55,7 +55,6 @@ const ExperienceDescription = ({
             </Text>
             <NiceLink
               href={company.url}
-              blank
               fontWeight={{ base: "normal", md: "inherit" }}
               fontSize={{ base: "md", md: "inherit" }}
             >

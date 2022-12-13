@@ -15,7 +15,12 @@ const useScrollSeqAnimation = ({ ref, animation }: ScrollSeqAnimationProps) => {
     isOnScreen && controls.start(animation);
   }, [controls, isOnScreen, animation]);
 
-  return controls;
+  return {
+    ...controls,
+    startNow: () => {
+      controls.start(animation);
+    },
+  };
 };
 
 export default useScrollSeqAnimation;

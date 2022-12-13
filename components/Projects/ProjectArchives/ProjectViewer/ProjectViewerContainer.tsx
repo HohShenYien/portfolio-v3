@@ -3,7 +3,7 @@ import { ImgurImage } from "components/Image";
 import { IProjectArchive } from "components/Projects";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ReactNode, useMemo } from "react";
-import { useProjectViewerStore } from "store";
+import { useViewerStore } from "store";
 import { colors } from "styles/variables";
 import style from "./MovementButton.module.scss";
 
@@ -16,8 +16,7 @@ const ProjectViewerContainer = ({
   project,
   children,
 }: IProjectViewerContainerProps) => {
-  const { onClose, canPrev, canNext, prev, next, index } =
-    useProjectViewerStore();
+  const { onClose, canPrev, canNext, prev, next, index } = useViewerStore();
 
   const canGoNext = useMemo(() => {
     console.log(canNext?.());

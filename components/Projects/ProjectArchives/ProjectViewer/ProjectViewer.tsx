@@ -1,29 +1,11 @@
-import {
-  Modal,
-  ModalContent,
-  ModalOverlay,
-  Box,
-  Grid,
-  Text,
-  Flex,
-  HStack,
-  VStack,
-  Tooltip,
-  Icon,
-} from "@chakra-ui/react";
+import { Modal, ModalContent, ModalOverlay, Box } from "@chakra-ui/react";
 import { projectArchives } from "components/Content";
-import { Dot } from "components/Extra";
-import { ImgurImage } from "components/Image";
-import { useProjectViewerStore } from "store";
-import { colors } from "styles/variables";
-import { getProjectIcon } from "../../OtherProjects/utils";
-import ProjectLinks from "../../ProjectLinks";
+import { useViewerStore } from "store";
 import ProjectViewerContainer from "./ProjectViewerContainer";
 import ProjectViewerContent from "./ProjectViewerContent";
 
 const ProjectViewer = () => {
-  const { year, index, isOpen, onOpen, onClose, next, prev, canPrev, canNext } =
-    useProjectViewerStore();
+  const { key: year, index, isOpen, onClose } = useViewerStore();
 
   const data = projectArchives[year ?? ""]?.[index ?? 0];
 

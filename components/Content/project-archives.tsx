@@ -10,7 +10,7 @@ const projectArchives: IProjectArchives = {
       descriptions: [
         <>
           This is our project from{" "}
-          <NiceLink blank href="https://odysseyhackfest.com/">
+          <NiceLink href="https://odysseyhackfest.com/">
             Odyssey Hackfest
           </NiceLink>
           . It is a one-stop community management mobile application with a

@@ -1,13 +1,13 @@
-export interface IProjectViewerData {
+export interface IViewerData {
   index: number;
-  year: string;
+  key: string;
 }
 
-export interface ProjectViewerStore {
-  year: string;
+export interface ViewerStore {
+  key: string;
   index: number;
   isOpen: boolean;
-  setData: (value: IProjectViewerData) => void;
+  setData: (value: IViewerData) => void;
   onOpen: () => void;
   onClose: () => void;
   next: () => void;

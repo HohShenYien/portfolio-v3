@@ -16,7 +16,7 @@ const projectContent: ProjectContentContent = {
       descriptions: [
         <Text key={0}>
           This is our project from{" "}
-          <NiceLink blank href="https://odysseyhackfest.com/">
+          <NiceLink href="https://odysseyhackfest.com/">
             Odyssey Hackfest
           </NiceLink>
           . It is a one-stop community management mobile application with a
@@ -161,8 +161,9 @@ const projectContent: ProjectContentContent = {
       type: "Desktop Application",
       descriptions: [
         <Text key={0}>
-          A chatbot that recommends on <Highlighter>users' diet</Highlighter>{" "}
-          based on disease names and symptoms.
+          A chatbot that recommends on{" "}
+          <Highlighter>users&apos; diet</Highlighter> based on disease names and
+          symptoms.
         </Text>,
         <Text key={1}>
           Made for my universiy assignment with own chatbot implementation.

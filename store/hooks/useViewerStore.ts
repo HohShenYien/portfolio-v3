@@ -1,18 +1,15 @@
 import { projectArchives } from "components/Content";
 import create from "zustand";
-import {
-  IProjectViewerData,
-  ProjectViewerStore,
-} from "../types/ProjectViewerStore";
+import { IViewerData, ViewerStore } from "../types/ViewerStore";
 
-export const useProjectViewerStore = create<Partial<ProjectViewerStore>>()(
-  (set, get): Partial<ProjectViewerStore> => ({
-    year: undefined,
+export const useViewerStore = create<Partial<ViewerStore>>()(
+  (set, get): Partial<ViewerStore> => ({
+    key: undefined,
     index: undefined,
     isOpen: false,
-    setData: ({ year, index }: IProjectViewerData) => {
+    setData: ({ key, index }: IViewerData) => {
       set({
-        year,
+        key,
         index,
         isOpen: true,
       });
@@ -33,8 +30,7 @@ export const useProjectViewerStore = create<Partial<ProjectViewerStore>>()(
     },
     canNext: () => {
       return (
-        (get().index ?? 0) <
-        (projectArchives[get().year ?? ""]?.length ?? 0) - 1
+        (get().index ?? 0) < (projectArchives[get().key ?? ""]?.length ?? 0) - 1
       );
     },
     prev: () => {

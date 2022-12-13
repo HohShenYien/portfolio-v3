@@ -13,7 +13,7 @@ interface INiceLinkProp extends ChakraProps {
 const NiceLink = ({
   children,
   href,
-  blank = false,
+  blank = true,
   isHome,
   ...chakraProps
 }: INiceLinkProp) => {

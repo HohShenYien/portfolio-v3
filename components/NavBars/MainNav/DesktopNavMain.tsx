@@ -43,7 +43,12 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
                 fontSize="sm"
                 fontWeight="light"
               >
-                <NiceLink href={`/#${header.id}`} color="white" isHome={isHome}>
+                <NiceLink
+                  href={`/#${header.id}`}
+                  color="white"
+                  isHome={isHome}
+                  blank={false}
+                >
                   {header.title}
                 </NiceLink>
               </Box>

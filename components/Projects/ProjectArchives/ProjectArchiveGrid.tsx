@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { IProjectArchive } from "..";
 import { ProjectArchive } from "./ProjectArchive";
 import { m } from "framer-motion";
-import { useProjectViewerStore } from "store";
+import { useViewerStore } from "store";
 
 interface IProjectArchiveGridProps {
   year: string;
@@ -22,7 +22,7 @@ const ProjectArchiveGrid = ({ projects, year }: IProjectArchiveGridProps) => {
     }),
   });
 
-  const setData = useProjectViewerStore((state) => state.setData);
+  const setData = useViewerStore((state) => state.setData);
 
   return (
     <Grid
@@ -37,7 +37,7 @@ const ProjectArchiveGrid = ({ projects, year }: IProjectArchiveGridProps) => {
           animate={fadeUpControls}
           custom={idx}
           initial={{ opacity: 0, translateY: 30 }}
-          onClick={() => setData?.({ year, index: idx })}
+          onClick={() => setData?.({ key: year, index: idx })}
         >
           <ProjectArchive {...project} key={idx} />
         </m.div>

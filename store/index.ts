@@ -1,2 +1,2 @@
 export * from "./hooks/useImageStore";
-export * from "./hooks/useProjectViewerStore";
+export * from "./hooks/useViewerStore";

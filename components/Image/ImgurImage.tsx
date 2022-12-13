@@ -13,7 +13,6 @@ interface ImageProps extends ChakraProps, React.ComponentProps<As> {
   format?: string;
   size?: ImgurSize | number;
   alt: string;
-  src?: string;
   fallbackSrc?: string;
   aspectRatio?: number;
 }
@@ -25,7 +24,6 @@ const ImgurImage = forwardRef(
       format,
       size,
       alt,
-      src,
       fallbackSrc,
       aspectRatio,
       ...props
@@ -33,13 +31,13 @@ const ImgurImage = forwardRef(
     ref
   ) => {
     // @ts-ignore
-    const imgSrc = src ?? generateImgurUrl({ size, imgurId, format });
+    const imgSrc = generateImgurUrl({ size, imgurId, format });
 
     const image = (
       <>
         <Image
           {...props}
-          alt={alt}
+          alt={imgSrc}
           // @ts-ignore
           src={imgSrc}
           fallbackSrc={
@@ -62,6 +60,6 @@ const ImgurImage = forwardRef(
   }
 );
 
-ImgurImage.displayName = "Custom Image";
+ImgurImage.displayName = "Imgur Image";
 
 export default ImgurImage;

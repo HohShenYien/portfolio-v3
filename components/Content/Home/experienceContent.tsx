@@ -96,7 +96,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Built an event{" "}
-          <NiceLink href="https://coffeeathome.quintagen.com" blank>
+          <NiceLink href="https://coffeeathome.quintagen.com">
             web application
           </NiceLink>{" "}
           for Starbucks&rsquo; <Highlighter>Coffee at Home</Highlighter> Event
