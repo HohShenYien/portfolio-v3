@@ -1,5 +1,6 @@
 import { Modal, ModalContent, ModalOverlay, Image } from "@chakra-ui/react";
 import { useImageStore } from "../../store";
+import ImgurImage from "./ImgurImage";
 
 const ImageViewer = () => {
   const imageStore = useImageStore();
@@ -15,9 +16,10 @@ const ImageViewer = () => {
         onClick={() => imageStore?.onClose?.()}
         justifyContent="center"
       >
-        <Image
-          src={imageStore.src ?? ""}
-          alt="HELLO"
+        <ImgurImage
+          imgurId={imageStore.src}
+          alt="Project Image"
+          size="full"
           maxH="80vh"
           height="auto"
           objectFit="contain"

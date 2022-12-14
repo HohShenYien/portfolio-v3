@@ -8,7 +8,12 @@ const FooterLinks = () => {
     <HStack alignItems="center" justifyContent="flex-start">
       {footerContent.links.map((link, idx) => (
         <HStack key={idx}>
-          <NiceLink href={link.url} color="gray.200" fontSize="sm">
+          <NiceLink
+            href={link.url}
+            color="gray.200"
+            fontSize="sm"
+            blank={false}
+          >
             {link.name}
           </NiceLink>
           {idx < footerContent.links.length - 1 ? (

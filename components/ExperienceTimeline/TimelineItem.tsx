@@ -65,9 +65,7 @@ const TimelineItem = ({
             ref={pic}
             aspectRatio={4 / 3}
             cursor="pointer"
-            onClick={() =>
-              setSrc?.(generateImgurUrl({ size: "full", imgurId: image.id }))
-            }
+            onClick={() => setSrc?.(image.id)}
           />
         </m.div>
       </Box>

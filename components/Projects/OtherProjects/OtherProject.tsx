@@ -29,9 +29,7 @@ const OtherProject = ({
       bgSize="cover"
       transition={"all ease-out 100ms"}
       cursor="pointer"
-      onClick={() =>
-        imageStore?.setSrc?.(generateImgurUrl({ size: "full", imgurId: img }))
-      }
+      onClick={() => imageStore?.setSrc?.(img)}
       _before={{
         content: '""',
         pos: "absolute",

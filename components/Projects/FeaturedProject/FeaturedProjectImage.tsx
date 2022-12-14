@@ -27,11 +27,7 @@ const FeaturedProjectImage = ({ image, alt }: IFeaturedProjectImageProp) => {
         bg={`${colors.brand[950]}`}
         className={style.overlay}
         zIndex="2"
-        onClick={() =>
-          imageStore?.setSrc?.(
-            generateImgurUrl({ size: "full", imgurId: image })
-          )
-        }
+        onClick={() => imageStore?.setSrc?.(image)}
         cursor="pointer"
       />
       <ImgurImage
