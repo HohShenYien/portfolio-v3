@@ -46,6 +46,7 @@ const OtherProject = ({
         transform: "translateY(-8px)",
         _before: { bgColor: "brand.900" },
       }}
+      bgPos="top center"
     >
       <Flex
         pos="relative"

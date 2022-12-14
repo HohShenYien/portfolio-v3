@@ -10,9 +10,13 @@ export type MainNavProps = {
 
 export const navigateTo = (href: string) => {
   const id = href.split("#")[1];
-  document.getElementById(id)?.scrollIntoView({
+  window.scrollTo({
+    top: (document.getElementById(id)?.offsetTop ?? 0) - 30,
     behavior: "smooth",
   });
+  // document.getElementById(id)?.scrollIntoView({
+  //   behavior: "smooth",
+  // });
 };
 
 export { DesktopNavMain, MobileNavMain, MainNavWrapper };
