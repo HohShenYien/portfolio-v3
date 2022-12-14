@@ -13,8 +13,8 @@ export default function Project() {
   return (
     <Box as="div" bg="brand.1000">
       <Header
-        title="Project Archives"
-        description="A collection of my past projects"
+        title="Reading Lists"
+        description="Some books that I've read in the past."
         image={generateImgurUrl({
           size: "large thumbnail",
           imgurId: "nPrJjja",

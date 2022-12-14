@@ -24,14 +24,14 @@ const experienceContent: { experiences: IExperienceProps[] } = {
           API and webhooks
         </>,
         <>
-          Started the migration of existing code base from Nest.js to TRPC and
+          Started the migration of existing code base from Nest.js to tRPC and
           from React to Next.js
         </>,
       ],
       techs: [
         "Nestjs",
         "Next.js",
-        "TRPC",
+        "tRPC",
         "React",
         "Prisma",
         "Django",

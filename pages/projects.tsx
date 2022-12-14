@@ -16,7 +16,7 @@ export default function Project() {
     <Box as="div" bg="brand.1000">
       <Header
         title="Project Archives"
-        description="A collection of my past projects"
+        description="A collection of my past projects."
         image={generateImgurUrl({
           size: "large thumbnail",
           imgurId: "nPrJjja",

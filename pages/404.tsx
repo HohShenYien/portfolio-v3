@@ -7,18 +7,20 @@ import { ArrowLink } from "components/Links";
 import { MainNavWrapper } from "components/NavBars/MainNav";
 import { colors } from "styles/variables";
 import { m } from "framer-motion";
+import { Header } from "components/Header";
+import { generateImgurUrl } from "components/Image";
 
 export default function Home() {
   return (
     <Box as="div" bg="brand.1000">
-      <Head>
-        <title>Shen Yien</title>
-        <meta
-          name="description"
-          content="Shen Yien is a fullstack web developer who specializes in delivering exceptional digital experiences"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header
+        title="Page Not Found"
+        description={"404 Not Found"}
+        image={generateImgurUrl({
+          size: "large thumbnail",
+          imgurId: "nPrJjja",
+        })}
+      />
       <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
         <Box as={m.div} {...fadeIn}>
@@ -53,7 +55,7 @@ export default function Home() {
                 Back to home
               </Button>
             </Link>
-            <Link href="https://shenyien.cyou/csdiary/">
+            <Link href="https://v2.shenyien.cyou/csdiary/">
               <Button
                 variant="outline"
                 colorScheme="brand"
