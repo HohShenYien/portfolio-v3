@@ -16,6 +16,7 @@ const ArrowLink = ({ children, href }: IArrowLinkProp) => {
       fontSize="lg"
       px={4}
       href={href}
+      target="_blank"
     >
       {children}
       <svg
