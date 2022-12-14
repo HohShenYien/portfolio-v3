@@ -6,7 +6,7 @@ interface IArrowLinkProp {
   href?: string;
 }
 
-const ArrowLink = ({ children }: IArrowLinkProp) => {
+const ArrowLink = ({ children, href }: IArrowLinkProp) => {
   return (
     <Link
       className={`${styles["link"]} ${styles["link--arrowed"]}`}
@@ -15,6 +15,7 @@ const ArrowLink = ({ children }: IArrowLinkProp) => {
       fontWeight="semibold"
       fontSize="lg"
       px={4}
+      href={href}
     >
       {children}
       <svg

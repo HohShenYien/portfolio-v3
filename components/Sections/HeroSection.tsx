@@ -1,4 +1,11 @@
-import { Box, Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Link,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { SectionContent, SectionLayout } from "../Layouts";
 import { AvatarMobile, fadeIn, fadeInRight } from "../Animation";
 import Avatar from "../Animation/Avatar";
@@ -69,15 +76,20 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             alignItems={{ base: "flex-start", md: "center" }}
             gap="6"
           >
-            <Button colorScheme="brand" size={{ md: "lg", base: "md" }}>
-              Contact Me
-            </Button>
+            <Link href="mailto:hohshenyien@gmail.com">
+              <Button colorScheme="brand" size={{ md: "lg", base: "md" }}>
+                Contact Me
+              </Button>
+            </Link>
+
             <Button
               variant="outline"
               colorScheme="brand"
               size={{ md: "lg", base: "md" }}
             >
-              <ArrowLink>Check out my Blogs</ArrowLink>
+              <ArrowLink href="https://v2.shenyien.cyou/csdiary">
+                Check out my Blogs
+              </ArrowLink>
             </Button>
           </Flex>
         </Box>
