@@ -46,7 +46,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         name: "Supplycart Technology",
         url: "https://adam-procure.com/",
         image: {
-          id: "FsDXdQX",
+          id: "PzTC4q4",
           format: "jpg",
         },
       },

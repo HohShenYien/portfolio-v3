@@ -23,9 +23,9 @@ const aboutContent = {
     </>,
     <>
       I also maintain a{" "}
-      <NiceLink href="https://v2.shenyien.cyou/csdiary">blog</NiceLink> about my
-      journey as a fullstack developer including some lessons and knowledge that
-      I learned along the journey.
+      <NiceLink href="https://blogs.shenyien.cyou/csdiary">blog</NiceLink> about
+      my journey as a fullstack developer including some lessons and knowledge
+      that I learned along the journey.
     </>,
   ],
 };

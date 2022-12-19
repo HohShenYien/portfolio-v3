@@ -55,7 +55,7 @@ export default function Home() {
                 Back to home
               </Button>
             </Link>
-            <Link href="https://v2.shenyien.cyou/csdiary/">
+            <Link href="https://blogs.shenyien.cyou/csdiary/">
               <Button
                 variant="outline"
                 colorScheme="brand"

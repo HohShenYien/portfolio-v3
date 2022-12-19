@@ -87,7 +87,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
               colorScheme="brand"
               size={{ md: "lg", base: "md" }}
             >
-              <ArrowLink href="https://v2.shenyien.cyou/csdiary">
+              <ArrowLink href="https://blogs.shenyien.cyou/csdiary">
                 Check out my Blogs
               </ArrowLink>
             </Button>
