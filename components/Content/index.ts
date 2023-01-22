@@ -4,4 +4,6 @@ import readings from "./readings";
 export * from "./Home";
 export * from "./General";
 
-export { projectArchives, readings };
+const YEAR = 2023;
+
+export { projectArchives, readings, YEAR };

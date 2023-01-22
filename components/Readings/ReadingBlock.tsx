@@ -15,7 +15,7 @@ interface IReadingBlockProps {
 const maxNum = 5;
 
 const ReadingBlock = ({ value, title }: IReadingBlockProps) => {
-  const books = readings[value];
+  const books = readings.current[value];
   const [showMore, setShowMore] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,7 +61,7 @@ const ReadingBlock = ({ value, title }: IReadingBlockProps) => {
             custom={index}
             animate={fadeUpControls}
             initial={{ opacity: 0, translateY: 30 }}
-            onClick={() => setViewer?.({ key: value, index })}
+            onClick={() => setViewer?.({ key: value, index, meta: "current" })}
           >
             <Reading {...book} />
           </m.div>

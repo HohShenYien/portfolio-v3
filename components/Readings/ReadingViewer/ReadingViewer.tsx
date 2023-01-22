@@ -18,9 +18,12 @@ import { ReadingViewerContent } from ".";
 import style from "./ReadingViewer.module.scss";
 
 const ReadingViewer = () => {
-  const { key, index, isOpen, onClose } = useViewerStore();
+  const { key, index, isOpen, onClose, meta } = useViewerStore();
 
-  const data = readings[key as "new" | "reading" | "completed"]?.[index ?? 0];
+  const data =
+    meta == "current"
+      ? readings.current[key as "new" | "reading" | "completed"]?.[index ?? 0]
+      : readings.past[index ?? 0];
 
   const { title, image, link } = data ?? {};
 

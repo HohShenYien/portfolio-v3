@@ -12,9 +12,7 @@ const footerContent = {
       textColor={colors.text}
       fontSize={{ base: "sm", md: "md" }}
     >
-      © 2022 No rights reserved. We live in a free world{" "}
-      {/* <Lottie animationData={peace} style={{ height: 40 }} /> */}
-      <Peace />
+      © 2023 No rights reserved. We live in a free world <Peace />
     </Box>
   ),
   quote: "Stay Hungry, Stay Foolish",

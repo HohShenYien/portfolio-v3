@@ -1,15 +1,15 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, VStack } from "@chakra-ui/react";
 import { fadeUp } from "components/Animation";
+import { readings } from "components/Content";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { generateImgurUrl } from "components/Image";
 import { SectionLayout, SectionContent } from "components/Layouts";
 import { MainNavWrapper } from "components/NavBars/MainNav";
-import { ProjectViewer } from "components/Projects";
-import { Readings, ReadingViewer } from "components/Readings";
+import { Readings, ReadingsPast, ReadingViewer } from "components/Readings";
 import { m } from "framer-motion";
 
-export default function Project() {
+export default function ReadingPage() {
   return (
     <Box as="div" bg="brand.1000">
       <Header
@@ -44,9 +44,12 @@ export default function Project() {
               as={m.p}
               {...fadeUp}
             >
-              A list of books I&apos;ve read since January 2022
+              Some books that I&apos;ve read in the past.
             </Text>
-            <Readings />
+            <VStack spacing="8">
+              <Readings />
+              <ReadingsPast />
+            </VStack>
           </SectionContent>
         </SectionLayout>
       </Box>

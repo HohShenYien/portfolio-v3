@@ -1,9 +1,11 @@
 export interface IViewerData {
   index: number;
-  key: string;
+  key?: string;
+  meta?: "current" | "past";
 }
 
 export interface ViewerStore {
+  meta: "current" | "past";
   key: string;
   index: number;
   isOpen: boolean;

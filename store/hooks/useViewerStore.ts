@@ -6,12 +6,14 @@ export const useViewerStore = create<Partial<ViewerStore>>()(
   (set, get): Partial<ViewerStore> => ({
     key: undefined,
     index: undefined,
+    meta: undefined,
     isOpen: false,
-    setData: ({ key, index }: IViewerData) => {
+    setData: ({ key, index, meta }: IViewerData) => {
       set({
         key,
         index,
         isOpen: true,
+        meta,
       });
     },
     onOpen: () => {

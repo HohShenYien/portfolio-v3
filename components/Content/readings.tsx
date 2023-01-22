@@ -1,70 +1,82 @@
 import { NiceLink } from "components/Links";
 import { IReading } from "components/Readings";
 
-const readings: Record<"new" | "reading" | "completed", IReading[]> = {
-  new: [
-    {
-      title: "Test Driven Development: By Example",
-      author: "Kent Beck",
-      link: "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530",
-      image: {
-        id: "QPQcDFy",
-        format: "jpg",
+const readings: {
+  current: Record<"new" | "reading" | "completed", IReading[]>;
+  past: IReading[];
+} = {
+  current: {
+    new: [],
+    reading: [
+      {
+        title: "Test Driven Development: By Example",
+        author: "Kent Beck",
+        link: "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530",
+        image: {
+          id: "QPQcDFy",
+          format: "jpg",
+        },
+        description: [
+          <>
+            I&apos;ve been very interested in TDD, and I wanted to dive deep
+            into how it&apos;s supposed to work from the perspective of the
+            founder himself
+          </>,
+        ],
+        category: "Agile",
       },
-      description: [
-        <>
-          I&apos;ve been very interested in TDD, and I wanted to dive deep into
-          how it&apos;s supposed to work from the perspective of the founder
-          himself
-        </>,
-      ],
-      category: "Agile",
-    },
-  ],
-  reading: [
-    {
-      title: "Spring in Action",
-      author: "Craig Walls",
-      link: "https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942",
-      image: {
-        id: "yYPE18T",
-        format: "jpg",
+      {
+        title: "Designing Data-Intensive Applications",
+        author: "Martin Kleppmann",
+        link: "https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321",
+        image: {
+          id: "zaWlStc",
+        },
+        description: [
+          <>
+            I started reading this book from Coding Horror&apos;s{" "}
+            <NiceLink href="https://blog.codinghorror.com/recommended-reading-for-developers/">
+              recommendation
+            </NiceLink>
+            . Partly also due to my lack of knowledge in terms of larger scale
+            data management.
+          </>,
+          <>
+            However, I can&apos;t deny that this book is very in-depth,
+            difficult and some parts cryptic to me, so, my progress on this book
+            is rather slow.
+          </>,
+        ],
+        category: "Programming",
       },
-      description: [
-        <>
-          Looking at how popular Spring & Java are especially in Enterprise
-          settings, I decided to add them into my toolbox from this book.
-        </>,
-        <>I chose this book as I always had good experience with Mannings</>,
-      ],
-      category: "Programming",
-    },
-    {
-      title: "Designing Data-Intensive Applications",
-      author: "Martin Kleppmann",
-      link: "https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321",
-      image: {
-        id: "zaWlStc",
+    ],
+    completed: [
+      {
+        title: "Spring in Action",
+        author: "Craig Walls",
+        link: "https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942",
+        image: {
+          id: "yYPE18T",
+          format: "jpg",
+        },
+        description: [
+          <>
+            Looking at how popular Spring & Java are especially in Enterprise
+            settings, I decided to add them into my toolbox from this book.
+          </>,
+          <>I chose this book as I always had good experience with Mannings</>,
+          <>
+            And I was right, this book was absolutely amazing, it will help
+            build a strong foundation for anyone who wishes to learn Spring
+            Boot. Unfortunately, there was a bit lack of description in terms of
+            relationships between models.
+          </>,
+        ],
+        category: "Programming",
       },
-      description: [
-        <>
-          I started reading this book from Coding Horror&apos;s{" "}
-          <NiceLink href="https://blog.codinghorror.com/recommended-reading-for-developers/">
-            recommendation
-          </NiceLink>
-          . Partly also due to my lack of knowledge in terms of larger scale
-          data management.
-        </>,
-        <>
-          However, I can&apos;t deny that this book is very in-depth, difficult
-          and some parts cryptic to me, so, my progress on this book is rather
-          slow.
-        </>,
-      ],
-      category: "Programming",
-    },
-  ],
-  completed: [
+    ],
+  },
+  past: [
     {
       title: "Clean Agile: Back to Basics",
       author: "Rober C. Martin",

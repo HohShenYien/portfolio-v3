@@ -3,6 +3,7 @@ import Reading from "./Reading";
 import ReadingBlock from "./ReadingBlock";
 import Readings from "./Readings";
 import { ReadingViewer } from "./ReadingViewer";
+import ReadingsPast from "./ReadingsPast";
 
 export interface IReading {
   title: string;
@@ -16,4 +17,4 @@ export interface IReading {
   category: string;
 }
 
-export { Readings, ReadingBlock, Reading, ReadingViewer };
+export { Readings, ReadingBlock, Reading, ReadingViewer, ReadingsPast };
