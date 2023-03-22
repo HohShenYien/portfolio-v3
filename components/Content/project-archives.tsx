@@ -3,6 +3,37 @@ import { IProjectArchives } from "components/Projects";
 import { Highlighter } from "components/Texts";
 
 const projectArchives: IProjectArchives = {
+  "2023": [
+    {
+      name: "Loopfoods",
+      type: "Web Application",
+      descriptions: [
+        <>
+          This is an e-commerce website built from scratch for a{" "}
+          <Highlighter>delivery service startup</Highlighter>.
+        </>,
+        <>
+          It is a very comprehensive application, consisting of modules related
+          to delivery, food information, admin panel, payment and nutritions.
+        </>,
+        <>
+          Due to the startup nature, I had to participate in basically{" "}
+          <Highlighter>every part of it</Highlighter>, from backend, frontend to
+          deployment. There were times when I as a part-timer had to take lead
+          for the project itself. Thus, this was quite a great experience for
+          me.
+        </>,
+        <>
+          Nevertheless, as the startup ran out of budget, the operation is
+          closed down.
+        </>,
+        <>By the way, tRPC as backend is a really interesting idea.</>,
+      ],
+      tags: ["React", "Next.js", "tRPC", "Mantine", "Docker"],
+      img: "IJn6EuH",
+      location: "Mindworks",
+    },
+  ],
   "2022": [
     {
       name: "Kommunity",

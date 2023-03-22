@@ -6,24 +6,49 @@ const readings: {
   past: IReading[];
 } = {
   current: {
-    new: [],
-    reading: [
+    new: [
       {
-        title: "Test Driven Development: By Example",
-        author: "Kent Beck",
-        link: "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530",
+        title: "Effective TypeScript",
+        author: "Dan Vanderkam",
+        link: "https://effectivetypescript.com/",
         image: {
-          id: "QPQcDFy",
+          id: "IJpmyeK",
           format: "jpg",
         },
         description: [
           <>
-            I&apos;ve been very interested in TDD, and I wanted to dive deep
-            into how it&apos;s supposed to work from the perspective of the
-            founder himself
+            Being a big fan for TypeScript, I always feel troubled for not being
+            able to exercise TypeScript to its full potential.
+          </>,
+          <>
+            I came across this book when googling, and since Animal Books is
+            usually good, I just keep it on the list.
           </>,
         ],
-        category: "Agile",
+        category: "Programming",
+      },
+    ],
+    reading: [
+      {
+        title: "Practical Object-Oriented Design",
+        author: "Sandi Metz",
+        link: "https://www.poodr.com/",
+        image: {
+          id: "t0tKSQn",
+          format: "jpg",
+        },
+        description: [
+          <>
+            While I did learn OOP in the university, but I always felt that it
+            is not enough. There are still many concepts and best practices that
+            I am not familiar with.
+          </>,
+          <>
+            I saw it being recommended by a Redditer, so I thought why not?
+            Seems exactly what I needed.
+          </>,
+        ],
+        category: "Programming",
       },
       {
         title: "Designing Data-Intensive Applications",
@@ -51,6 +76,52 @@ const readings: {
       },
     ],
     completed: [
+      {
+        title: "Test Driven Development: By Example",
+        author: "Kent Beck",
+        link: "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530",
+        image: {
+          id: "QPQcDFy",
+          format: "jpg",
+        },
+        description: [
+          <>
+            I&apos;ve been very interested in TDD, and I wanted to dive deep
+            into how it&apos;s supposed to work from the perspective of the
+            founder himself
+          </>,
+          <>
+            An intriguing book despite its age. The content is still highly
+            relevant and helped me to understand the way TDD works and the
+            philosophies behind it.
+          </>,
+        ],
+        category: "Agile",
+      },
+      {
+        title: "Refactoring",
+        author: "Martin Fowler",
+        link: "https://martinfowler.com/books/refactoring.html",
+        image: {
+          id: "jyr0Pwp",
+          format: "jpg",
+        },
+        description: [
+          <>
+            The primary reason I picked up this book was because of the nasty
+            codes I came across while developing{" "}
+            <NiceLink href="/projects">Loopfoods</NiceLink>. I could not bear
+            with them, and so I thought why not I make them better?
+          </>,
+          <>
+            All the techniques were presented like a catalogue, in an easy to
+            digest manner. Felt like my coding skill have levelled up after
+            reading this book.
+          </>,
+          <>Totally recommending all programmers to read it</>,
+        ],
+        category: "Programming",
+      },
       {
         title: "Spring in Action",
         author: "Craig Walls",

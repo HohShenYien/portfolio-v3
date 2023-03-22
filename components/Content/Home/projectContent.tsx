@@ -11,6 +11,36 @@ interface ProjectContentContent {
 const projectContent: ProjectContentContent = {
   featured: [
     {
+      name: "Loopfoods",
+      type: "Web Application",
+      descriptions: [
+        <Text key={0}>
+          This is an e-commerce website built from scratch for a{" "}
+          <Highlighter>delivery service startup</Highlighter>.
+        </Text>,
+        <Text key={1}>
+          It is a very comprehensive application, consisting of modules related
+          to delivery, food information, admin panel, payment and nutritions.
+        </Text>,
+        <Text key={2}>
+          Due to the startup nature, I had to participate in basically{" "}
+          <Highlighter>every part of it</Highlighter>, from backend, frontend to
+          deployment. There were times when I as a part-timer had to take lead
+          for the project itself. Thus, this was quite a great experience for
+          me.
+        </Text>,
+        <Text key={3}>
+          Nevertheless, as the startup ran out of budget, the operation is
+          closed down.
+        </Text>,
+        <Text key={4}>
+          By the way, tRPC as backend is a really interesting idea.
+        </Text>,
+      ],
+      tags: ["React", "Next.js", "tRPC", "Mantine", "Docker"],
+      img: "IJn6EuH",
+    },
+    {
       name: "Kommunity",
       type: "Hackathon Projects",
       descriptions: [
@@ -71,31 +101,21 @@ const projectContent: ProjectContentContent = {
       img: "NBYYp7q",
       link: "https://oye.events/",
     },
+  ],
+  others: [
     {
       name: "Starbucks - Coffee At Home",
       type: "Web Application",
       descriptions: [
         <Text key={0}>
-          Coffee At Home is an experimental journey in Malaysia held by none
-          other than <Highlighter>Starbucks</Highlighter>. As of 2023, more than
-          14k Malaysians have participated in the event using this application.
-        </Text>,
-        <Text key={1}>
-          It features a user-friendly event interface in guiding the users from
-          all age range to complete their coffee journeys.
-        </Text>,
-        <Text key={2}>
-          Beyond users, this application includes a real-time analysis dashboard
-          and management system for the admins, as well as a station master
-          system.
+          This is an event web application that is used by Starbucks in Malaysia
+          to aid the customers throughout the event flow.
         </Text>,
       ],
       tags: ["Vue", "Vuetify", "Laravel"],
       img: "B5yPtCS",
       link: "https://coffeeathome.quintagen.com/",
     },
-  ],
-  others: [
     {
       name: "Pomodo App",
       type: "Desktop Application",
@@ -123,20 +143,6 @@ const projectContent: ProjectContentContent = {
       tags: ["Vue", "Electron", "Vuetify", "Flask"],
       img: "bPSwnPS",
       github: "https://github.com/HohShenYien/pomodo",
-    },
-    {
-      name: "APAC Website",
-      type: "Website",
-      descriptions: [
-        <Text key={0}>
-          A SPA website built for my university club to display various
-          information.
-        </Text>,
-      ],
-      tags: ["React", "Next.js", "Chakra-ui"],
-      img: "CFDBiPs",
-      github: "apu-apac.netlify.app/",
-      link: "https://apu-apac.netlify.app/",
     },
     {
       name: "v2 Website",
