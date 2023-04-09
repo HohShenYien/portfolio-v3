@@ -10,7 +10,7 @@ const Header = ({ description, title, image }: IHeaderProps) => {
   return (
     <Head>
       <title>
-        {title ? `${title} | Shen Yien` : "Shen Yien - Programmer & Blogger"}
+        {title ? `${title} | Shen Yien` : "Shen Yien - Developer & Blogger"}
       </title>
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />

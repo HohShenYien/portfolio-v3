@@ -23,9 +23,7 @@ export default function Home() {
     <Box as="div" bg="brand.1000" onMouseMove={onMouseMove}>
       <Header
         description={
-          "Shen Yien is a software engineer who translates ideas into fully functional features." +
-          " Specialized in problem solving to provide the best solutions and" +
-          " experienced to work in a fast-paced agile team."
+          "Shen Yien is a passionate software engineer who brings ideas to life with seamless functionality and specializes in crafting innovative solutions."
         }
         image={generateImgurUrl({
           size: "large thumbnail",

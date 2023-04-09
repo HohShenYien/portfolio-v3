@@ -33,7 +33,6 @@ const SkillRow = ({
         <HStack>
           <Text
             flex={1}
-            as="h4"
             fontFamily="mono"
             color="gray.200"
             fontSize="lg"
