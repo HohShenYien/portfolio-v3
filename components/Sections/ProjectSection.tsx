@@ -19,7 +19,7 @@ const ProjectSection = () => {
           <Text
             color="whiteAlpha.800"
             fontWeight="semibold"
-            as="h3"
+            as="h4"
             fontSize="xl"
           >
             Some Other Interesting Projects

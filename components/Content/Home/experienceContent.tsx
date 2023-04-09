@@ -15,17 +15,34 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       },
       dates: {
         start: "August 2022",
-        end: "Present",
+        end: "March 2023",
       },
       achievements: [
         <>
-          Integrated Stripe payment into a growing food-ordering{" "}
-          <NiceLink href="https://loopfoods.app/">web application</NiceLink> via
-          API and webhooks
+          Developed a growing food-order{" "}
+          <NiceLink href="https://loopfoods.app/">web application</NiceLink>
+          {"'"}s payment gateway using Stripe, facilitating over 70% of the
+          <NiceLink href="https://loopfoods.app/ https://www.linkedin.com/company/eatloop">
+            startup
+          </NiceLink>
+          {"'"}s sales and generating more than RM 40k in just six months.
         </>,
         <>
-          Started the migration of existing code base from Nest.js to tRPC and
-          from React to Next.js
+          Contributed to the successful <Highlighter>migration</Highlighter> of
+          Loop Foods{"'"} platform to Next.js and trpc, managing thousands of
+          files and overseeing all aspects of storefront, backend API services,
+          API webhooks, deployment management, and database structure
+          management.
+        </>,
+        <>
+          Collaborated effectively with cross-functional team members to drive
+          Loop Foods{"'"} development, showcasing strong project management,
+          problem-solving, and technical skills.
+        </>,
+        <>
+          Leveraged strong <Highlighter>design skills</Highlighter> and
+          collaborated closely with designers to user-friendly,
+          mobile-responsive and highly functional UIs for Loop Foods
         </>,
       ],
       techs: [

@@ -51,7 +51,7 @@ const ReadingBlock = ({ value, title }: IReadingBlockProps) => {
       ref={containerRef}
       w="full"
     >
-      <Text as="h2" color="gray.200" fontSize="lg" mb={4} fontWeight="medium">
+      <Text as="h3" color="gray.200" fontSize="lg" mb={4} fontWeight="medium">
         {title} ({books.length})
       </Text>
       <VStack alignItems="stretch">

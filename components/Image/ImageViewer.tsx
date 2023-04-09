@@ -1,6 +1,7 @@
-import { Modal, ModalContent, ModalOverlay, Image } from "@chakra-ui/react";
+import { Modal, ModalContent, ModalOverlay, Box } from "@chakra-ui/react";
 import { useImageStore } from "../../store";
 import ImgurImage from "./ImgurImage";
+import ImageZoomer from "./ImageZoomer";
 
 const ImageViewer = () => {
   const imageStore = useImageStore();
@@ -13,17 +14,26 @@ const ImageViewer = () => {
       <ModalOverlay />
       <ModalContent
         bg="transparent"
-        onClick={() => imageStore?.onClose?.()}
         justifyContent="center"
+        alignItems="center"
+        onClick={() => imageStore?.onClose?.()}
       >
-        <ImgurImage
-          imgurId={imageStore.src}
-          alt="Project Image"
-          size="full"
-          maxH="80vh"
-          height="auto"
-          objectFit="contain"
-        />
+        <Box
+          onClick={(event) => event.stopPropagation()}
+          display="flex"
+          justifyContent="center"
+        >
+          <ImageZoomer>
+            <ImgurImage
+              imgurId={imageStore.src}
+              alt="Project Image"
+              size="full"
+              maxH="80vh"
+              height="auto"
+              objectFit="contain"
+            />
+          </ImageZoomer>
+        </Box>
       </ModalContent>
     </Modal>
   ) : (

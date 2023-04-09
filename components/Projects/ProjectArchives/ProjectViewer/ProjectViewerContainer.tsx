@@ -1,5 +1,5 @@
 import { Flex, IconButton, Grid, Box } from "@chakra-ui/react";
-import { ImgurImage } from "components/Image";
+import { ImageZoomer, ImgurImage } from "components/Image";
 import { IProjectArchive } from "components/Projects";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ReactNode, useMemo } from "react";
@@ -35,15 +35,20 @@ const ProjectViewerContainer = ({
         alignItems="center"
         pos="relative"
         className={style.image}
+        px={{ md: 12 }}
       >
-        <ImgurImage
-          imgurId={project.img}
-          size="full"
-          alt="HELLO"
-          w="full"
-          maxH="90vh"
-          objectFit={"contain"}
-        />
+        <ImageZoomer>
+          <ImgurImage
+            imgurId={project.img}
+            size="full"
+            alt="HELLO"
+            w="full"
+            maxH="90vh"
+            minH="450px"
+            objectFit={"contain"}
+          />
+        </ImageZoomer>
+
         {canGoPrev && (
           <Box
             className={style.container}

@@ -174,7 +174,7 @@ const projectArchives: IProjectArchives = {
       ],
       tags: ["Vue", "Nuxt", "Vuetify"],
       img: "0wuU2uX",
-      github: "https://github.com/HohShenYien/personal-blog",
+      github: "https://github.com/HohShenYien/portfolio-v2",
       link: "https://v2.shenyien.cyou",
       location: "Personal Project",
     },

@@ -8,6 +8,25 @@ const readings: {
   current: {
     new: [
       {
+        title: "Spring Microservices in Action",
+        author: "John & Illary",
+        link: "https://www.manning.com/books/spring-microservices-in-action-second-edition",
+        image: {
+          id: "uhgl69v",
+          format: "png",
+        },
+        description: [
+          <>
+            After reading about Spring, I felt an urge to explore it further. At
+            the same time, I have yet to learn about Microservices, so this book
+            came into my eyes.
+          </>,
+        ],
+        category: "Programming",
+      },
+    ],
+    reading: [
+      {
         title: "Effective TypeScript",
         author: "Dan Vanderkam",
         link: "https://effectivetypescript.com/",
@@ -27,25 +46,18 @@ const readings: {
         ],
         category: "Programming",
       },
-    ],
-    reading: [
       {
-        title: "Practical Object-Oriented Design",
-        author: "Sandi Metz",
-        link: "https://www.poodr.com/",
+        title: "C# Programming Yellow Book",
+        author: "Rob Miles",
+        link: "http://www.csharpcourse.com/",
         image: {
-          id: "t0tKSQn",
-          format: "jpg",
+          id: "aMhooRG",
+          format: "png",
         },
         description: [
           <>
-            While I did learn OOP in the university, but I always felt that it
-            is not enough. There are still many concepts and best practices that
-            I am not familiar with.
-          </>,
-          <>
-            I saw it being recommended by a Redditer, so I thought why not?
-            Seems exactly what I needed.
+            Seeing how people said C# is like improved Java makes me curious
+            about exploring it. I also wanted to prepare in learning .Net soon.
           </>,
         ],
         category: "Programming",
@@ -76,6 +88,35 @@ const readings: {
       },
     ],
     completed: [
+      {
+        title: "Practical Object-Oriented Design",
+        author: "Sandi Metz",
+        link: "https://www.poodr.com/",
+        image: {
+          id: "t0tKSQn",
+          format: "jpg",
+        },
+        description: [
+          <>
+            While I did learn OOP in the university, but I always felt that it
+            is not enough. There are still many concepts and best practices that
+            I am not familiar with. I saw this being recommended on Reddit, so I
+            thought why not?
+          </>,
+          <>
+            My understanding towards OOP did improve a lot after reading it.
+            Things that I didn{"'"}t really think or know before like
+            dependencies, message passing and stubs became so much clearer after
+            reading it.
+          </>,
+          <>
+            The only drawback I could say is the usage of Ruby which didn{"' "}
+            support all OOP features like interfaces, making some parts of this
+            book a bit out.
+          </>,
+        ],
+        category: "Programming",
+      },
       {
         title: "Test Driven Development: By Example",
         author: "Kent Beck",

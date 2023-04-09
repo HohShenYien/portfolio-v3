@@ -2807,6 +2807,11 @@ react-use-rect@^2.0.4:
   resolved "https://registry.yarnpkg.com/react-use-rect/-/react-use-rect-2.0.4.tgz#e35a327555950504ae330a984ac6883bd4fb1dac"
   integrity sha512-U0MyT5le01P83t/G37t+Z36lafKEl5icCM1M9V4ubt5+kgczllyd5xWNH4Ahxn+CzMs6mnTypZ+XwpFbE045XA==
 
+react-zoom-pan-pinch@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.0.6.tgz#c664beb4b335962c270b11d1c0ec95b2187505b0"
+  integrity sha512-0Blz0XyWDKEYKHg8tBznOOdCWZOTtXFdSpaAdr3dqbeA7BBZn2xd0fEqNlzk2pXAvV1dmEso2vNLCpqCZh2NPQ==
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

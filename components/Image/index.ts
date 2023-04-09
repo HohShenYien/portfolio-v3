@@ -1,6 +1,7 @@
 import ImageViewer from "./ImageViewer";
 import ImgurImage from "./ImgurImage";
 import Logo from "./Logo";
+import ImageZoomer from "./ImageZoomer";
 
 export type ImgurSize =
   | "small square"
@@ -13,4 +14,4 @@ export type ImgurSize =
 
 export * from "./utils";
 
-export { ImgurImage, ImageViewer, Logo };
+export { ImgurImage, ImageViewer, Logo, ImageZoomer };

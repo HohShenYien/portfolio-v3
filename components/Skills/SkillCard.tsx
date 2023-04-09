@@ -40,7 +40,7 @@ const SkillCard = ({ name, skills, delay, gridRef }: ISkillCardProp) => {
       transition="all ease 100ms"
     >
       <HStack justifyContent="center" mb={4}>
-        <Text fontSize="xl" fontWeight="semibold" color="brand.200" as="h2">
+        <Text fontSize="xl" fontWeight="semibold" color="brand.200" as="h3">
           {name}
         </Text>
         <Box bg="brand.200" h="1px" flex={1} />

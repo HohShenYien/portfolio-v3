@@ -1,31 +1,29 @@
-import { Highlight } from "@chakra-ui/react";
+import { Highlighter } from "components/Texts";
 import { NiceLink } from "../../Links";
-import { Highlighter } from "../../Texts";
 
 const aboutContent = {
   descriptions: [
     <>
-      Hello! My name is <Highlighter>Shen Yien</Highlighter> and I&apos;m a
-      Malaysian fullstack developer with a knack in logical problem solving. My
-      journey began with solving problems from{" "}
+      Hi there! I{"'"}m <Highlighter>Shen Yien</Highlighter>, a Malaysian
+      fullstack developer with a knack in logical problem solving. My journey
+      began with tackling complex problems on{" "}
       <NiceLink href="https://projecteuler.net/">The Euler Project</NiceLink>{" "}
-      using Python back in 2018. It&apos;s still impressive to me how I could
-      make my computer solve problems that seem impossible easily.
+      using Python back in 2018, and I{"'"}ve been hooked ever since.
     </>,
     <>
-      Fast forward to today, I&apos;ve had the privilege to work with a{" "}
+      Since then, I{"'"}ve had the opportunity to work with a{" "}
       <NiceLink href="https://www.quintagen.com/">software house</NiceLink>, a{" "}
       <NiceLink href="https://www.mindworks.xyz/">technology agency</NiceLink>,
       and a <NiceLink href="https://adam-procure.com/">SaaS start-up</NiceLink>.
-      Currently, I focus on developing exceptional{" "}
-      <Highlighter>Web Applications</Highlighter> that solve users&apos; pain
-      points and make world a better place to live in!
+      Today, I{"'"}m dedicated to developing exceptional web applications that
+      tackle user pain points and contribute to making the world a better place
+      to live in.
     </>,
     <>
-      I also maintain a{" "}
-      <NiceLink href="https://blogs.shenyien.cyou/csdiary">blog</NiceLink> about
-      my journey as a fullstack developer including some lessons and knowledge
-      that I learned along the journey.
+      In addition to my work, I also write{" "}
+      <NiceLink href="https://blogs.shenyien.cyou">blogs</NiceLink> where I
+      share my journey as a fullstack developer and the lessons I learned along
+      the journey.
     </>,
   ],
 };

@@ -56,6 +56,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
             fontWeight="bold"
             lineHeight={1}
             mb={{ base: 2, md: 4 }}
+            as="h1"
           >
             {heroContent.name}
           </Text>

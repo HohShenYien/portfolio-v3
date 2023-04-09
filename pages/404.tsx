@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
-import Head from "next/head";
 import Lottie from "react-lottie-player";
 import { error404, fadeIn, fadeUp } from "components/Animation";
 import { Footer } from "components/Footer";
@@ -55,7 +54,7 @@ export default function Home() {
                 Back to home
               </Button>
             </Link>
-            <Link href="https://blogs.shenyien.cyou/csdiary/">
+            <Link href="https://blogs.shenyien.cyou/">
               <Button
                 variant="outline"
                 colorScheme="brand"

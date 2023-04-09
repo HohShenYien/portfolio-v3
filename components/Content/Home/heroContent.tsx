@@ -3,9 +3,8 @@ const heroContent = {
   name: "Shen Yien.",
   title: "Full Stack Developer.",
   description:
-    "I'm a software engineer who translates ideas into fully functional features." +
-    " Specialized in problem solving to provide the best solutions and" +
-    " experienced to work in a fast-paced agile team.",
+    "A passionate software engineer who brings ideas to life with seamless functionality." +
+    " Specialized in crafting innovative solutions and thrive in fast-paced, agile environments.",
   cta: {
     primary: {
       text: "Contact Me",

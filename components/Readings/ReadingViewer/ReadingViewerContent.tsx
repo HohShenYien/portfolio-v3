@@ -6,7 +6,7 @@ const ReadingViewerContent = ({ title, author, description }: IReading) => {
   return (
     <Box px={{ lg: 4, base: 4 }} py={2} w={{ md: "md", base: "100%" }}>
       <Text
-        as="h2"
+        as="h3"
         fontSize="2xl"
         fontWeight="semibold"
         color="gray.300"
