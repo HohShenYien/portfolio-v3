@@ -5,7 +5,7 @@ const aboutContent = {
   descriptions: [
     <>
       Hi there! I{"'"}m <Highlighter>Shen Yien</Highlighter>, a Malaysian
-      fullstack developer with a knack in logical problem solving. My journey
+      fullstack developer with a knack for logical problem solving. My journey
       began with tackling complex problems on{" "}
       <NiceLink href="https://projecteuler.net/">The Euler Project</NiceLink>{" "}
       using Python back in 2018, and I{"'"}ve been hooked ever since.

@@ -21,7 +21,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         <>
           Developed a growing food-order{" "}
           <NiceLink href="https://loopfoods.app/">web application</NiceLink>
-          {"'"}s payment gateway using Stripe, facilitating over 70% of the
+          {"'"}s payment gateway using Stripe, facilitating over 70% of the{" "}
           <NiceLink href="https://loopfoods.app/ https://www.linkedin.com/company/eatloop">
             startup
           </NiceLink>
