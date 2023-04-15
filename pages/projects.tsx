@@ -19,7 +19,7 @@ export default function Project() {
         description="A collection of my past projects."
         image={generateImgurUrl({
           size: "large thumbnail",
-          imgurId: "nPrJjja",
+          imgurId: "xQtQJHt",
         })}
       />
       <MainNavWrapper />

@@ -28,8 +28,7 @@ const ImageViewer = () => {
               imgurId={imageStore.src}
               alt="Project Image"
               size="full"
-              maxH="80vh"
-              height="auto"
+              height="80vh"
               objectFit="contain"
             />
           </ImageZoomer>

@@ -17,7 +17,7 @@ export default function ReadingPage() {
         description="Some books that I've read in the past."
         image={generateImgurUrl({
           size: "large thumbnail",
-          imgurId: "nPrJjja",
+          imgurId: "xQtQJHt",
         })}
       />
       <MainNavWrapper />

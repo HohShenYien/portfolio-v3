@@ -13,27 +13,21 @@ import {
 } from "components/Sections";
 
 export default function Home() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const onMouseMove: MouseEventHandler = (mouseEvent) => {
-    const { pageX, pageY } = mouseEvent;
-    setMousePos({ x: pageX, y: pageY });
-  };
-
   return (
-    <Box as="div" bg="brand.1000" onMouseMove={onMouseMove}>
+    <Box as="div" bg="brand.1000">
       <Header
         description={
           "Shen Yien is a passionate software engineer who brings ideas to life with seamless functionality and specializes in crafting innovative solutions."
         }
         image={generateImgurUrl({
           size: "large thumbnail",
-          imgurId: "nPrJjja",
+          imgurId: "xQtQJHt",
         })}
       />
       <ImageViewer />
       <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
-        <HeroSection mousePos={mousePos} />
+        <HeroSection />
         <AboutSection />
         <ExperienceSection />
         <ProjectSection />

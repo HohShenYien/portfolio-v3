@@ -1,7 +1,6 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Tooltip } from "@chakra-ui/react";
 import { m } from "framer-motion";
 import { useMemo, useState } from "react";
-import { Rect, useRect } from "react-use-rect";
 import { IHeroSectionProp } from "../Sections/HeroSection";
 
 const getAngle = (
@@ -28,59 +27,9 @@ const getDistance = (
   return Math.sqrt(dy * dy + dx * dx);
 };
 
-const Avatar = ({ mousePos }: IHeroSectionProp) => {
+const Avatar = ({}: IHeroSectionProp) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [rotated, setRotated] = useState(false);
-
-  const [eyeRect, setEyeRect] = useState<Rect | null>(null);
-  const [eyeRef] = useRect(setEyeRect);
-
-  const [avatarRect, setAvatarRect] = useState<Rect | null>(null);
-  const [avatarRef] = useRect(setAvatarRect);
-
-  const eyeLoc = useMemo(() => {
-    if (eyeRect) {
-      return {
-        x: (eyeRect.left + eyeRect.right) / 2,
-        y: eyeRect.top,
-      };
-    }
-    return {
-      x: 0,
-      y: 0,
-    };
-  }, [eyeRect]);
-
-  const avatarLoc = useMemo(() => {
-    if (avatarRect) {
-      return {
-        x: (avatarRect.left + avatarRect.right) / 2,
-        y: (avatarRect.top + avatarRect.bottom) / 2,
-      };
-    }
-    return {
-      x: 0,
-      y: 0,
-    };
-  }, [avatarRect]);
-
-  const angle = useMemo(() => {
-    return getAngle(eyeLoc.x, eyeLoc.y, mousePos.x, mousePos.y) + 300;
-  }, [eyeLoc, mousePos]);
-
-  const translationY = useMemo(() => {
-    if (mousePos.y > 600 || mousePos.x < 400) {
-      return 0;
-    }
-    const distance = getDistance(
-      avatarLoc.x,
-      avatarLoc.y,
-      mousePos.x,
-      mousePos.y
-    );
-    const motion = distance / 10;
-    return 60 - motion > 20 ? 60 : 0;
-  }, [mousePos, avatarLoc]);
 
   return (
     <Box
@@ -94,70 +43,36 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
     >
       {rotated && (
         <m.div
-          style={{ position: "absolute", right: "62vw", top: "2vw" }}
-          animate={{ translateY: translationY }}
-          transition={{
-            type: "spring",
-            damping: 10,
-            stiffness: 40,
-            restDelta: 0.5,
+          style={{
+            position: "absolute",
+            right: "60vw",
+            top: "4vw",
+            rotate: -15,
           }}
         >
           <m.div
-            style={{ rotate: -20 }}
             initial={{ y: "10vw" }}
+            animate={{ translateY: -120 }}
             transition={{
               type: "spring",
-              damping: 9,
-              stiffness: 50,
+              damping: 10,
+              stiffness: 70,
               restDelta: 0.5,
             }}
-            animate={{ y: "0" }}
+            whileHover={{ translateY: -160 }}
           >
-            <Image
-              src="/images/me/avatar-me.svg"
-              width="8vw"
-              alt="Avatar Me!"
-              ref={avatarRef}
-            />
-            {/* Eyeballs */}
-            <Box
-              pos="absolute"
-              top="3.5vw"
-              left="2.5vw"
-              display="flex"
-              ref={eyeRef}
+            <Tooltip
+              label="Learning Golang"
+              placement="left-start"
+              hasArrow
+              bg="brand.500"
             >
-              {Array(2)
-                .fill(0)
-                .map((_: number, index: number) => {
-                  return (
-                    <m.div
-                      key={index}
-                      initial={{
-                        rotate: 0,
-                        paddingTop: 4,
-                        transformOrigin: "top center",
-                        marginRight: index === 0 ? "2vw" : "0",
-                      }}
-                      animate={{
-                        rotate: angle,
-                      }}
-                      transition={{
-                        duration: 0,
-                        type: "rotate",
-                      }}
-                    >
-                      <Box
-                        bgColor="#2C1B18"
-                        w={"0.5vw"}
-                        h={"0.5vw"}
-                        rounded="full"
-                      />
-                    </m.div>
-                  );
-                })}
-            </Box>
+              <Image
+                src="/images/me/gopher.png"
+                width="8vw"
+                alt="Avatar Gopher"
+              />
+            </Tooltip>
           </m.div>
         </m.div>
       )}
@@ -167,6 +82,7 @@ const Avatar = ({ mousePos }: IHeroSectionProp) => {
           display: "inline-block",
           transformOrigin: "bottom left",
           overflow: "visible",
+          pointerEvents: "none",
         }}
         initial={{ rotate: 0 }}
         animate={imageLoaded ? { rotate: -65 } : {}}

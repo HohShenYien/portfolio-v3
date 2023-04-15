@@ -14,11 +14,9 @@ import { m } from "framer-motion";
 import { BackgroundWatermark } from "../Texts";
 import { heroContent } from "../Content";
 
-export interface IHeroSectionProp {
-  mousePos: { x: number; y: number };
-}
+export interface IHeroSectionProp {}
 
-const HeroSection = ({ mousePos }: IHeroSectionProp) => {
+const HeroSection = ({}: IHeroSectionProp) => {
   const isMobile = useBreakpointValue({
     base: true,
     md: false,
@@ -31,7 +29,7 @@ const HeroSection = ({ mousePos }: IHeroSectionProp) => {
         <BackgroundWatermark text={heroContent.watermarks.middle} ml={24} />
         <BackgroundWatermark text={heroContent.watermarks.bottom} ml={12} />
       </Box>
-      {isMobile ? <AvatarMobile /> : <Avatar mousePos={mousePos} />}
+      {isMobile ? <AvatarMobile /> : <Avatar />}
       <SectionContent zIndex="2" pos="relative" full>
         <Box
           maxW={{ md: "45vw", base: "100vw" }}
