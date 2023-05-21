@@ -61,7 +61,10 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
             fontSize="sm"
             fontWeight="light"
           >
-            <a href="" download>
+            <Link
+              href="https://raw.githubusercontent.com/HohShenYien/portfolio-v3/main/resume.pdf"
+              download
+            >
               <Button
                 variant="outline"
                 colorScheme="brand"
@@ -70,7 +73,7 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
               >
                 Resume
               </Button>
-            </a>
+            </Link>
           </Box>
         </HStack>
       </Box>

@@ -5,27 +5,27 @@ const skillContent: SkillGroup[] = [
     name: "Frontend",
     skills: [
       {
-        name: "Vue",
-        progress: 80,
-        description: "Professional experience in Vue development",
-        emoji: "cool",
-      },
-      {
         name: "React",
-        progress: 70,
+        progress: 90,
         description: "Actively developing in React now",
         emoji: "fire",
       },
       {
         name: "Next.js",
-        progress: 50,
+        progress: 75,
         description: "Most of my React projects are built with Next.js",
         emoji: "fire",
       },
       {
+        name: "Vue",
+        progress: 60,
+        description: "Professional experience in Vue development",
+        emoji: "cool",
+      },
+      {
         name: "Nuxt.js",
         progress: 40,
-        description: "Fell in love with Nuxt when I used it in a past project",
+        description: "Fell in love with Nuxt when I used it for my second blog",
         emoji: "heart",
       },
       {
@@ -46,6 +46,12 @@ const skillContent: SkillGroup[] = [
         emoji: "cool",
       },
       {
+        name: "Spring",
+        progress: 70,
+        description: "Studying Spring in Action on my way to mastery",
+        emoji: "fire",
+      },
+      {
         name: "Flask",
         progress: 60,
         description: "Been using Flask to build quick and simple backends",
@@ -62,12 +68,6 @@ const skillContent: SkillGroup[] = [
         progress: 45,
         description: "Had some exposure to Django in my past job experience",
         emoji: "monocle",
-      },
-      {
-        name: "Spring",
-        progress: 20,
-        description: "Studying Spring in Action on my way to mastery",
-        emoji: "fire",
       },
     ],
   },
@@ -144,7 +144,7 @@ const skillContent: SkillGroup[] = [
     skills: [
       {
         name: "Typescript",
-        progress: 55,
+        progress: 90,
         description: "Can't live without Typescript!",
         emoji: "heart",
       },
@@ -174,16 +174,16 @@ const skillContent: SkillGroup[] = [
         emoji: "cool",
       },
       {
+        name: "Design Patterns",
+        progress: 65,
+        description: "Studied major patterns from Head FIrst series",
+        emoji: "heart",
+      },
+      {
         name: "Test Driven",
         progress: 60,
         description: "Working in a test-driven environment during my past job",
         emoji: "cool",
-      },
-      {
-        name: "Design Patterns",
-        progress: 40,
-        description: "Studied major patterns from Head FIrst series",
-        emoji: "heart",
       },
     ],
   },

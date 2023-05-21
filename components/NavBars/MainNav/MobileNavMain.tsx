@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -50,7 +51,7 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
                       onClick={() => isHome && onClick(header.id)}
                     >
                       <Text
-                        fontSize="4xl"
+                        fontSize="3xl"
                         color="white"
                         transform={
                           startAnim ? "translateY(0)" : "translateY(100%)"
@@ -62,6 +63,29 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
                     </Link>
                   </Box>
                 ))}
+                <Box overflowY="hidden">
+                  <Link
+                    href="https://raw.githubusercontent.com/HohShenYien/portfolio-v3/main/resume.pdf"
+                    download
+                  >
+                    <Button
+                      variant="outline"
+                      colorScheme="brand"
+                      size="lg"
+                      color="brand.500"
+                      fontSize="3xl"
+                      py="4"
+                      transform={
+                        startAnim ? "translateY(0)" : "translateY(100%)"
+                      }
+                      transition={`all ease-in 150ms ${
+                        200 + headers.length * 50
+                      }ms`}
+                    >
+                      Resume
+                    </Button>
+                  </Link>
+                </Box>
               </VStack>
             </VStack>
           </DrawerBody>

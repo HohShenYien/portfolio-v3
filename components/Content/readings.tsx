@@ -24,44 +24,6 @@ const readings: {
         ],
         category: "Programming",
       },
-    ],
-    reading: [
-      {
-        title: "Effective TypeScript",
-        author: "Dan Vanderkam",
-        link: "https://effectivetypescript.com/",
-        image: {
-          id: "IJpmyeK",
-          format: "jpg",
-        },
-        description: [
-          <>
-            Being a big fan for TypeScript, I always feel troubled for not being
-            able to exercise TypeScript to its full potential.
-          </>,
-          <>
-            I came across this book when googling, and since Animal Books is
-            usually good, I just keep it on the list.
-          </>,
-        ],
-        category: "Programming",
-      },
-      {
-        title: "C# Programming Yellow Book",
-        author: "Rob Miles",
-        link: "http://www.csharpcourse.com/",
-        image: {
-          id: "aMhooRG",
-          format: "png",
-        },
-        description: [
-          <>
-            Seeing how people said C# is like improved Java makes me curious
-            about exploring it. I also wanted to prepare in learning .Net soon.
-          </>,
-        ],
-        category: "Programming",
-      },
       {
         title: "Designing Data-Intensive Applications",
         author: "Martin Kleppmann",
@@ -87,7 +49,98 @@ const readings: {
         category: "Programming",
       },
     ],
+    reading: [
+      {
+        title: "The Introvert's Edge to Networking",
+        author: "Matthew Pollard",
+        link: "https://www.amazon.com/Introverts-Edge-Networking-Leverage-Connections/dp/1400216680",
+        image: {
+          id: "54DYHxy",
+        },
+        description: [
+          <>
+            This book was on my favorite {"blogger's"} reading list,
+            <NiceLink href="https://lo-victoria.com/the-introverts-edge-to-networking-key-takeaways/">
+              Victoria Lo
+            </NiceLink>
+            . Since I do lack networking skills, I decided to pick it up as
+            well.
+          </>,
+        ],
+        category: "Self Help",
+      },
+    ],
     completed: [
+      {
+        title: "A Billion Wicked Thoughts",
+        author: "Ogi Ogas & Sai Gaddam",
+        link: "https://www.amazon.com/Billion-Wicked-Thoughts-Internet-Relationships/dp/0452297877",
+        image: {
+          id: "scMRNvg",
+          format: "png",
+        },
+        description: [
+          <>
+            I know it is a little strange for this book to appear here. But it
+            was recommended in a YouTube comment of a documentary. I thought
+            this seems interesting, so why not?
+          </>,
+          <>
+            While certain parts seem hypothetical without scientific proofs, the
+            overall content is quite nice. It mainly discusses our desires and
+            basically why we watch porn. I also enjoyed its discussion about the
+            gender differences, though I would not agree with certain parts.
+          </>,
+        ],
+        category: "Self Help",
+      },
+      {
+        title: "C# Programming Yellow Book",
+        author: "Rob Miles",
+        link: "http://www.csharpcourse.com/",
+        image: {
+          id: "aMhooRG",
+          format: "png",
+        },
+        description: [
+          <>
+            Seeing how people said C# is like improved Java makes me curious
+            about exploring it. I also wanted to prepare in learning .Net soon.
+          </>,
+          <>
+            This book covered the very basic syntax and principles of C#, but it
+            still requires me to study other books in more depth to actually
+            learn .Net.
+          </>,
+        ],
+        category: "Programming",
+      },
+      {
+        title: "Effective TypeScript",
+        author: "Dan Vanderkam",
+        link: "https://effectivetypescript.com/",
+        image: {
+          id: "IJpmyeK",
+          format: "jpg",
+        },
+        description: [
+          <>
+            Being a big fan for TypeScript, I always feel troubled for not being
+            able to exercise TypeScript to its full potential.
+          </>,
+          <>
+            I came across this book when googling, and since Animal Books is
+            usually good, I just keep it on the list.
+          </>,
+          <>
+            And the book is awesome! Learned a lot about the {"do's and don'ts"}{" "}
+            as well as the best practices of TypeScript. I also felt a lot more
+            confident in working with different TypeScript syntax that was
+            deemed to be arcane.
+          </>,
+        ],
+        category: "Programming",
+      },
       {
         title: "Practical Object-Oriented Design",
         author: "Sandi Metz",

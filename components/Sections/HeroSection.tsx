@@ -84,6 +84,7 @@ const HeroSection = ({}: IHeroSectionProp) => {
             <Button
               variant="outline"
               colorScheme="brand"
+              color="brand.500"
               size={{ md: "lg", base: "md" }}
             >
               <ArrowLink href="https://blogs.shenyien.cyou">

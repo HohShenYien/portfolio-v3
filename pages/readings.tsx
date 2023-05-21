@@ -1,11 +1,8 @@
 import { Box, Text, VStack } from "@chakra-ui/react";
 import { fadeUp } from "components/Animation";
-import { readings } from "components/Content";
-import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { generateImgurUrl } from "components/Image";
 import { SectionLayout, SectionContent } from "components/Layouts";
-import { MainNavWrapper } from "components/NavBars/MainNav";
 import { Readings, ReadingsPast, ReadingViewer } from "components/Readings";
 import { m } from "framer-motion";
 
@@ -20,7 +17,6 @@ export default function ReadingPage() {
           imgurId: "xQtQJHt",
         })}
       />
-      <MainNavWrapper />
       <ReadingViewer />
       <Box as="main" minH="100vh" pt={12}>
         <SectionLayout id="projects">
@@ -53,7 +49,6 @@ export default function ReadingPage() {
           </SectionContent>
         </SectionLayout>
       </Box>
-      <Footer />
     </Box>
   );
 }

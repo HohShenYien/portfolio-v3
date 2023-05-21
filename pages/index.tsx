@@ -1,9 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { MouseEventHandler, useState } from "react";
-import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { generateImgurUrl, ImageViewer } from "components/Image";
-import { MainNavWrapper } from "components/NavBars/MainNav";
 import {
   AboutSection,
   ExperienceSection,
@@ -17,7 +15,7 @@ export default function Home() {
     <Box as="div" bg="brand.1000">
       <Header
         description={
-          "Shen Yien is a passionate software engineer who brings ideas to life with seamless functionality and specializes in crafting innovative solutions."
+          "Shen Yien is a software engineer who brings ideas to life with seamless functionality and specializes in crafting innovative solutions."
         }
         image={generateImgurUrl({
           size: "large thumbnail",
@@ -25,7 +23,6 @@ export default function Home() {
         })}
       />
       <ImageViewer />
-      <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
         <HeroSection />
         <AboutSection />
@@ -33,7 +30,6 @@ export default function Home() {
         <ProjectSection />
         <SkillSection />
       </Box>
-      <Footer />
     </Box>
   );
 }

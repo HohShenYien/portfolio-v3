@@ -1,9 +1,7 @@
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import Lottie from "react-lottie-player";
 import { error404, fadeIn, fadeUp } from "components/Animation";
-import { Footer } from "components/Footer";
 import { ArrowLink } from "components/Links";
-import { MainNavWrapper } from "components/NavBars/MainNav";
 import { colors } from "styles/variables";
 import { m } from "framer-motion";
 import { Header } from "components/Header";
@@ -20,7 +18,6 @@ export default function Home() {
           imgurId: "nPrJjja",
         })}
       />
-      <MainNavWrapper />
       <Box as="main" minH="100vh" pt={12}>
         <Box as={m.div} {...fadeIn}>
           <Lottie loop play animationData={error404} style={{ height: 480 }} />
@@ -66,7 +63,6 @@ export default function Home() {
           </Flex>
         </Box>
       </Box>
-      <Footer />
     </Box>
   );
 }

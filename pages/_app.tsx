@@ -20,6 +20,9 @@ import "@fontsource/fira-code/600.css";
 import "@fontsource/fira-code/700.css";
 
 import { colors } from "styles/variables";
+import { MainNavWrapper } from "components/NavBars/MainNav";
+import { Footer } from "components/Footer";
+import { ReactNode } from "react";
 
 const theme = extendTheme({
   colors: {
@@ -37,11 +40,21 @@ const theme = extendTheme({
   },
 });
 
+const getLayout = (children: ReactNode) => {
+  return (
+    <>
+      <MainNavWrapper />
+      {children}
+      <Footer />
+    </>
+  );
+};
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <LazyMotion features={domAnimation}>
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </LazyMotion>
     </ChakraProvider>
   );

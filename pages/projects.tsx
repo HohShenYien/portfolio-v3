@@ -2,11 +2,9 @@ import { Box, Text } from "@chakra-ui/react";
 import { fadeUp } from "components/Animation";
 import { projectArchives } from "components/Content";
 import { ExperienceTimeline } from "components/ExperienceTimeline";
-import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { generateImgurUrl } from "components/Image";
 import { SectionLayout, SectionContent } from "components/Layouts";
-import { MainNavWrapper } from "components/NavBars/MainNav";
 import { ProjectArchives } from "components/Projects";
 import { ProjectViewer } from "components/Projects";
 import { m } from "framer-motion";
@@ -22,7 +20,6 @@ export default function Project() {
           imgurId: "xQtQJHt",
         })}
       />
-      <MainNavWrapper />
       <ProjectViewer />
       <Box as="main" minH="100vh" pt={12}>
         <SectionLayout id="projects">
@@ -52,7 +49,6 @@ export default function Project() {
           </SectionContent>
         </SectionLayout>
       </Box>
-      <Footer />
     </Box>
   );
 }
