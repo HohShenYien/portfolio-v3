@@ -1,6 +1,6 @@
-import { Box, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { NiceLink } from "../../Links";
+import { ArrowLink, NiceLink } from "../../Links";
 import { m } from "framer-motion";
 import { fadeDown } from "../../Animation";
 import headers from "./headers";
@@ -54,6 +54,24 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
               </Box>
             );
           })}
+          <Box
+            as={m.div}
+            {...fadeDown}
+            transition={`all linear 0.2s ${headers.length * 0.1}s`}
+            fontSize="sm"
+            fontWeight="light"
+          >
+            <a href="" download>
+              <Button
+                variant="outline"
+                colorScheme="brand"
+                size={{ md: "sm", base: "sm" }}
+                color="brand.500"
+              >
+                Resume
+              </Button>
+            </a>
+          </Box>
         </HStack>
       </Box>
     </Box>

@@ -14,9 +14,6 @@ export const navigateTo = (href: string) => {
     top: (document.getElementById(id)?.offsetTop ?? 0) - 30,
     behavior: "smooth",
   });
-  // document.getElementById(id)?.scrollIntoView({
-  //   behavior: "smooth",
-  // });
 };
 
 export { DesktopNavMain, MobileNavMain, MainNavWrapper };
