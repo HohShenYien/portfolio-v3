@@ -5,6 +5,55 @@ import { Highlighter } from "components/Texts";
 const projectArchives: IProjectArchives = {
   "2023": [
     {
+      name: "Next Power Starter",
+      type: "Web Project",
+      descriptions: [
+        <>
+          Next Power Starter is an optionated Next.js starter template with
+          <Highlighter>flexibility</Highlighter> &{" "}
+          <Highlighter>ease of use</Highlighter> in mind.
+        </>,
+        <>
+          I always find myself needing to setup the project in the same way, and
+          often times, reusing the same structures and types. Hence, {"I've "}
+          put together the common configurations into this starter template
+          using my favorite libraries.
+        </>,
+      ],
+      tags: ["React", "Next.js", "Mantine", "Tailwind"],
+      img: "OODaChW",
+      github: "https://github.com/HohShenYien/next-power-starter",
+      location: "Asia Pacific University",
+    },
+    {
+      name: "InstaNext",
+      type: "Web Application",
+      descriptions: [
+        <>
+          This is a project for my blog series{" "}
+          <NiceLink href="https://blogs.shenyien.cyou/series/insta-next">
+            Fullstack Instagram Clone with Next.js
+          </NiceLink>
+        </>,
+        <>
+          While Next.js is a popular framework for frontend, the number of
+          fullstack Next.js projects are still relatively few, so I created this
+          series to introduce Next.js to more people.
+        </>,
+        <>
+          Unlike other tutorials that only cover a few concepts, this series
+          features complete <Highlighter>step-by-step tutorials</Highlighter>{" "}
+          covering concepts like Database, REST APIs, Authentication and
+          frontend.
+        </>,
+      ],
+      tags: ["React", "Next.js", "Prisma", "Mantine", "Tailwind"],
+      img: "6theoki",
+      github: "https://github.com/HohShenYien/insta-next",
+      link: "https://insta-next-alpha.vercel.app/",
+      location: "Asia Pacific University",
+    },
+    {
       name: "Loopfoods",
       type: "Web Application",
       descriptions: [
