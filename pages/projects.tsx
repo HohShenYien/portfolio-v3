@@ -1,15 +1,32 @@
 import { Box, Text } from "@chakra-ui/react";
 import { fadeUp } from "components/Animation";
 import { projectArchives } from "components/Content";
-import { ExperienceTimeline } from "components/ExperienceTimeline";
 import { Header } from "components/Header";
 import { generateImgurUrl } from "components/Image";
 import { SectionLayout, SectionContent } from "components/Layouts";
 import { ProjectArchives } from "components/Projects";
 import { ProjectViewer } from "components/Projects";
 import { m } from "framer-motion";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useViewerStore } from "store";
 
 export default function Project() {
+  const { setData } = useViewerStore();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.isReady && router.query.project) {
+      for (let year in projectArchives) {
+        for (let i = 0; i < projectArchives[year].length; i++) {
+          if (projectArchives[year][i].slug === router.query.project) {
+            setData?.({ key: year, index: i });
+            break;
+          }
+        }
+      }
+    }
+  }, [router.isReady]);
   return (
     <Box as="div" bg="brand.1000">
       <Header

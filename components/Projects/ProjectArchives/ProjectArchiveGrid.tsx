@@ -5,6 +5,7 @@ import { IProjectArchive } from "..";
 import { ProjectArchive } from "./ProjectArchive";
 import { m } from "framer-motion";
 import { useViewerStore } from "store";
+import { useRouter } from "next/router";
 
 interface IProjectArchiveGridProps {
   year: string;
@@ -12,6 +13,7 @@ interface IProjectArchiveGridProps {
 }
 
 const ProjectArchiveGrid = ({ projects, year }: IProjectArchiveGridProps) => {
+  const router = useRouter();
   const gridRef = useRef<HTMLDivElement>(null);
   const fadeUpControls = useScrollSeqAnimation({
     ref: gridRef,
@@ -37,7 +39,14 @@ const ProjectArchiveGrid = ({ projects, year }: IProjectArchiveGridProps) => {
           animate={fadeUpControls}
           custom={idx}
           initial={{ opacity: 0, translateY: 30 }}
-          onClick={() => setData?.({ key: year, index: idx })}
+          onClick={() => {
+            setData?.({ key: year, index: idx });
+            router.push(
+              { query: { ...router.query, project: project.slug } },
+              undefined,
+              { shallow: true }
+            );
+          }}
         >
           <ProjectArchive {...project} key={idx} />
         </m.div>

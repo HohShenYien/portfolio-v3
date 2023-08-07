@@ -19,7 +19,6 @@ const ProjectViewerContainer = ({
   const { onClose, canPrev, canNext, prev, next, index } = useViewerStore();
 
   const canGoNext = useMemo(() => {
-    console.log(canNext?.());
     return canNext?.() ?? false;
   }, [canNext, index]);
 

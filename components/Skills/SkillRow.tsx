@@ -1,6 +1,15 @@
-import { Box, HStack, Image, Text, Tooltip, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Image,
+  Text,
+  Tooltip,
+  VStack,
+  useOutsideClick,
+} from "@chakra-ui/react";
 import { Skill } from ".";
 import { AnimationControls, m } from "framer-motion";
+import { useRef, useState } from "react";
 
 interface SkillRowProps extends Skill {
   expandRightControl: AnimationControls;
@@ -16,6 +25,13 @@ const SkillRow = ({
   expandRightControl,
   emoji,
 }: SkillRowProps) => {
+  const [isLabelOpen, setIsLabelOpen] = useState(false);
+  const ref = useRef(null);
+  useOutsideClick({
+    ref: ref,
+    handler: () => setIsLabelOpen(false),
+  });
+
   return (
     <HStack justifyContent="stretch" alignItems="stretch" spacing={4}>
       <Image
@@ -40,11 +56,21 @@ const SkillRow = ({
           >
             {name}
           </Text>
-          <Tooltip label={description} hasArrow placement="top" bg="brand.950">
+          <Tooltip
+            label={description}
+            hasArrow
+            placement="top"
+            bg="brand.950"
+            isOpen={isLabelOpen}
+          >
             <Image
               src={`/images/emojis/${emoji}.png`}
               alt={description}
               w={8}
+              onMouseEnter={() => setIsLabelOpen(true)}
+              onMouseLeave={() => setIsLabelOpen(false)}
+              onClick={() => setIsLabelOpen(true)}
+              ref={ref}
             />
           </Tooltip>
         </HStack>

@@ -1,17 +1,14 @@
-import { IExperienceProps } from "../../ExperienceTimeline";
+import { IExperienceProps } from "components/Experiences";
 import { NiceLink } from "../../Links";
 import { Highlighter } from "../../Texts";
 
 const experienceContent: { experiences: IExperienceProps[] } = {
   experiences: [
     {
-      title: "Part-time Web Developer",
+      title: "Web Developer",
       company: {
         name: "Mindworks Interactive",
         url: "https://www.mindworks.xyz/",
-        image: {
-          id: "zggjjDe",
-        },
       },
       dates: {
         start: "August 2022",
@@ -20,9 +17,11 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Developed a growing food-order{" "}
-          <NiceLink href="https://loopfoods.app/">web application</NiceLink>
+          <NiceLink href="/projects?project=loopfoods">
+            web application
+          </NiceLink>
           {"'"}s payment gateway using Stripe, facilitating over 70% of the{" "}
-          <NiceLink href="https://loopfoods.app/ https://www.linkedin.com/company/eatloop">
+          <NiceLink href="https://www.linkedin.com/company/eatloop">
             startup
           </NiceLink>
           {"'"}s sales and generating more than RM 40k in just six months.
@@ -41,7 +40,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         </>,
         <>
           Leveraged strong <Highlighter>design skills</Highlighter> and
-          collaborated closely with designers to user-friendly,
+          collaborated closely with designers to create user-friendly,
           mobile-responsive and highly functional UIs for Loop Foods
         </>,
       ],
@@ -55,17 +54,13 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         "Stripe",
       ],
       logo: "aCaRVRv",
-      angle: -20,
+      type: "Part-Time",
     },
     {
-      title: "Intern Web Developer",
+      title: "Web Developer",
       company: {
         name: "Supplycart Technology",
         url: "https://adam-procure.com/",
-        image: {
-          id: "PzTC4q4",
-          format: "jpg",
-        },
       },
       dates: {
         start: "July 2022",
@@ -74,10 +69,15 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Developed a customizable{" "}
-          <Highlighter>Vendor Self Registration Form</Highlighter> to aid
-          business users collecting info from their procurement vendors.
+          <NiceLink href="/projects?project=vendor-registration-form">
+            Vendor Self Registration Form
+          </NiceLink>{" "}
+          to aid business users collecting info from their procurement vendors.
         </>,
-        <>Reduced the loading time of the system by over 1 second.</>,
+        <>
+          Reduced the loading time of the system by over{" "}
+          <Highlighter>1 second</Highlighter>.
+        </>,
         <>
           Overcame immediate customer-blocking bugs and deploying fixes within
           30 minutes.
@@ -87,24 +87,23 @@ const experienceContent: { experiences: IExperienceProps[] } = {
           experience.
         </>,
         <>
-          Integrated <Highlighter>QuickBooks & XERO</Highlighter> API and
-          webhook into the system which receives over thousand of usages each
-          month.
+          Integrated{" "}
+          <NiceLink href="/projects?project=quickbooks-integration">
+            QuickBooks & XERO
+          </NiceLink>{" "}
+          API and webhook into the system which receives over{" "}
+          <Highlighter>thousands</Highlighter> of usages each month.
         </>,
       ],
       techs: ["Tailwind", "Laravel", "Vue.js", "PHP"],
       logo: "sums4gx",
-      angle: 10,
+      type: "Internship",
     },
     {
-      title: "Part-time Web Developer",
+      title: "Web Developer",
       company: {
         name: "Quintagen Tech",
         url: "https://www.quintagen.com/",
-        image: {
-          id: "neg4N96",
-          format: "jpg",
-        },
       },
       dates: {
         start: "August 2021",
@@ -113,7 +112,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Built an event{" "}
-          <NiceLink href="https://coffeeathome.quintagen.com">
+          <NiceLink href="/projects?project=starbucks-coffee-at-home">
             web application
           </NiceLink>{" "}
           for Starbucks&rsquo; <Highlighter>Coffee at Home</Highlighter> Event
@@ -130,7 +129,7 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       ],
       techs: ["Laravel", "Vue.js", "Wordpress"],
       logo: "xWB4yFR",
-      angle: -5,
+      type: "Part-Time",
     },
   ],
 };

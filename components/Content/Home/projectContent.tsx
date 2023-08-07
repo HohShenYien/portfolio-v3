@@ -39,6 +39,7 @@ const projectContent: ProjectContentContent = {
       ],
       tags: ["React", "Next.js", "tRPC", "Mantine", "Docker"],
       img: "IJn6EuH",
+      slug: "loopfoods",
     },
     {
       name: "Kommunity",
@@ -62,6 +63,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Django", "React Native"],
       img: "hhAAMKM",
       github: "https://github.com/HohShenYien/OdysseyHackFest_Kommunity",
+      slug: "kommunity",
     },
     {
       name: "Vendor Registration Form",
@@ -81,6 +83,7 @@ const projectContent: ProjectContentContent = {
       ],
       tags: ["Vue", "Laravel", "Tailwind"],
       img: "5p5XBWz",
+      slug: "vendor-registration-form",
     },
     {
       name: "Website Editor",
@@ -100,6 +103,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Vue", "Laravel", "Vuetify"],
       img: "NBYYp7q",
       link: "https://oye.events/",
+      slug: "website-editor",
     },
   ],
   others: [
@@ -115,6 +119,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Vue", "Vuetify", "Laravel"],
       img: "B5yPtCS",
       link: "https://coffeeathome.quintagen.com/",
+      slug: "starbuck-coffee-at-home",
     },
     {
       name: "Pomodo App",
@@ -129,6 +134,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Angular", "Tauri", "Rust"],
       img: "R6tOWEc",
       github: "https://github.com/HohShenYien/pomodo",
+      slug: "pomodo-app",
     },
     {
       name: "APAC Mailer",
@@ -143,6 +149,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Vue", "Electron", "Vuetify", "Flask"],
       img: "bPSwnPS",
       github: "https://github.com/HohShenYien/pomodo",
+      slug: "apac-mailer",
     },
     {
       name: "v2 Website",
@@ -161,6 +168,7 @@ const projectContent: ProjectContentContent = {
       img: "0wuU2uX",
       github: "https://github.com/HohShenYien/portfolio-v2",
       link: "https://v2.shenyien.cyou",
+      slug: "v2-website",
     },
     {
       name: "Nutribot",
@@ -179,6 +187,7 @@ const projectContent: ProjectContentContent = {
       img: "Act0oub",
       github:
         "https://github.com/HohShenYien/university_assignments/tree/main/year%201/sem%202/IAI",
+      slug: "nutribot",
     },
     {
       name: "Pomodoro Focus",
@@ -192,6 +201,7 @@ const projectContent: ProjectContentContent = {
       tags: ["Java", "Android"],
       img: "kUUpawE",
       github: "https://github.com/HohShenYien/Pomodoro_Focus",
+      slug: "pomodoro-focus",
     },
   ],
 };

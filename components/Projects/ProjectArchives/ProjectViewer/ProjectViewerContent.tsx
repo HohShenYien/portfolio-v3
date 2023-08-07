@@ -6,11 +6,8 @@ import {
   Flex,
   Box,
   Text,
-  Grid,
-  IconButton,
 } from "@chakra-ui/react";
 import { Dot } from "components/Extra";
-import { ImgurImage } from "components/Image";
 import { IProjectArchive } from "components/Projects";
 import { getProjectIcon } from "components/Projects/OtherProjects/utils";
 import ProjectLinks from "components/Projects/ProjectLinks";

@@ -11,6 +11,7 @@ export interface IProject {
   img: string;
   github?: string;
   link?: string;
+  slug: string;
 }
 
 export interface IProjectArchive extends IProject {

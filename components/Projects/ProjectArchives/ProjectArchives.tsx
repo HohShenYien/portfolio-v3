@@ -1,6 +1,5 @@
-import { Grid, Box, Text, Flex } from "@chakra-ui/react";
-import { BackgroundWatermark, SectionTitle } from "components/Texts";
-import { IProjectArchives, ProjectArchive, ProjectArchiveGrid } from "..";
+import { Box, Text } from "@chakra-ui/react";
+import { IProjectArchives, ProjectArchiveGrid } from "..";
 import { m } from "framer-motion";
 import { fadeInRight } from "components/Animation";
 

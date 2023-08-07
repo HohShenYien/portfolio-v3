@@ -24,6 +24,7 @@ const projectArchives: IProjectArchives = {
       img: "OODaChW",
       github: "https://github.com/HohShenYien/next-power-starter",
       location: "Asia Pacific University",
+      slug: "next-power-starter",
     },
     {
       name: "InstaNext",
@@ -52,6 +53,7 @@ const projectArchives: IProjectArchives = {
       github: "https://github.com/HohShenYien/insta-next",
       link: "https://insta-next-alpha.vercel.app/",
       location: "Asia Pacific University",
+      slug: "instanext",
     },
     {
       name: "Loopfoods",
@@ -81,6 +83,7 @@ const projectArchives: IProjectArchives = {
       tags: ["React", "Next.js", "tRPC", "Mantine", "Docker"],
       img: "IJn6EuH",
       location: "Mindworks",
+      slug: "loopfoods",
     },
   ],
   "2022": [
@@ -114,6 +117,7 @@ const projectArchives: IProjectArchives = {
       img: "hhAAMKM",
       github: "https://github.com/HohShenYien/OdysseyHackFest_Kommunity",
       location: "Asia Pacific University",
+      slug: "kommunity",
     },
     {
       name: "Vendor Registration Form",
@@ -142,6 +146,7 @@ const projectArchives: IProjectArchives = {
       tags: ["Vue", "Laravel", "Tailwind"],
       img: "5p5XBWz",
       location: "SupplyCart Technology",
+      slug: "vendor-registration-form",
     },
     {
       name: "QuickBooks Integration",
@@ -164,6 +169,7 @@ const projectArchives: IProjectArchives = {
       tags: ["Vue", "Laravel", "Tailwind"],
       img: "TkYgWGF",
       location: "SupplyCart Technology",
+      slug: "quickbooks-integration",
     },
     {
       name: "Pomodo App",
@@ -183,6 +189,7 @@ const projectArchives: IProjectArchives = {
       img: "R6tOWEc",
       github: "https://github.com/HohShenYien/pomodo",
       location: "Personal Project",
+      slug: "pomodo-app",
     },
   ],
   2021: [
@@ -200,6 +207,7 @@ const projectArchives: IProjectArchives = {
       github: "apu-apac.netlify.app/",
       link: "https://apu-apac.netlify.app/",
       location: "Asia Pacific Analytics Club",
+      slug: "apac-website",
     },
     {
       name: "v2 Website",
@@ -226,6 +234,7 @@ const projectArchives: IProjectArchives = {
       github: "https://github.com/HohShenYien/portfolio-v2",
       link: "https://v2.shenyien.cyou",
       location: "Personal Project",
+      slug: "v2-website",
     },
     {
       name: "APAC Mailer",
@@ -252,6 +261,7 @@ const projectArchives: IProjectArchives = {
       img: "bPSwnPS",
       github: "https://github.com/HohShenYien/pomodo",
       location: "Asia Pacific Analytics Club",
+      slug: "apac-mailer",
     },
     {
       name: "Starbucks - Coffee At Home",
@@ -278,6 +288,7 @@ const projectArchives: IProjectArchives = {
       img: "B5yPtCS",
       link: "https://coffeeathome.quintagen.com/",
       location: "Quintagen",
+      slug: "starbucks-coffee-at-home",
     },
     {
       name: "Website Editor",
@@ -303,6 +314,7 @@ const projectArchives: IProjectArchives = {
       img: "NBYYp7q",
       link: "https://oye.events/",
       location: "Own Your Events",
+      slug: "website-editor",
     },
     {
       name: "Nutribot",
@@ -325,6 +337,7 @@ const projectArchives: IProjectArchives = {
       github:
         "https://github.com/HohShenYien/university_assignments/tree/main/year%201/sem%202/IAI",
       location: "Asia Pacific University",
+      slug: "nutribot",
     },
     {
       name: "Pomodoro Timer",
@@ -343,6 +356,7 @@ const projectArchives: IProjectArchives = {
       img: "fL6TyI3",
       github: "https://github.com/HohShenYien/Pomodoro-Timer",
       location: "Personal Project",
+      slug: "pomodoro-timer",
     },
   ],
   2020: [
@@ -363,6 +377,7 @@ const projectArchives: IProjectArchives = {
       img: "kUUpawE",
       github: "https://github.com/HohShenYien/Pomodoro_Focus",
       location: "CS50",
+      slug: "pomodoro-focus",
     },
     {
       name: "Pokedex",
@@ -382,6 +397,7 @@ const projectArchives: IProjectArchives = {
       img: "x4DuDJk",
       github: "https://github.com/HohShenYien/Pokedex",
       location: "CS50",
+      slug: "pokedex",
     },
   ],
 };

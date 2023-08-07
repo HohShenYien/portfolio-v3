@@ -15,13 +15,13 @@ const SectionLayout = ({
 }: ISectionLayoutProp) => {
   return (
     <Box
-      {...chakraProps}
       as="section"
       minH="60vh"
       maxW="full"
       overflow={"hidden"}
       py={12}
       id={id}
+      {...chakraProps}
     >
       {title && <SectionTitle text={title} />}
       {children}
