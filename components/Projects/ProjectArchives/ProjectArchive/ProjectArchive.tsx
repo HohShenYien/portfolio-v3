@@ -22,6 +22,7 @@ const ProjectArchive = ({
   img,
   github,
   link,
+  imgFormat = "png",
 }: IProjectArchive) => {
   return (
     <Flex
@@ -59,6 +60,7 @@ const ProjectArchive = ({
           className={style.image}
           size="large thumbnail"
           aspectRatio={4 / 3}
+          format={imgFormat}
         />
       </Box>
       <Flex px={6} py={3} flex={1} flexDir="column">

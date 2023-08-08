@@ -20,7 +20,7 @@ const NiceLink = ({
   return (
     <Link
       href={isHome ? undefined : href}
-      className={styles["nice-link"]}
+      className={`${styles["nice-link"]} special-link`}
       target={blank ? "_blank" : "_self"}
       onClick={() => isHome && navigateTo(href)}
     >

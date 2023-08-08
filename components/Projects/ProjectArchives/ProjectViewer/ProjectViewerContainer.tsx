@@ -6,6 +6,7 @@ import { ReactNode, useMemo } from "react";
 import { useViewerStore } from "store";
 import { colors } from "styles/variables";
 import style from "./MovementButton.module.scss";
+import { useRouter } from "next/router";
 
 interface IProjectViewerContainerProps {
   project: IProjectArchive;
@@ -17,6 +18,11 @@ const ProjectViewerContainer = ({
   children,
 }: IProjectViewerContainerProps) => {
   const { onClose, canPrev, canNext, prev, next, index } = useViewerStore();
+  const router = useRouter();
+  const close = () => {
+    onClose?.();
+    router.replace("/projects", undefined, { shallow: true });
+  };
 
   const canGoNext = useMemo(() => {
     return canNext?.() ?? false;
@@ -96,7 +102,7 @@ const ProjectViewerContainer = ({
           _active={{
             bgColor: "#333333B0",
           }}
-          onClick={() => onClose?.()}
+          onClick={close}
         />
       </Flex>
       {children}

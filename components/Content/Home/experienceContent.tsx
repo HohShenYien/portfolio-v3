@@ -1,6 +1,6 @@
 import { IExperienceProps } from "components/Experiences";
-import { NiceLink } from "../../Links";
 import { Highlighter } from "../../Texts";
+import Link from "next/link";
 
 const experienceContent: { experiences: IExperienceProps[] } = {
   experiences: [
@@ -17,13 +17,11 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Developed a growing food-order{" "}
-          <NiceLink href="/projects?project=loopfoods">
-            web application
-          </NiceLink>
+          <Link href="/projects?project=loopfoods">web application</Link>
           {"'"}s payment gateway using Stripe, facilitating over 70% of the{" "}
-          <NiceLink href="https://www.linkedin.com/company/eatloop">
+          <Link target="_blank" href="https://www.linkedin.com/company/eatloop">
             startup
-          </NiceLink>
+          </Link>
           {"'"}s sales and generating more than RM 40k in just six months.
         </>,
         <>
@@ -69,9 +67,9 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Developed a customizable{" "}
-          <NiceLink href="/projects?project=vendor-registration-form">
+          <Link href="/projects?project=vendor-registration-form">
             Vendor Self Registration Form
-          </NiceLink>{" "}
+          </Link>{" "}
           to aid business users collecting info from their procurement vendors.
         </>,
         <>
@@ -88,9 +86,9 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         </>,
         <>
           Integrated{" "}
-          <NiceLink href="/projects?project=quickbooks-integration">
+          <Link href="/projects?project=quickbooks-integration">
             QuickBooks & XERO
-          </NiceLink>{" "}
+          </Link>{" "}
           API and webhook into the system which receives over{" "}
           <Highlighter>thousands</Highlighter> of usages each month.
         </>,
@@ -112,9 +110,9 @@ const experienceContent: { experiences: IExperienceProps[] } = {
       achievements: [
         <>
           Built an event{" "}
-          <NiceLink href="/projects?project=starbucks-coffee-at-home">
+          <Link href="/projects?project=starbucks-coffee-at-home">
             web application
-          </NiceLink>{" "}
+          </Link>{" "}
           for Starbucks&rsquo; <Highlighter>Coffee at Home</Highlighter> Event
           that receives more than 14k usages.
         </>,
@@ -124,7 +122,10 @@ const experienceContent: { experiences: IExperienceProps[] } = {
         </>,
         <>
           Involved in building an NFT-based{" "}
-          <NiceLink href="https://ghosto.xyz">website</NiceLink>.
+          <Link target="_blank" href="https://ghosto.xyz">
+            website
+          </Link>
+          .
         </>,
       ],
       techs: ["Laravel", "Vue.js", "Wordpress"],

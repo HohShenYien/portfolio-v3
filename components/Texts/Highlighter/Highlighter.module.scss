@@ -1,0 +1,13 @@
+@import "/styles/variables.scss";
+
+.highlighter {
+  background: linear-gradient(0, $brand-600, $brand-600) no-repeat left bottom /
+    100% 4px !important;
+  transition: background-size ease-in 50ms, color ease-in 100ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-size: 100% 100% !important;
+  }
+}

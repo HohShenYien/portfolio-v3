@@ -55,7 +55,7 @@ const ReadingViewer = () => {
               objectFit="contain"
             />
 
-            <Link href={link} target="_blank">
+            <Link href={link} target="_blank" className="special-link">
               <Box className={style.overlay}>
                 <Icon
                   as={ExternalLink}

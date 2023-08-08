@@ -19,7 +19,7 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
         justifyContent="space-between"
         px={{ base: 6, "2xl": 0 }}
       >
-        <Link href="/">
+        <Link href="/" className="special-link">
           <HStack alignItems="flex-end" spacing={1}>
             <Logo />
             <Text
@@ -64,6 +64,7 @@ export default function DesktopNavMain({ navStyles, isHome }: MainNavProps) {
             <Link
               href="https://raw.githubusercontent.com/HohShenYien/portfolio-v3/main/resume.pdf"
               download
+              className="special-link"
             >
               <Button
                 variant="outline"

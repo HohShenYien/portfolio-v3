@@ -19,6 +19,7 @@ const FeaturedProject = ({
   inverted = false,
   github,
   link,
+  imgFormat,
 }: IProjectProps) => {
   return (
     <Flex
@@ -27,7 +28,7 @@ const FeaturedProject = ({
       flexDir={{ md: inverted ? "row-reverse" : "row", base: "column" }}
       bg={{ md: "transparent", base: "brand.950" }}
     >
-      <FeaturedProjectImage image={img} alt={name} />
+      <FeaturedProjectImage image={img} alt={name} format={imgFormat} />
 
       <Flex
         flexDir="column"

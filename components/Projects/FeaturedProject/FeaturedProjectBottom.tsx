@@ -22,6 +22,7 @@ const FeaturedProjectBottom = ({
           md: inverted ? "flex-start" : "flex-end",
           base: "flex-start",
         }}
+        flexWrap={{ md: "nowrap", base: "wrap" }}
       >
         {tags.map((tech) => (
           <Text
@@ -44,7 +45,7 @@ const FeaturedProjectBottom = ({
         }}
       >
         {github && (
-          <Link href={github} target="_blank">
+          <Link href={github} target="_blank" className="special-link">
             <IconButton
               icon={<Github />}
               aria-label="GitHub"
@@ -58,7 +59,7 @@ const FeaturedProjectBottom = ({
           </Link>
         )}
         {link && (
-          <Link href={link} target="_blank">
+          <Link href={link} target="_blank" className="special-link">
             <IconButton
               icon={<ExternalLink />}
               aria-label="External Link"

@@ -47,6 +47,7 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
                 {headers.map((header, index) => (
                   <Box key={header.id} overflowY="hidden">
                     <Link
+                      className="special-link"
                       href={isHome ? undefined : `/#${header.id}`}
                       onClick={() => isHome && onClick(header.id)}
                     >
@@ -67,6 +68,7 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
                   <Link
                     href="https://raw.githubusercontent.com/HohShenYien/portfolio-v3/main/resume.pdf"
                     download
+                    className="special-link"
                   >
                     <Button
                       variant="outline"
@@ -98,7 +100,7 @@ export default function MobileNavMain({ navStyles, isHome }: MainNavProps) {
         justifyContent="space-between"
         pos="relative"
       >
-        <Link href="/">
+        <Link href="/" className="special-link">
           <HStack alignItems="flex-end" spacing={1}>
             <Logo height={8} />
             <Text

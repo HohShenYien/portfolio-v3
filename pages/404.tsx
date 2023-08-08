@@ -46,12 +46,12 @@ export default function Home() {
             justifyContent="center  "
             gap="6"
           >
-            <Link href="/">
+            <Link href="/" className="special-link">
               <Button colorScheme="brand" size={{ md: "md", base: "md" }}>
                 Back to home
               </Button>
             </Link>
-            <Link href="https://blogs.shenyien.cyou/">
+            <Link href="https://blogs.shenyien.cyou/" className="special-link">
               <Button
                 variant="outline"
                 colorScheme="brand"

@@ -1,9 +1,118 @@
-import { NiceLink } from "components/Links";
 import { IProjectArchives } from "components/Projects";
 import { Highlighter } from "components/Texts";
+import Link from "next/link";
 
 const projectArchives: IProjectArchives = {
   "2023": [
+    {
+      name: "BizFlow",
+      type: "Hackathon",
+      descriptions: [
+        <>
+          BizFlow is an AI-Powered (using ChatGPT API){" "}
+          <Highlighter>data intelligence system</Highlighter>
+          submitted for{" "}
+          <Link href="https://jomhack.com/impacthack/" target="_blank">
+            ImpactHack 2023
+          </Link>{" "}
+          Hackathon that we won as <Highlighter>champion</Highlighter>.
+        </>,
+        <>
+          Its goal was to empower SMEs by allowing them to integrate their data
+          sources from various platforms for the AI to learn from. Using the
+          knowledge, FlowAI will be able to provide advice and recommendations
+          to the business owners, acting as a{" "}
+          <Highlighter>personal assistant</Highlighter>.
+        </>,
+        <>
+          We even integrated <Highlighter>Stable Diffusion</Highlighter> and
+          Video Generation into the system
+        </>,
+        <>
+          It was even featured on the{" "}
+          <Link
+            href="https://www.thestar.com.my/news/education/2023/07/30/winning-solution-for-smes"
+            target="_blank"
+          >
+            local news
+          </Link>
+          .
+        </>,
+      ],
+      tags: ["Next.js", "Flask", "AI", "ChatGPT"],
+      img: "Kmau3Y1",
+      imgFormat: "jpg",
+      github: "https://github.com/DoBetter-Malaysia/bizflow-impacthack",
+      location: "Asia Pacific University",
+      slug: "bizflow",
+    },
+    {
+      name: "Caringly",
+      type: "Web Application",
+      descriptions: [
+        <>
+          Caringly conveys the message to{" "}
+          <Highlighter>{'"Care for those whom you love"'}</Highlighter>.
+        </>,
+        <>
+          It is a web application that enables users to{" "}
+          <Highlighter>monitor</Highlighter> posts of their closed {"one's"}{" "}
+          social media accounts. If any depression or suicidal signs are found
+          in their posts, the users will be notified via an email.
+        </>,
+        <>
+          Beyond a mere web project, it also includes{" "}
+          <Highlighter>data science</Highlighter> portion where I built a deep
+          learning model using bi-LSTM with{" "}
+          <Link
+            href="https://www.kaggle.com/datasets/hohshenyien/fyp-dataset"
+            target="_blank"
+          >
+            dataset
+          </Link>{" "}
+          collected from Reddit.
+        </>,
+        <>
+          It was submitted as part of my Final Year Project to my Computer
+          Science Degree.
+        </>,
+      ],
+      tags: ["Next.js", "Flask", "AI", "Deep Learning"],
+      img: "VdTdB7h",
+      imgFormat: "jpg",
+      github: "https://github.com/HohShenYien/caringly",
+      location: "Asia Pacific University",
+      slug: "caringly",
+    },
+    {
+      name: "Velocap",
+      type: "Hackathon",
+      descriptions: [
+        <>
+          Velocap is an AI-driven{" "}
+          <Highlighter>venture capital management software</Highlighter>{" "}
+          designed to automate and optimize investments through data-driven
+          decision-making.
+        </>,
+        <>
+          We combined our web development skill with data science knowledge to
+          integrate 3 models into the system. This is a prototype system that we
+          developed during the 3 days 2 nights UM Hackathon, which we won.
+        </>,
+        <>
+          It was featured in the local{" "}
+          <Link href="https://www.thestar.com.my/news/education/2023/06/25/double-win-for-apu">
+            news
+          </Link>
+        </>,
+      ],
+      tags: ["Next.js", "Flask", "AI", "SQL", "BingAI"],
+      img: "RhvTpbU",
+      imgFormat: "jpg",
+      github: "https://github.com/DoBetter-Malaysia/velocap-web-umhack",
+      location: "Asia Pacific University",
+      slug: "velocap",
+    },
     {
       name: "Next Power Starter",
       type: "Web Project",
@@ -32,9 +141,12 @@ const projectArchives: IProjectArchives = {
       descriptions: [
         <>
           This is a project for my blog series{" "}
-          <NiceLink href="https://blogs.shenyien.cyou/series/insta-next">
+          <Link
+            target="_blank"
+            href="https://blogs.shenyien.cyou/series/insta-next"
+          >
             Fullstack Instagram Clone with Next.js
-          </NiceLink>
+          </Link>
         </>,
         <>
           While Next.js is a popular framework for frontend, the number of
@@ -49,7 +161,8 @@ const projectArchives: IProjectArchives = {
         </>,
       ],
       tags: ["React", "Next.js", "Prisma", "Mantine", "Tailwind"],
-      img: "6theoki",
+      img: "huqnhVb",
+      imgFormat: "jpg",
       github: "https://github.com/HohShenYien/insta-next",
       link: "https://insta-next-alpha.vercel.app/",
       location: "Asia Pacific University",
@@ -61,7 +174,10 @@ const projectArchives: IProjectArchives = {
       descriptions: [
         <>
           This is an e-commerce website built from scratch for a{" "}
-          <Highlighter>delivery service startup</Highlighter>.
+          <Link target="_blank" href="https://www.linkedin.com/company/eatloop">
+            delivery service startup
+          </Link>
+          .
         </>,
         <>
           It is a very comprehensive application, consisting of modules related
@@ -81,7 +197,8 @@ const projectArchives: IProjectArchives = {
         <>By the way, tRPC as backend is a really interesting idea.</>,
       ],
       tags: ["React", "Next.js", "tRPC", "Mantine", "Docker"],
-      img: "IJn6EuH",
+      img: "rJvO6wj",
+      imgFormat: "jpg",
       location: "Mindworks",
       slug: "loopfoods",
     },
@@ -93,9 +210,9 @@ const projectArchives: IProjectArchives = {
       descriptions: [
         <>
           This is our project from{" "}
-          <NiceLink href="https://odysseyhackfest.com/">
+          <Link target="_blank" href="https://odysseyhackfest.com/">
             Odyssey Hackfest
-          </NiceLink>
+          </Link>
           . It is a one-stop community management mobile application with a
           focus on residents&apos; personal safety.
         </>,
@@ -114,7 +231,8 @@ const projectArchives: IProjectArchives = {
         </>,
       ],
       tags: ["Django", "React Native"],
-      img: "hhAAMKM",
+      img: "jxxysqw",
+      imgFormat: "jpg",
       github: "https://github.com/HohShenYien/OdysseyHackFest_Kommunity",
       location: "Asia Pacific University",
       slug: "kommunity",
@@ -366,7 +484,9 @@ const projectArchives: IProjectArchives = {
       descriptions: [
         <>
           A Pomodoro Timer application. It was the final assignment for{" "}
-          <NiceLink href="https://cs50.harvard.edu/x/2020/">CS50 2020</NiceLink>
+          <Link target="_blank" href="https://cs50.harvard.edu/x/2020/">
+            CS50 2020
+          </Link>
         </>,
         <>
           Decided to pick this topic due to my fondness towards Pomodoro system
@@ -389,7 +509,9 @@ const projectArchives: IProjectArchives = {
         </>,
         <>
           It was based on the Android track conducted from{" "}
-          <NiceLink href="https://cs50.harvard.edu/x/2020/">CS50 2020</NiceLink>
+          <Link target="_blank" href="https://cs50.harvard.edu/x/2020/">
+            CS50 2020
+          </Link>
           .
         </>,
       ],

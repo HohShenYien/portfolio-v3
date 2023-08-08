@@ -8,24 +8,17 @@ import { useRouter } from "next/router";
 const ProjectViewer = () => {
   const { key: year, index, isOpen, onClose } = useViewerStore();
   const router = useRouter();
+  const close = () => {
+    onClose?.();
+    router.replace("/projects", undefined, { shallow: true });
+  };
 
   const data = projectArchives[year ?? ""]?.[index ?? 0];
 
   return isOpen && data ? (
-    <Modal
-      isOpen={isOpen ?? false}
-      onClose={() => {
-        onClose?.();
-        router.replace("/projects", undefined, { shallow: true });
-      }}
-      size="full"
-    >
+    <Modal isOpen={isOpen ?? false} onClose={close} size="full">
       <ModalOverlay />
-      <ModalContent
-        bg="transparent"
-        justifyContent="center"
-        onClick={() => onClose?.()}
-      >
+      <ModalContent bg="transparent" justifyContent="center" onClick={close}>
         <Box
           maxH="90vh"
           px={{ lg: 8, base: 4 }}

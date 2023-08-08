@@ -6,7 +6,12 @@ const FooterSocialLinks = () => {
     <HStack spacing={{ lg: 3, base: 5 }}>
       {footerContent.socials.map((social) => {
         return (
-          <Link key={social.icon} href={social.url} target="_blank">
+          <Link
+            key={social.icon}
+            href={social.url}
+            target="_blank"
+            className="special-link"
+          >
             <Image
               src={`/images/social-icons/${social.icon}.svg`}
               alt={social.icon}

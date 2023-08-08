@@ -75,7 +75,7 @@ const HeroSection = ({}: IHeroSectionProp) => {
             alignItems={{ base: "flex-start", md: "center" }}
             gap="6"
           >
-            <Link href="mailto:hohshenyien@gmail.com">
+            <Link href="mailto:hohshenyien@gmail.com" className="special-link">
               <Button colorScheme="brand" size={{ md: "lg", base: "md" }}>
                 Contact Me
               </Button>

@@ -10,7 +10,7 @@ const ProjectLinks = ({ github, link }: IProjectLinksProps) => {
   return (
     <>
       {github && (
-        <Link href={github} target="_blank">
+        <Link href={github} target="_blank" className="special-link">
           <IconButton
             icon={<Github />}
             aria-label="GitHub"
@@ -24,7 +24,7 @@ const ProjectLinks = ({ github, link }: IProjectLinksProps) => {
         </Link>
       )}
       {link && (
-        <Link href={link} target="_blank">
+        <Link href={link} target="_blank" className="special-link">
           <IconButton
             icon={<ExternalLink />}
             aria-label="External Link"

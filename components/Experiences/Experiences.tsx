@@ -68,7 +68,8 @@ const Experiences = () => {
                   imgurId={experience.logo}
                   alt={experience.company.name}
                   mr={2}
-                  border="white solid 1px"
+                  border="solid 2px"
+                  borderColor={index === tabIndex ? "brand.400" : "white"}
                 />
                 {experience.company.name}
               </Tab>

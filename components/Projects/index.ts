@@ -12,6 +12,7 @@ export interface IProject {
   github?: string;
   link?: string;
   slug: string;
+  imgFormat?: "jpg" | "png" | "webp";
 }
 
 export interface IProjectArchive extends IProject {

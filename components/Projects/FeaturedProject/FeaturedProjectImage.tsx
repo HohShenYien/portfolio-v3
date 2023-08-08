@@ -7,9 +7,14 @@ import style from "./FeaturedProjectImage.module.scss";
 interface IFeaturedProjectImageProp {
   image: string;
   alt: string;
+  format?: string;
 }
 
-const FeaturedProjectImage = ({ image, alt }: IFeaturedProjectImageProp) => {
+const FeaturedProjectImage = ({
+  image,
+  alt,
+  format,
+}: IFeaturedProjectImageProp) => {
   const imageStore = useImageStore();
   return (
     <Box
@@ -36,6 +41,7 @@ const FeaturedProjectImage = ({ image, alt }: IFeaturedProjectImageProp) => {
         width="100%"
         className={style.projectImg}
         size="huge thumbnail"
+        format={format}
       />
     </Box>
   );

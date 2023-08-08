@@ -7,14 +7,14 @@ const skillContent: SkillGroup[] = [
       {
         name: "React",
         progress: 90,
-        description: "Actively developing in React now",
+        description: "Actively developing in React",
         emoji: "fire",
       },
       {
         name: "Next.js",
-        progress: 75,
-        description: "Most of my React projects are built with Next.js",
-        emoji: "fire",
+        progress: 90,
+        description: "Pretty confident with anything on Next.js",
+        emoji: "cool",
       },
       {
         name: "Vue",
@@ -40,28 +40,28 @@ const skillContent: SkillGroup[] = [
     name: "Backend",
     skills: [
       {
-        name: "Laravel",
+        name: "Flask",
         progress: 80,
+        description: "Been loving Flask for its clean setup",
+        emoji: "heart",
+      },
+      {
+        name: "Laravel",
+        progress: 65,
         description: "Professional experience in Laravel Development",
         emoji: "cool",
       },
       {
         name: "Spring",
-        progress: 70,
-        description: "Studying Spring in Action on my way to mastery",
-        emoji: "fire",
-      },
-      {
-        name: "Flask",
         progress: 60,
-        description: "Been using Flask to build quick and simple backends",
+        description: "Have spent some time studying Spring",
         emoji: "monocle",
       },
       {
         name: "NestJs",
-        progress: 55,
-        description: "Currently focusing on building applications with NestJs",
-        emoji: "fire",
+        progress: 50,
+        description: "Built some applications with NestJs before",
+        emoji: "monocle",
       },
       {
         name: "Django",
@@ -112,23 +112,15 @@ const skillContent: SkillGroup[] = [
     skills: [
       {
         name: "Python",
+        progress: 90,
+        description: "Very confident in doing anything with Python",
+        emoji: "cool",
+      },
+      {
+        name: "JavaScript",
         progress: 85,
-        description:
-          "In-depth knowledge of Python from my years of experience using it across various projects",
-        emoji: "heart",
-      },
-      {
-        name: "Javascript",
-        progress: 80,
-        description:
-          "Gotten better with Javascript since the use of various Javascript frameworks",
+        description: "Actively developing in JavaScript",
         emoji: "fire",
-      },
-      {
-        name: "PHP",
-        progress: 70,
-        description: "Used PHP professionally alongside Laravel",
-        emoji: "heart",
       },
       {
         name: "Java",
@@ -136,6 +128,12 @@ const skillContent: SkillGroup[] = [
         description:
           "Having decent knowledge of Java due to the wide use of it in the world of DSA",
         emoji: "cool",
+      },
+      {
+        name: "PHP",
+        progress: 50,
+        description: "Used PHP professionally alongside Laravel",
+        emoji: "monocle",
       },
     ],
   },
@@ -150,16 +148,16 @@ const skillContent: SkillGroup[] = [
       },
       {
         name: "Git",
-        progress: 40,
+        progress: 50,
         description:
           "My Git knowledge is sufficient for all sorts of collaboration",
         emoji: "cool",
       },
       {
         name: "Bash",
-        progress: 30,
+        progress: 45,
         description:
-          "Rather confident to setup any development environment in Linux",
+          "Pretty confident to setup any development environment in Linux",
         emoji: "monocle",
       },
     ],

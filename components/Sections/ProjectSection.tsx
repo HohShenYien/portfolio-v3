@@ -1,10 +1,10 @@
 import { Box, Grid, Text, VStack } from "@chakra-ui/react";
 import { projectContent } from "../Content";
 import { SectionContent, SectionLayout } from "../Layouts";
-import { NiceLink } from "../Links";
 import headers from "../NavBars/MainNav/headers";
 import { FeaturedProject } from "../Projects";
 import { OtherProjects } from "../Projects/OtherProjects";
+import Link from "next/link";
 
 const ProjectSection = () => {
   return (
@@ -24,9 +24,7 @@ const ProjectSection = () => {
           >
             Some Other Interesting Projects
           </Text>
-          <NiceLink href="/projects" blank={false}>
-            Project Archives
-          </NiceLink>
+          <Link href="/projects">Project Archives</Link>
         </Box>
         <OtherProjects projects={projectContent.others} />
       </SectionContent>

@@ -14,6 +14,7 @@ const OtherProject = ({
   img,
   github,
   link,
+  imgFormat,
 }: IProject) => {
   const imageStore = useImageStore();
   return (
@@ -21,6 +22,7 @@ const OtherProject = ({
       bgImage={`url(${generateImgurUrl({
         size: "medium thumbnail",
         imgurId: img,
+        format: imgFormat,
       })})`}
       pos="relative"
       h="100%"

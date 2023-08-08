@@ -1,5 +1,5 @@
-import { NiceLink } from "components/Links";
 import { IReading } from "components/Readings";
+import Link from "next/link";
 
 const readings: {
   current: Record<"new" | "reading" | "completed", IReading[]>;
@@ -34,9 +34,12 @@ const readings: {
         description: [
           <>
             I started reading this book from Coding Horror&apos;s{" "}
-            <NiceLink href="https://blog.codinghorror.com/recommended-reading-for-developers/">
+            <Link
+              target="_blank"
+              href="https://blog.codinghorror.com/recommended-reading-for-developers/"
+            >
               recommendation
-            </NiceLink>
+            </Link>
             . Partly also due to my lack of knowledge in terms of larger scale
             data management.
           </>,
@@ -48,8 +51,89 @@ const readings: {
         ],
         category: "Programming",
       },
+      {
+        title: "Software Engineering at Google",
+        author: "O'Reilly",
+        link: "https://abseil.io/resources/swe-book",
+        image: {
+          id: "lG8AH29",
+          format: "jpg",
+        },
+        description: [
+          <>
+            I started to feel a ceiling with my current skill level, so this
+            book is one of my attempts to break through the ceiling.
+          </>,
+        ],
+        category: "Programming",
+      },
+      {
+        title: "The Manager's Path",
+        author: "Camille Fournier",
+        link: "https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897",
+        image: {
+          id: "Y6dTOl8",
+          format: "jpg",
+        },
+        description: [
+          <>
+            I do not want to be limited as a programmer, and this book seems
+            like a good start for me to break into the upper levels.
+          </>,
+          <>
+            Also as a preparation for my possible startup ventures in the
+            future.
+          </>,
+        ],
+        category: "Management",
+      },
     ],
     reading: [
+      {
+        title: "The Lean Product Playbook",
+        author: "Dan Olsen",
+        link: "https://leanproductplaybook.com/",
+        image: {
+          id: "JScNAAh",
+          format: "jpg",
+        },
+        description: [
+          <>
+            After my great experience with{" "}
+            <Link href="https://www.linkedin.com/posts/shen-yien_champion-hackathon-venturecapital-activity-7061550515414839296-kCx">
+              UM Hackathon
+            </Link>
+            , I began to think about venturing into the Startup field.
+          </>,
+          <>
+            And of course, I could not miss this great book in the field, so I
+            picked it up and started reading.
+          </>,
+        ],
+        category: "Startup",
+      },
+    ],
+    completed: [
+      {
+        title: "Laws of UX",
+        author: "Jon Yablonski",
+        link: "https://lawsofux.com/book/",
+        image: {
+          id: "yvDoke0",
+        },
+        description: [
+          <>A short book on several important UX Laws.</>,
+          <>
+            The contents were short and concise, but to the point. Overall, I
+            quite enjoy reading the book.
+          </>,
+          <>
+            I also did learn quite a few things here and there, would not say a
+            lot from my past UX books, but yeah.
+          </>,
+        ],
+        category: "UI/UX",
+      },
       {
         title: "The Introvert's Edge to Networking",
         author: "Matthew Pollard",
@@ -59,18 +143,24 @@ const readings: {
         },
         description: [
           <>
-            This book was on my favorite {"blogger's"} reading list,
-            <NiceLink href="https://lo-victoria.com/the-introverts-edge-to-networking-key-takeaways/">
-              Victoria Lo
-            </NiceLink>
-            . Since I do lack networking skills, I decided to pick it up as
-            well.
+            This book was on my favorite blogger,{" "}
+            <Link
+              target="_blank"
+              href="https://lo-victoria.com/the-introverts-edge-to-networking-key-takeaways/"
+            >
+              {"Victoria Lo's"}
+            </Link>{" "}
+            reading list, . Since I do lack networking skills, I decided to pick
+            it up as well.
+          </>,
+          <>
+            It turns out to be pretty decent, while I would not take everything
+            mentioned, but quite a few interesting concepts like early
+            preparation sounds useful to me.
           </>,
         ],
         category: "Self Help",
       },
-    ],
-    completed: [
       {
         title: "A Billion Wicked Thoughts",
         author: "Ogi Ogas & Sai Gaddam",
@@ -204,8 +294,8 @@ const readings: {
           <>
             The primary reason I picked up this book was because of the nasty
             codes I came across while developing{" "}
-            <NiceLink href="/projects">Loopfoods</NiceLink>. I could not bear
-            with them, and so I thought why not I make them better?
+            <Link href="/projects">Loopfoods</Link>. I could not bear with them,
+            and so I thought why not I make them better?
           </>,
           <>
             All the techniques were presented like a catalogue, in an easy to
@@ -343,9 +433,12 @@ const readings: {
       description: [
         <>
           I learned about Design Pattern from Fireship&apos;s{" "}
-          <NiceLink href="https://www.youtube.com/watch?v=tv-_1er1mWI">
+          <Link
+            target="_blank"
+            href="https://www.youtube.com/watch?v=tv-_1er1mWI"
+          >
             Design Patterns video
-          </NiceLink>
+          </Link>
           . Later on, I began to come across some special patterns during my
           internship like DDD, State, and Facade, I thought I should really
           start to learn more about it.
@@ -353,9 +446,12 @@ const readings: {
         <>
           This book did work as a wonderful introduction, and I feel like diving
           more deeply into other GOF patterns from their{" "}
-          <NiceLink href="https://circle.visual-paradigm.com/catalog/">
+          <Link
+            target="_blank"
+            href="https://circle.visual-paradigm.com/catalog/"
+          >
             Catalog
-          </NiceLink>
+          </Link>
         </>,
       ],
       category: "Programming",
@@ -370,8 +466,10 @@ const readings: {
       description: [
         <>
           I came across this book on{" "}
-          <NiceLink href="https://tailwindcss.com/">Tailwinds</NiceLink>, and
-          since I like to use Tailwinds, it must be good.
+          <Link target="_blank" href="https://tailwindcss.com/">
+            Tailwinds
+          </Link>
+          , and since I like to use Tailwinds, it must be good.
         </>,
         <>
           And in fact, it&apos;s good. Many more good UI concepts from the book,
@@ -462,9 +560,9 @@ const readings: {
         <>Absolutely loved this book. I built my Rust foundation from it.</>,
         <>
           I practised Rust on{" "}
-          <NiceLink href="https://github.com/rust-lang/rustlings">
+          <Link target="_blank" href="https://github.com/rust-lang/rustlings">
             Rustlings
-          </NiceLink>{" "}
+          </Link>{" "}
           alongside this book
         </>,
       ],
@@ -481,9 +579,12 @@ const readings: {
         <>
           Always had dilemma and hesitations when it comes to making decision,
           and by chance a{" "}
-          <NiceLink href="https://www.youtube.com/watch?v=wUB8l1Fz0mA">
+          <Link
+            target="_blank"
+            href="https://www.youtube.com/watch?v=wUB8l1Fz0mA"
+          >
             video
-          </NiceLink>{" "}
+          </Link>{" "}
           showed this book to me, and it sounded interesting, so I took it.
         </>,
         <>
